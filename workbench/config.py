@@ -8,6 +8,7 @@
 """
 from __future__ import annotations
 
+import json
 import os
 import shutil
 from pathlib import Path
@@ -53,10 +54,46 @@ CN_TICKERS = [                                  # A 股：沪市 .SS / 深市 .S
     "002594.SZ",   # 比亚迪
     "600556.SS",   # 天下秀
 ]
-TICKERS = US_TICKERS + CN_TICKERS
-BENCHMARKS = {"US": "SPY", "CN": "000300.SS"}   # 分市场 beta 基准
-ALL_SYMBOLS = TICKERS + list(BENCHMARKS.values())
+HK_TICKERS = ["00700.HK"]                       # 港股：5 位数字代码 .HK
+TICKERS = US_TICKERS + CN_TICKERS + HK_TICKERS
+BENCHMARKS = {"US": "SPY", "CN": "000300.SS", "HK": "HSI.HK"}  # 分市场 beta 基准
 HISTORY = "5y"                                  # 五年日线
+
+# 页面"添加标的"写入的自定义池（运行时状态：本地持久化，随 data/ 不进 git）
+CUSTOM_POOL_PATH = DATA_DIR / "symbol_pool.json"
+
+
+def _load_custom() -> list[str]:
+    try:
+        return [str(s) for s in json.loads(CUSTOM_POOL_PATH.read_text(encoding="utf-8"))]
+    except Exception:  # noqa: BLE001
+        return []
+
+
+def save_custom(symbols: list[str]) -> None:
+    ensure_dirs()
+    CUSTOM_POOL_PATH.write_text(json.dumps(symbols, ensure_ascii=False, indent=1),
+                                encoding="utf-8")
+
+
+def active_tickers() -> list[str]:
+    """默认池 + 页面添加的自定义池（去重保序）。"""
+    seen, out = set(), []
+    for s in TICKERS + _load_custom():
+        if s not in seen:
+            seen.add(s)
+            out.append(s)
+    return out
+
+
+def active_symbols() -> list[str]:
+    """active_tickers + 全部市场基准（去重保序）。"""
+    seen, out = set(), []
+    for s in active_tickers() + list(BENCHMARKS.values()):
+        if s not in seen:
+            seen.add(s)
+            out.append(s)
+    return out
 
 
 def is_cn(symbol: str) -> bool:
@@ -65,8 +102,38 @@ def is_cn(symbol: str) -> bool:
     return symbol.endswith((".SS", ".SZ")) and code.isdigit() and len(code) == 6
 
 
+def is_hk(symbol: str) -> bool:
+    """港股代码：4-5 位数字 + .HK 后缀（HSI.HK 是恒指基准，不算个股）。"""
+    code, _, _suffix = symbol.partition(".")
+    return symbol.endswith(".HK") and code.isdigit() and len(code) in (4, 5)
+
+
 def benchmark_of(symbol: str) -> str:
-    return BENCHMARKS["CN"] if is_cn(symbol) else BENCHMARKS["US"]
+    if is_cn(symbol):
+        return BENCHMARKS["CN"]
+    if is_hk(symbol):
+        return BENCHMARKS["HK"]
+    return BENCHMARKS["US"]
+
+
+def normalize_symbol(market: str, code: str) -> str:
+    """按市场把用户输入规范成标准符号；无法解析时抛 ValueError。"""
+    code = code.strip().upper()
+    if market == "US":
+        if code.isdigit() or not code.replace(".", "").replace("-", "").isalnum():
+            raise ValueError(f"美股代码不合法：{code}")
+        return code
+    if market == "CN":
+        raw = code.split(".")[0]
+        if not (raw.isdigit() and len(raw) == 6):
+            raise ValueError(f"A股代码应为 6 位数字：{code}")
+        return raw + (".SS" if raw[0] in "5689" else ".SZ")
+    if market == "HK":
+        raw = code.split(".")[0]
+        if not (raw.isdigit() and len(raw) in (4, 5)):
+            raise ValueError(f"港股代码应为 4-5 位数字：{code}")
+        return raw.zfill(5) + ".HK"
+    raise ValueError(f"未知市场：{market}")
 
 # ── 交易成本（带手续费回测）──────────────────────────────────────────────
 COMMISSION_BPS = 5.0     # 单边佣金，万5

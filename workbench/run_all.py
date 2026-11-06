@@ -14,7 +14,7 @@ import sys
 import time
 from pathlib import Path
 
-from workbench.config import ALL_SYMBOLS, ARTIFACTS
+from workbench.config import ARTIFACTS, active_symbols
 from workbench.store.arctic import get_library, symbol_status
 
 LOGS = ARTIFACTS / "logs"
@@ -44,7 +44,7 @@ def main() -> None:
 
     # 1) 数据落库（已存在且未指定 --fresh 则跳过）
     lib = get_library()
-    have = set(lib.list_symbols()) >= set(ALL_SYMBOLS)
+    have = set(lib.list_symbols()) >= set(active_symbols())
     if fresh or not have:
         from workbench.data.ingest import ingest_all
         _step("数据接入：yfinance 五年日线 → ArcticDB", ingest_all)

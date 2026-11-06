@@ -13,7 +13,7 @@ import time
 import pandas as pd
 
 from workbench.analytics.backtest import run_backtest
-from workbench.config import ARTIFACTS, TICKERS
+from workbench.config import ARTIFACTS, active_tickers
 from workbench.store.arctic import load_symbol
 
 
@@ -32,24 +32,25 @@ def _bt_to_json(bt) -> dict:
     }
 
 
+def backtest_symbol(symbol: str) -> dict:
+    """单标的带手续费回测（z-score 回归 + 双均线），供全量 run 与页面增量添加共用。"""
+    df = load_symbol(symbol)
+    primary = run_backtest(df, symbol, strategy="zscore_reversion")
+    secondary = run_backtest(df, symbol, strategy="sma_cross")
+    s = primary.stats
+    print(f"  {symbol:<10} 净收益={s['net_total_return']:+8.2%}  (毛 {s['gross_total_return']:+8.2%})"
+          f"  买入持有={s['buy_and_hold']:+8.2%}  净夏普={s['net_sharpe']:.2f}"
+          f"  费用拖累={s['fee_drag']:.2%}")
+    return {"zscore_reversion": _bt_to_json(primary), "sma_cross": _bt_to_json(secondary)}
+
+
 def run() -> dict:
     out = {"generated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
            "cost_model": "commission 5bps + slippage 2bps，单边，按 |Δ仓位|×收盘价 计名义额；"
                          "A股与美股统一口径（未计 A 股印花税/过户费，未模拟 T+1 与涨跌停）",
            "symbols": {}}
-    for symbol in TICKERS:
-        df = load_symbol(symbol)
-        primary = run_backtest(df, symbol, strategy="zscore_reversion")
-        secondary = run_backtest(df, symbol, strategy="sma_cross")
-        out["symbols"][symbol] = {
-            "zscore_reversion": _bt_to_json(primary),
-            "sma_cross": _bt_to_json(secondary),
-        }
-        s = primary.stats
-        print(f"  {symbol:<5} 净收益={s['net_total_return']:+8.2%}  (毛 {s['gross_total_return']:+8.2%})"
-              f"  买入持有={s['buy_and_hold']:+8.2%}  净夏普={s['net_sharpe']:.2f}"
-              f"  净回撤={s['net_max_drawdown']:.2%}  交易次数={s['num_trades']}"
-              f"  费用拖累={s['fee_drag']:.2%}")
+    for symbol in active_tickers():
+        out["symbols"][symbol] = backtest_symbol(symbol)
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     (ARTIFACTS / "backtest.json").write_text(json.dumps(out, ensure_ascii=False, indent=1),
                                              encoding="utf-8")

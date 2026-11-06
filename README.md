@@ -80,8 +80,13 @@ WSL 侧（Ubuntu 24.04，需 `wsl -d MiniStation`）：
 
 - **美股**（AAPL/MSFT/NVDA/JPM/GS/XOM/TSLA + 基准 SPY）：yfinance 真实日线，约 1253 行/只，含复权收盘价。
 - **A股**（600519/300750/601318/000858/002594/600556 + 基准 000300）：东方财富公开 API 前复权日线，1215 行/只。
+- **港股**（00700 腾讯 + 基准恒指 HSI.HK）：东财 116 通道（个股）/ yfinance `^HSI`（指数），1233+ 行/只。
+- **页面添加标的**：概览页「＋ 添加标的」对话框，支持美股/A股/港股三类；输入代码（如 `AMD`、`600036`、`09988`）→
+  自动规范后缀（.SS/.SZ/.HK）→ 取五年日线落 ArcticDB → gs-quant 指标 → 带手续费回测 → 页面即时刷新。
+  自定义标的持久化在 `data/symbol_pool.json`（运行时状态，不进 git）。
 - **降级链**（`workbench/data/ingest.py::fetch_one`，来源标记进 ArcticDB 元数据，UI 数据源徽标可见）：
   - A股：东财直连 → akshare（前复权，锁版本 1.20.34）→ GBM 模拟
+  - 港股：东财 116 通道 → GBM 模拟（yfinance 无港股个股）
   - 美股：yfinance → akshare（东财源，市场前缀 105/106/107 自动试探）→ Stooq → GBM 模拟
   - 兜底与主源同源（akshare 封装东财接口），逐行一致性已验证（close 最大差 0.000000）。
 

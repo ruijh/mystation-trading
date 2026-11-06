@@ -71,7 +71,9 @@ select{background:var(--panel2);color:var(--fg);border:1px solid var(--border);b
 <main>
   <section id="tab-overview" class="on">
     <div id="kpis" class="grid g3"></div>
-    <div class="card"><h3>标的池 · 五年日线（ArcticDB 实时读取）</h3><div id="tbl"></div></div>
+    <div class="card"><h3>标的池 · 五年日线（ArcticDB 实时读取）
+      <button id="add-btn" style="float:right;background:var(--panel2);color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:3px 12px;cursor:pointer;font-size:12px">＋ 添加标的</button>
+    </h3><div id="tbl"></div></div>
     <div class="card"><h3>数据管道</h3><div id="pipe" class="small"></div></div>
   </section>
 
@@ -98,6 +100,26 @@ select{background:var(--panel2);color:var(--fg);border:1px solid var(--border);b
     <div id="libs-grid" class="grid g2"></div>
   </section>
 </main>
+<div id="add-dialog" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50;align-items:center;justify-content:center">
+  <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:22px 26px;width:400px;max-width:92vw">
+    <h3 style="margin:0 0 14px">＋ 添加标的</h3>
+    <label class="small">市场</label>
+    <select id="add-market" style="width:100%;margin:4px 0 12px">
+      <option value="US">🇺🇸 美股（如 AAPL、AMD）</option>
+      <option value="CN">🇨🇳 A股（如 600036、300059）</option>
+      <option value="HK">🇭🇰 港股（如 00700、09988）</option>
+    </select>
+    <label class="small">代码</label>
+    <input id="add-code" placeholder="输入代码…" autocomplete="off"
+      style="width:100%;margin:4px 0 4px;background:var(--panel2);color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:8px 10px;font-size:14px">
+    <div id="add-hint" class="small dimc" style="margin-bottom:12px"></div>
+    <div id="add-status" class="small" style="margin-bottom:12px;min-height:18px"></div>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button id="add-cancel" style="background:none;color:var(--dim);border:1px solid var(--border);border-radius:6px;padding:7px 16px;cursor:pointer">取消</button>
+      <button id="add-submit" style="background:var(--cyan);color:var(--bg);border:none;border-radius:6px;padding:7px 20px;cursor:pointer;font-weight:600">添加</button>
+    </div>
+  </div>
+</div>
 <script>
 const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];
 /* 静态部署模式（GitHub Pages）：window.MYSTATION_STATIC 注入后，API 走内嵌的 data/*.json */
@@ -290,6 +312,37 @@ async function boot(){
    <span class="pill">回测 <b>含手续费</b></span>`;
 }
 boot().catch(e=>{$('#kpis').innerHTML=`<div class="card neg">加载失败：${e}</div>`});
+
+/* ── 添加标的对话框 ── */
+const HINTS={US:'输入美股代码，如 AAPL / AMD / COIN',CN:'6 位数字，沪市 6/9 开头、深市 0/3 开头；自动判断 .SS/.SZ',HK:'4-5 位数字，如 00700（腾讯）、09988（阿里）；自动补 .HK'};
+$('#add-market').onchange=e=>{$('#add-hint').textContent=HINTS[e.target.value]||''};
+$('#add-hint').textContent=HINTS.US;
+$('#add-btn').onclick=()=>{$('#add-dialog').style.display='flex';$('#add-code').focus()};
+$('#add-cancel').onclick=()=>{$('#add-dialog').style.display='none';$('#add-status').textContent='';$('#add-status').style.color=''};
+$('#add-submit').onclick=async()=>{
+  const btn=$('#add-submit'),st=$('#add-status');
+  btn.disabled=true;st.style.color='var(--dim)';
+  st.textContent='⏳ 获取五年日线 → ArcticDB → gs-quant 指标 → 带手续费回测…';
+  try{
+    const r=await fetch('/api/symbols',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({market:$('#add-market').value,code:$('#add-code').value})});
+    const j=await r.json();
+    if(!j.ok){st.style.color='var(--red)';st.textContent='❌ '+j.error}
+    else{
+      st.style.color='var(--green)';
+      const sim=j.source==='simulated'?' ⚠️（真实源不可用，已用模拟数据）':'';
+      st.textContent=`✅ ${j.symbol}${j.name?' '+j.name:''}：${j.rows} 行（${j.start} → ${j.end}，来源 ${j.source}）${sim} · ${j.elapsed_s}s`;
+      setTimeout(async()=>{$('#add-dialog').style.display='none';st.textContent='';
+        const [ov,sy]=await Promise.all([fetch(apiUrl('overview')).then(r=>r.json()),fetch(apiUrl('status')).then(r=>r.json())]);
+        state.overview=ov;state.status=sy;
+        const opts=Object.keys(ov.analytics.symbols).map(s=>`<option>${s}</option>`).join('');
+        $('#risk-symbol').innerHTML=opts;$('#bt-symbol').innerHTML=opts;
+        renderOverview();
+      },1600);
+    }
+  }catch(e){st.style.color='var(--red)';st.textContent='❌ 请求失败：'+e}
+  btn.disabled=false;
+};
 </script>
 </body>
 </html>
