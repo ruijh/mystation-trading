@@ -7,3 +7,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store
+# 运行时噪音（服务器日志随每次启动变化，不是演示证据）
+artifacts/logs/flask.log
