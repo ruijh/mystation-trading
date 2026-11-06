@@ -100,6 +100,9 @@ select{background:var(--panel2);color:var(--fg);border:1px solid var(--border);b
 </main>
 <script>
 const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];
+/* 静态部署模式（GitHub Pages）：window.MYSTATION_STATIC 注入后，API 走内嵌的 data/*.json */
+const API_ROOT=window.MYSTATION_STATIC?'data':'';
+const apiUrl=name=>API_ROOT?`${API_ROOT}/${name}.json`:`/api/${name}`;
 const fmtP=x=>(x>=0?'+':'')+(100*x).toFixed(2)+'%';
 const fmt2=x=>Number(x).toFixed(2);
 const dstr=ms=>{const d=new Date(ms);return d.toISOString().slice(0,10)};
@@ -211,7 +214,7 @@ function renderOverview(){
 async function renderRisk(){
   const s=state.riskSym,a=state.overview.analytics.symbols[s];
   $('#beta-bench').textContent=a.benchmark||'SPY';
-  const [pr]=await Promise.all([fetch(`/api/price/${s}`).then(r=>r.json())]);
+  const [pr]=await Promise.all([fetch(apiUrl('price/'+s)).then(r=>r.json())]);
   const ser=a.series;
   svgLine($('#c-price'),[{name:s+' 收盘价',color:COLORS.price,points:pr.weekly}],{yfmt:v=>v.toFixed(0)});
   svgLine($('#c-dd'),[{name:'回撤',color:COLORS.dd,points:ser.drawdown_1w}],{yfmt:pctfmt,refLines:[{v:0,t:'0'}]});
@@ -231,7 +234,7 @@ async function renderRisk(){
 
 /* ── 回测 ── */
 async function renderBt(){
-  const s=state.btSym,d=await fetch(`/api/backtest/${s}`).then(r=>r.json());
+  const s=state.btSym,d=await fetch(apiUrl('backtest/'+s)).then(r=>r.json());
   const z=d.zscore_reversion||{},m=d.sma_cross||{};
   svgLine($('#c-eq'),[
     {name:'毛收益（不含费用）',color:COLORS.gross,points:z.equity_gross_1w},
@@ -273,8 +276,8 @@ function renderLibs(){
 /* ── boot ── */
 async function boot(){
   const [ov,st]=await Promise.all([
-    fetch('/api/overview').then(r=>r.json()),
-    fetch('/api/status').then(r=>r.json())]);
+    fetch(apiUrl('overview')).then(r=>r.json()),
+    fetch(apiUrl('status')).then(r=>r.json())]);
   state.overview=ov;state.status=st;
   const syms=Object.keys(ov.analytics.symbols);
   const opts=syms.map(s=>`<option>${s}</option>`).join('');
