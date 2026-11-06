@@ -1,6 +1,7 @@
-# 本地环境与数据（不入库）
+# 本地环境与数据（不入库；/data/ 仅指仓库根的 ArcticDB 本地存储，
+# 站点数据 docs/data/ 需要入库供 GitHub Pages 托管）
 .venv/
-data/
+/data/
 vendor/
 __pycache__/
 *.pyc
