@@ -25,6 +25,11 @@ yfinance 五年日线（真实数据）
 
 ## 快速开始
 
+**🌐 线上静态版（GitHub Pages）**：https://ruijh.github.io/mystation-trading/
+（导出时刻的数据快照，全功能四 tab 可交互；主题切换/标的下拉均可用）
+
+**本地完整版**（实时读 ArcticDB）：
+
 ```bash
 cd E:\交易桌
 # 1) 一键全量跑（首次会拉取行情，之后跳过）
@@ -33,6 +38,14 @@ cd E:\交易桌
 # 2) 启动工作台 UI
 .venv\Scripts\python.exe -X utf8 -m workbench.server.app
 # 打开 http://127.0.0.1:5055
+```
+
+**更新 Pages 静态快照**：
+
+```bash
+.venv\Scripts\python.exe -X utf8 -m workbench.run_all                     # 刷新分析数据
+.venv\Scripts\python.exe -X utf8 -m workbench.demos.export_static_site   # 导出 docs/
+git add docs/ && git commit -m "site: 刷新快照" && git push               # Pages 自动重建
 ```
 
 ## 分模块演示
