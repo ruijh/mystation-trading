@@ -4,7 +4,7 @@
 原理：UI（index.html）已支持 window.MYSTATION_STATIC 静态模式——fetch(/api/x)
 改走 data/x.json。本脚本把 Flask 各 API 的响应结构原样落成 JSON 文件：
 
-  site/
+  docs/
     index.html          （注入静态标志的 UI）
     .nojekyll           （跳过 Jekyll 处理）
     data/overview.json      （= /api/overview）
@@ -12,7 +12,8 @@
     data/price/<SYM>.json   （= /api/price/<SYM>）
     data/backtest/<SYM>.json（= /api/backtest/<SYM>）
 
-输出后可本地 `python -m http.server` 预览，或推送后由 Pages 托管。
+输出后可本地 `python -m http.server` 预览，或推送后由 Pages 托管
+（GitHub Pages legacy 构建仅支持根目录或 /docs 路径，故输出到 docs/）。
 注意：静态站是导出时刻的数据快照，不随 ArcticDB 实时更新。
 """
 from __future__ import annotations
@@ -25,7 +26,7 @@ from workbench.config import ARTIFACTS, ROOT
 from workbench.server.app import _json  # noqa: F401 —— 复用 Flask 端的 JSON 读取
 from workbench.store.arctic import load_symbol, symbol_status
 
-SITE_DIR = ROOT / "site"
+SITE_DIR = ROOT / "docs"
 
 
 def _price_payload(symbol: str) -> dict:
