@@ -1,0 +1,6 @@
+[WARNING] Running as root is not recommended
+File "demo_decode/mt_decode_demo.ml", lines 87-88, characters 2-19:
+87 | ..printf "\n[decode summary] events=%d (timeline excerpt above, %d printed)\n"
+88 |     !total !printed
+Error: This expression has type "unit" but an expression was expected of type
+         "'a Deferred.t"

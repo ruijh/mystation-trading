@@ -1,0 +1,38 @@
++ export 'PATH=/usr/lib/llvm-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ PATH='/usr/lib/llvm-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ opam switch set 5.2.0+ox
+# Run eval $(opam env) to update the current shell environment
++ cd /root/magic-trace
++ opam install --switch=5.2.0+ox -y --assume-depexts -j3 . --deps-only
++ RC=0
++ echo DEPS3_EXIT=0
+DEPS3_EXIT=0
++ '[' 0 -ne 0 ']'
++ opam exec --switch=5.2.0+ox -- dune --version
+[WARNING] Running as root is not recommended
+3.20.2
++ opam exec --switch=5.2.0+ox -- dune build
++ RC=1
++ echo DUNE_BUILD4_EXIT=1
+DUNE_BUILD4_EXIT=1
++ '[' 1 -ne 0 ']'
++ tail -25 /mnt/e/交易桌/artifacts/logs/mt_ox_build4.log
+[WARNING] Running as root is not recommended
+Error: execve(./gen-versions.sh): No such file or directory
+-> required by _build/default/bin/version_stubs.c
+-> required by alias bin/all
+-> required by alias default
+Generating perf_dlfilter.ml
+Skipping generation of .mli
++ ls -la _build/default/bin/
++ head -5
+total 36
+drwxr-xr-x  4 root root 4096 Nov  6 04:02 .
+drwxr-xr-x 10 root root 4096 Nov  6 04:02 ..
+drwxr-xr-x  4 root root 4096 Nov  6 04:02 .magic_trace_bin.eobjs
+drwxr-xr-x  2 root root 4096 Nov  6 04:02 .merlin-conf
++ ./_build/default/bin/main.exe --version
++ head -2
+/mnt/e/交易桌/scripts/wsl_magic_trace_deps.sh: line 19: ./_build/default/bin/main.exe: No such file or directory
++ echo MAGIC_TRACE_DEPS_BUILD_DONE
+MAGIC_TRACE_DEPS_BUILD_DONE

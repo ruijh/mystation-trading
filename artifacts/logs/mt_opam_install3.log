@@ -1,0 +1,39 @@
+[WARNING] Running as root is not recommended
+[NOTE] Ignoring uncommitted changes in /root/magic-trace (`--working-dir' not active).
+[magic-trace.1.0.1] synchronised (no changes)
+The following actions will be performed:
+  ∗ install magic-trace 1.0.1*
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+⬇ retrieved magic-trace.1.0.1  (no changes)
+[ERROR] The compilation of magic-trace.1.0.1 failed at "dune build -p magic-trace -j 3".
+
+#=== ERROR while compiling magic-trace.1.0.1 ==================================#
+# context              2.1.5 | linux/x86_64 | ocaml.4.14.1 | pinned(git+file:///root/magic-trace#master#b3faf23fccfc4373d47bb6458c9d7dc79b0723fe)
+# path                 ~/.opam/default/.opam-switch/build/magic-trace.1.0.1
+# command              ~/.opam/default/bin/dune build -p magic-trace -j 3
+# exit-code            1
+# env-file             ~/.opam/log/magic-trace-5704-8ad4e3.env
+# output-file          ~/.opam/log/magic-trace-5704-8ad4e3.out
+### output ###
+# [...]
+# Error: value expected
+# (cd _build/default && /usr/bin/ocamlc.opt -w -40 -w -a -alert -all -g -bin-annot -I vendor/tracing/zero/.tracing_zero.objs/byte -I /root/.opam/default/lib/base -I /root/.opam/default/lib/base/base_internalhash_types -I /root/.opam/default/lib/base/caml -I /root/.opam/default/lib/base/md5 -I /root/.opam/default/lib/base/shadow_stdlib -I /root/.opam/default/lib/base_bigstring -I /root/.opam/def[...]
+# File "vendor/tracing/zero/writer_intf.ml", line 17, characters 40-86:
+# 17 |   val next_buf : ensure_capacity:int -> (read_write, Iobuf.seek, Iobuf.global) Iobuf.t
+#                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# Error: The type constructor Iobuf.t expects 2 argument(s),
+#        but is here applied to 3 argument(s)
+# (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -w -a -alert -all -g -I vendor/fzf/src/.fzf.objs/byte -I vendor/fzf/src/.fzf.objs/native -I /root/.opam/default/lib/async -I /root/.opam/default/lib/async/async_command -I /root/.opam/default/lib/async/async_quickcheck -I /root/.opam/default/lib/async/async_rpc -I /root/.opam/default/lib/async_kernel -I /root/.opam/default/lib/async_kernel/co[...]
+# File "vendor/fzf/src/fzf.ml", line 375, characters 43-62:
+# 375 |       Option.iter pid_ivar ~f:(fun ivar -> Async.Ivar.fill_exn ivar pid);
+#                                                  ^^^^^^^^^^^^^^^^^^^
+# Error: Unbound value Async.Ivar.fill_exn
+
+
+
+<><> Error report <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+┌─ The following actions failed
+│ λ build magic-trace 1.0.1
+└─ 
+╶─ No changes have been performed

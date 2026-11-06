@@ -1,0 +1,20 @@
+[WARNING] Running as root is not recommended
+Creating repository ox...
+[ox] Initialised
+
+<><> Installing new switch packages <><><><><><><><><><><><><><><><><><><><><><>
+Switch invariant: ["ocaml-variants" {= "5.2.0+ox"}]
+
+The following system packages will first need to be installed:
+    autoconf
+
+<><> Handling external dependencies <><><><><><><><><><><><><><><><><><><><><><>
+Let opam run your package manager to install the required system packages?
+(answer 'n' for other options) [Y/n] n
+[NOTE] Use 'opam option depext-run-installs=false' if you don't want to be prompted again.
+This command should get the requirements installed:
+
+    apt-get install autoconf
+
+You can retry with '--assume-depexts' to skip this check, or run 'opam option depext=false' to permanently disable handling of system packages altogether.
+Switch initialisation failed: clean up? ('n' will leave the switch partially installed) [Y/n] y

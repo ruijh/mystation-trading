@@ -1,0 +1,1608 @@
+CC	fd_blst_curve.o
+CC	fd_blst_field.o
+AS	assembly.o
+CC	fd_rdisp.o
+CC	fd_sched.o
+CC	fd_replay_tile.o
+CC	fd_vote_tracker.o
+CC	fd_rpc_tile.o
+CC	fd_gui.o
+CC	fd_gui_shred.o
+CC	fd_gui_printf.o
+CC	fd_gui_peers.o
+CC	fd_gui_config_parse.o
+CC	fd_gui_tile.o
+CC	fd_gui_store.o
+CC	fd_gui_hist.o
+CC	fd_gui_gossip_bw.o
+AS	fd_reedsol_gfni_32.o
+CC	entropy_common.o
+CC	error_private.o
+CC	fse_decompress.o
+CC	xxhash.o
+CC	fd_reedsol.o
+CC	fd_reedsol_encode_16.o
+CC	zstd_common.o
+CC	fse_compress.o
+CC	hist.o
+CC	huf_compress.o
+CC	fd_reedsol_encode_32.o
+CC	zstd_compress.o
+CC	fd_reedsol_encode_64.o
+CC	fd_reedsol_encode_128.o
+CC	zstd_compress_literals.o
+CC	fd_reedsol_recover_16.o
+CC	zstd_compress_sequences.o
+CC	fd_reedsol_recover_32.o
+CC	zstd_compress_superblock.o
+CC	fd_reedsol_recover_64.o
+CC	zstd_double_fast.o
+CC	zstd_fast.o
+CC	zstd_ldm.o
+CC	fd_reedsol_recover_128.o
+CC	zstd_opt.o
+CC	fd_reedsol_recover_256.o
+CC	zstd_preSplit.o
+CC	fd_reedsol_pi.o
+CC	adler32.o
+CC	crc32.o
+CC	deflate.o
+CC	trees.o
+CC	zutil.o
+LD	fd_zstd_pack (tool)
+CC	fd_reedsol_ppt_impl_33.o
+LD	fd_gzip_pack (tool)
+CC	fd_reedsol_ppt_impl_40.o
+CC	fd_reedsol_ppt_impl_45.o
+CC	fd_reedsol_ppt_impl_50.o
+CC	fd_reedsol_ppt_impl_55.o
+CC	fd_reedsol_ppt_impl_60.o
+CC	fd_reedsol_ppt_impl_65.o
+CC	fd_reedsol_fft_impl_128_0.o
+CC	fd_reedsol_fft_impl_128_128.o
+CC	fd_reedsol_fft_impl_256_0.o
+CC	fd_reedsol_ifft_impl_128_0.o
+CC	fd_reedsol_ifft_impl_256_0.o
+CC	fd_reedsol_fderiv_impl_128.o
+CC	fd_reedsol_fderiv_impl_256.o
+GZIP	LICENSE_DEPENDENCIES.gzCC	fd_vm.o
+
+ZSTD	index.html.zst
+GZIP	index.html.gz
+ZSTD	version.zst
+GZIP	version.gz
+ZSTD	Chart-_eZALpCv.js.zst
+GZIP	Chart-_eZALpCv.js.gz
+ZSTD	NotoFlagsOnly.woff2.zst
+GZIP	NotoFlagsOnly.woff2.gz
+ZSTD	firedancer-D_J0EzUc.svg.zst
+GZIP	firedancer-D_J0EzUc.svg.gz
+ZSTD	firedancer_bam_circle_logo-CDCzUQI_.svg.zst
+GZIP	firedancer_bam_circle_logo-CDCzUQI_.svg.gz
+ZSTD	firedancer_circle_logo-D9jlxCje.svg.zst
+GZIP	firedancer_circle_logo-D9jlxCje.svg.gz
+ZSTD	firedancer_harmonic_circle_logo-BDGMe3Wt.svg.zst
+GZIP	firedancer_harmonic_circle_logo-BDGMe3Wt.svg.gz
+ZSTD	firedancer_logo-CrgwxzPk.svg.zst
+GZIP	firedancer_logo-CrgwxzPk.svg.gz
+ZSTD	frankendancer-0Top5G94.svg.zst
+GZIP	frankendancer-0Top5G94.svg.gz
+CC	fd_vm_interp.o
+ZSTD	frankendancer_bam_circle_logo-CWbBJvMN.svg.zst
+GZIP	frankendancer_bam_circle_logo-CWbBJvMN.svg.gz
+ZSTD	frankendancer_circle_logo-D5z79vwQ.svg.zst
+GZIP	frankendancer_circle_logo-D5z79vwQ.svg.gz
+ZSTD	frankendancer_harmonic_circle_logo-RW9Ak0Ky.svg.zst
+GZIP	frankendancer_harmonic_circle_logo-RW9Ak0Ky.svg.gz
+ZSTD	frankendancer_logo-CHyfJ772.svg.zst
+GZIP	frankendancer_logo-CHyfJ772.svg.gz
+ZSTD	index-BE18loOQ.js.zst
+GZIP	index-BE18loOQ.js.gz
+ZSTD	index-E858nJas.css.zst
+GZIP	index-E858nJas.css.gz
+ZSTD	inter-tight-latin-400-normal-BLrFJfvD.woff.zst
+CC	fd_vm_disasm.o
+CC	fd_vm_trace.o
+GZIP	inter-tight-latin-400-normal-BLrFJfvD.woff.gz
+ZSTD	inter-tight-latin-400-normal-iW8qmuJY.woff2.zst
+GZIP	inter-tight-latin-400-normal-iW8qmuJY.woff2.gz
+ZSTD	privateYou-DnAsYVZD.svg.zst
+GZIP	privateYou-DnAsYVZD.svg.gz
+ZSTD	roboto-mono-latin-400-normal-DBZPkcnn.woff.zst
+GZIP	roboto-mono-latin-400-normal-DBZPkcnn.woff.gz
+ZSTD	roboto-mono-latin-400-normal-GekRknry.woff2.zst
+GZIP	roboto-mono-latin-400-normal-GekRknry.woff2.gz
+ZSTD	wsWorker-zREcbQEj.js.zst
+GZIP	wsWorker-zREcbQEj.js.gz
+CC	fd_vm_syscall.o
+CC	fd_vm_syscall_cpi.o
+CC	fd_vm_syscall_hash.o
+ZSTD	LICENSE_DEPENDENCIES.zst
+CC	fd_vm_syscall_crypto.o
+CC	fd_vm_syscall_curve.o
+CC	fd_vm_syscall_pda.o
+CC	fd_vm_syscall_runtime.o
+CC	fd_vm_syscall_util.o
+CC	fd_vm_syscall_big_mod_exp.o
+CC	test_vm_util.o
+CC	fse_compress.o
+CC	hist.o
+CC	huf_compress.o
+CC	zstd_compress.o
+CC	zstd_compress_literals.o
+CC	zstd_compress_sequences.o
+CC	zstd_compress_superblock.o
+CC	zstd_double_fast.o
+CC	zstd_fast.o
+CC	zstd_ldm.o
+CC	zstd_opt.o
+CC	zstd_preSplit.o
+CC	fd_pack.o
+CC	fd_pack_rebate_sum.o
+CC	fd_pack_tile.o
+CC	fd_quic.o
+CC	topology.o
+CC	watch.o
+CC	fd_snapct_tile.o
+CC	fd_snapld_tile.o
+CC	fd_snapdc_tile.o
+CC	fd_snapin_tile.o
+CC	fd_execle_tile.o
+CC	fd_failover_tile.o
+CC	fd_admin_tile.o
+CC	fd_solcap_tile.o
+CC	fd_gossip_tile.o
+CC	fd_gossvf_tile.o
+CC	fd_execrp_tile.o
+CC	fd_motor_tile.o
+CC	fd_resolv_tile.o
+CC	fd_ipecho_tile.o
+CC	fd_snapmk_tile.o
+CC	fd_snapzp_tile.o
+CC	fd_snaprd_tile.o
+CC	fd_snapsv_tile.o
+CC	fd_genesi_tile.o
+CC	fd_votor_tile.o
+CC	fd_waker_tile.o
+CC	fd_metric_tile.o
+CC	fd_dedup_tile.o
+CC	fd_shred_tile.o
+CC	fd_repair_tile.o
+CC	fd_rserve_tile.o
+CC	fd_bundle_tile.o
+CC	fd_sock_tile.o
+CC	fd_xdp_tile.o
+CC	fd_iavf_tile.o
+CC	fd_mlx5_tile.o
+CC	fd_quic_tile.o
+CC	fd_netlink_tile.o
+CC	fd_diag_tile.o
+CC	fd_sign_tile.o
+CC	fd_verify_tile.o
+CC	fd_event_tile.o
+CC	fd_mwaitx_tile.o
+CC	fd_accdb.o
+CC	huf_decompress.o
+CC	zstd_ddict.o
+CC	zstd_decompress.o
+CC	zstd_decompress_block.o
+AS	huf_decompress_amd64.o
+CC	fd_sha256.o
+CC	fd_sha256_batch_avx.o
+CC	fd_sha512.o
+AS	fd_sha512_core_avx2.o
+CC	fd_sha512_batch_avx.o
+CC	fd_bn254.o
+CC	fd_bn254_field.o
+CC	fd_bn254_field_ext.o
+CC	fd_bn254_fp12.o
+CC	fd_bn254_g1.o
+CC	fd_bn254_g2.o
+CC	fd_bn254_g2_check.o
+CC	fd_bn254_pairing.o
+CC	fd_bn254_final_exp.o
+CC	fd_poseidon.o
+CC	fd_builtin_programs.o
+CC	fd_bpf_loader_serialization.o
+CC	fd_precompiles.o
+CC	fd_bpf_loader_program.o
+CC	fd_compute_budget_program.o
+CC	fd_system_program.o
+CC	fd_system_program_nonce.o
+CC	fd_vote_program.o
+CC	fd_zk_elgamal_proof_program.o
+CC	fd_native_cpi.o
+CC	fd_vote_codec.o
+CC	fd_authorized_voters.o
+CC	fd_vote_utils.o
+CC	fd_vote_state_versioned.o
+CC	fd_vote_state_v3.o
+CC	fd_vote_state_v4.o
+CC	fd_vote_state_v5.o
+CC	fd_f25519.o
+CC	fd_curve25519.o
+CC	fd_curve25519_scalar.o
+CC	fd_ed25519_user.o
+CC	fd_ed25519_cache.o
+CC	fd_x25519.o
+CC	fd_ristretto255.o
+CC	blocksort.o
+CC	compress.o
+CC	crctable.o
+CC	decompress.o
+CC	huffman.o
+CC	randtable.o
+CC	bzlib.o
+CC	fd_stakes.o
+CC	fd_vote_stakes.o
+CC	fd_stake_delegations.o
+CC	fd_epoch_credits.o
+CC	fd_stat.o
+CC	fd_circq.o
+CC	fd_event_client.o
+CC	fd_event_report.o
+CC	fd_boot_report.o
+CC	fd_event_gen.o
+CC	fd_topo.o
+CC	fd_topob.o
+CC	fd_topob_layout.o
+CC	fd_cpu_topo.o
+CC	fd_topo_run.o
+CC	fd_dns_resolve.o
+CC	fd_blake3.o
+CC	fd_blake3_ref.o
+CC	fd_blake3_sse41.o
+CC	fd_blake3_avx2.o
+CC	fd_stake_rewards.o
+CC	fd_integer_inflation.o
+CC	fd_rewards.o
+CC	fd_shred_dest.o
+CC	fd_shredder.o
+CC	fd_stake_ci.o
+CC	fd_fec_resolver.o
+CC	fd_shred_dest_resolver.o
+CC	fd_http_server.o
+CC	fd_dump_pb.o
+CC	fd_x509.o
+CC	fd_toml.o
+CC	fd_rangeproofs.o
+CC	fd_alloc.o
+INFO	info
+CC	fd_pod.o
+CC	fd_wksp_restore_v2.o
+CC	fd_shmem_admin.o
+CC	fd_sandbox.o
+CC	fd_tpool.o
+CC	fd_wksp_helper.o
+CC	fd_wksp_admin.o
+CC	entropy_common.o
+CC	error_private.o
+CC	fse_decompress.o
+CC	xxhash.o
+CC	zstd_common.o
+CC	test_sha512.o
+CC	fd_base64.o
+CC	fd_jtok.o
+CC	fd_aes_gcm_x86.o
+AS	fd_aes_base_aesni.o
+AS	fd_aes_gcm_aesni.o
+AS	fd_aes_gcm_avx10.o
+CC	fd_shred.o
+CC	fd_merlin.o
+CC	fd_base58.o
+CC	fd_bls12_381.o
+CC	fd_bls.o
+CC	fd_bmtree.o
+CC	fd_x509_mock.o
+CC	fd_x509_ca_store.o
+CC	fd_x509_verify.o
+CC	fd_murmur3.o
+CC	fd_pb_tokenize.o
+CC	fd_rsa.o
+CC	fd_sha1.o
+CC	fd_hmac.o
+CC	fd_zksdk_zero_ciphertext.o
+CC	fd_zksdk_ciphertext_ciphertext_equality.o
+CC	fd_zksdk_ciphertext_commitment_equality.o
+CC	fd_zksdk_pubkey_validity.o
+CC	fd_zksdk_percentage_with_cap.o
+CC	fd_zksdk_batched_range_proof_u64.o
+CC	fd_zksdk_batched_range_proof_u128.o
+CC	fd_zksdk_batched_range_proof_u256.o
+CC	fd_zksdk_grouped_ciphertext_2_handles_validity.o
+CC	fd_zksdk_batched_grouped_ciphertext_2_handles_validity.o
+CC	fd_zksdk_grouped_ciphertext_3_handles_validity.o
+CC	fd_zksdk_batched_grouped_ciphertext_3_handles_validity.o
+CC	fd_secp384r1.o
+CC	fd_secp256k1.o
+CC	fd_chacha_sse.o
+CC	fd_chacha_rng.o
+CC	fd_chacha_rng_avx.o
+CC	fd_big_mod_exp.o
+CC	fd_keccak256.o
+CC	fd_secp256r1.o
+CC	fd_siphash13.o
+CC	fd_utf8.o
+CC	fd_hex.o
+CC	fd_sbpf_loader.o
+CC	fd_wsample.o
+CC	fd_lthash_adder.o
+CC	fd_txn_parse.o
+AS	bignum_inv_p25519.o
+AS	curve25519_x25519.o
+AS	curve25519_x25519_alt.o
+AS	curve25519_x25519base.o
+AS	curve25519_x25519base_alt.o
+AS	edwards25519_scalarmuldouble.o
+AS	edwards25519_scalarmuldouble_alt.o
+AS	edwards25519_scalarmulbase.o
+AS	edwards25519_scalarmulbase_alt.o
+AS	bignum_emontredc_8n.o
+AS	bignum_kmul_16_32.o
+AS	bignum_kmul_32_64.o
+AS	bignum_ksqr_16_32.o
+AS	bignum_ksqr_32_64.o
+AS	bignum_mul_4_8.o
+AS	bignum_mul_4_8_alt.o
+AS	bignum_mul_6_12.o
+AS	bignum_mul_6_12_alt.o
+AS	bignum_mul_8_16.o
+AS	bignum_sqr_8_16.o
+AS	bignum_amontifier.o
+AS	bignum_amontmul.o
+AS	bignum_amontsqr.o
+AS	bignum_bitsize.o
+AS	bignum_demont.o
+AS	bignum_modexp.o
+AS	bignum_modinv.o
+AS	bignum_montifier.o
+AS	bignum_montmul.o
+AS	bignum_mul.o
+AS	bignum_optsub.o
+AS	bignum_sqr.o
+AS	bignum_sub.o
+AS	word_negmodinv.o
+AS	bignum_add_p256.o
+AS	bignum_demont_p256.o
+AS	bignum_demont_p256_alt.o
+AS	bignum_mod_n256.o
+AS	bignum_mod_n256_4.o
+AS	bignum_mod_n256_alt.o
+AS	bignum_montinv_p256.o
+AS	bignum_montmul_p256.o
+AS	bignum_montmul_p256_alt.o
+AS	bignum_montsqr_p256.o
+AS	bignum_montsqr_p256_alt.o
+AS	bignum_optneg_p256.o
+AS	bignum_tomont_p256.o
+AS	bignum_tomont_p256_alt.o
+AS	p256_montjdouble.o
+AS	p256_montjdouble_alt.o
+AS	p256_montjmixadd.o
+AS	p256_montjmixadd_alt.o
+AS	p256_montjscalarmul.o
+AS	p256_montjscalarmul_alt.o
+AS	p256_scalarmulbase.o
+AS	p256_scalarmulbase_alt.o
+AS	bignum_add_p384.o
+AS	bignum_demont_p384.o
+AS	bignum_demont_p384_alt.o
+AS	bignum_mod_n384.o
+AS	bignum_mod_n384_6.o
+AS	bignum_mod_n384_alt.o
+AS	bignum_montinv_p384.o
+AS	bignum_montmul_p384.o
+AS	bignum_montmul_p384_alt.o
+AS	bignum_montsqr_p384.o
+AS	bignum_montsqr_p384_alt.o
+AS	bignum_optneg_p384.o
+AS	bignum_tomont_p384.o
+AS	bignum_tomont_p384_alt.o
+AS	p384_montjadd.o
+AS	p384_montjadd_alt.o
+AS	p384_montjdouble.o
+AS	p384_montjdouble_alt.o
+AS	p384_montjscalarmul.o
+AS	p384_montjscalarmul_alt.o
+AS	bignum_add_p256k1.o
+AS	bignum_demont_p256k1.o
+AS	bignum_double_p256k1.o
+AS	bignum_mod_n256k1_4.o
+AS	bignum_montmul_p256k1.o
+AS	bignum_montmul_p256k1_alt.o
+AS	bignum_montsqr_p256k1.o
+AS	bignum_montsqr_p256k1_alt.o
+AS	bignum_neg_p256k1.o
+AS	bignum_sub_p256k1.o
+AS	bignum_tomont_p256k1.o
+AS	bignum_tomont_p256k1_alt.o
+AS	bignum_triple_p256k1.o
+AS	bignum_triple_p256k1_alt.o
+AS	sha3_keccak_f1600.o
+CC	pb_common.o
+CC	pb_decode.o
+CC	pb_encode.o
+AR	libfd_blst.a
+CC	fd_shmem_user.o
+AR	libfd_zstd.a
+CC	fd_numa_linux.o
+CC	fd_wksp_user.o
+CC	fd_wksp_used_treap.o
+CC	fd_wksp_free_treap.o
+CC	fd_cstr.o
+CC	fd_eth.o
+CC	fd_ip4.o
+CC	fd_ip6.o
+CC	fd_scratch.o
+CC	fd_env.o
+CC	fd_tile.o
+CC	fd_tile_rseq.o
+CC	fd_tile_threads.o
+CC	fd_rng_secure.o
+CC	fd_io_uring.o
+CC	fd_io_uring_setup.o
+CC	fd_hash.o
+CC	fd_util.o
+CC	fd_version.o
+CC	fd_map_util.o
+CC	fd_clock.o
+CC	fd_backtrace.o
+CC	fd_io.o
+CC	test_elf.o
+CC	test_bn254.o
+CC	test_poseidon.o
+CC	test_base64.o
+CC	test_jtok.o
+CC	test_aes.o
+CC	fd_aes_base_ref.o
+CC	test_shred.o
+CC	test_merlin.o
+CC	test_base58.o
+CC	test_bls12_381.o
+CC	test_bmtree.o
+CC	test_der.o
+CC	test_x509.o
+CC	test_x509_verify.o
+CC	test_murmur3.o
+CC	test_blake3.o
+CC	test_ed25519.o
+CC	test_ed25519_signature_malleability.o
+CC	test_x25519.o
+CC	test_ristretto255.o
+CC	test_pb.o
+CC	test_rsa.o
+CC	test_sha1.o
+CC	test_sha256.o
+CC	test_hmac.o
+CC	test_zksdk.o
+CC	test_secp384r1.o
+CC	test_reedsol.o
+CC	fd_reedsol_ppt_impl_17.o
+CC	fd_reedsol_ppt_impl_25.o
+CC	fd_reedsol_fft_impl_64_0.o
+CC	fd_reedsol_fft_impl_64_64.o
+CC	fd_reedsol_ifft_impl_64_0.o
+CC	fd_reedsol_ifft_impl_64_64.o
+CC	fd_reedsol_ifft_impl_128_128.o
+AR	libfd_reedsol.a
+CC	test_secp256k1.o
+CC	test_chacha.o
+CC	test_chacha_rng.o
+CC	test_chacha_rng_roll.o
+CC	test_uint256.o
+CC	test_big_mod_exp.o
+CC	test_keccak256.o
+CC	test_secp256r1.o
+CC	test_siphash13.o
+CC	test_utf8.o
+CC	test_toml.o
+CC	test_hex.o
+CC	test_sbpf_load_prog.o
+CC	test_sbpf_loader.o
+CC	test_sbpf_elf_peek.o
+CC	test_sbpf_strict_elf.o
+CC	test_sbpf_fast_load.o
+CC	test_wsample.o
+CC	test_lthash.o
+CC	test_txn_parse.o
+CC	test_txn.o
+CC	test_compact_u16.o
+CC	test_txn_build.o
+CC	fd_txn_build.o
+CC	test_waker.o
+CC	fd_waker.o
+CC	fd_prometheus.o
+CC	fd_metrics.o
+CC	fd_metrics_sample.o
+CC	fd_metrics_all.o
+CC	fd_metrics_sample_gen.o
+CC	fd_store.o
+CC	fd_repair.o
+CC	fd_repair_serde.o
+CC	fd_repair_strat.o
+CC	fd_rserve.o
+CC	fd_bundle_proto.o
+CC	fd_bundle_crank.o
+CC	fd_bundle_auth.o
+CC	fd_bundle_client.o
+CC	fd_iavf.o
+CC	fd_mlx5.o
+CC	fd_net_tile_topo.o
+CC	fd_linux_bond.o
+CC	fd_net_tile_fib4.o
+CC	fd_tpu_reasm.o
+CC	fd_proc_interrupts.o
+CC	fd_keyguard_authorize.o
+CC	fd_keyguard_match.o
+CC	fd_keyguard_client.o
+CC	fd_keyswitch.o
+CC	fd_keyguard_bls.o
+CC	fd_keyload.o
+CC	fd_genesis_cluster.o
+CC	fd_sleep.o
+CC	fd_accdb_tile.o
+CC	fd_tempo.o
+CC	fd_cnc.o
+CC	fd_dcache.o
+CC	fd_mcache.o
+CC	fd_tcache.o
+CC	fd_fseq.o
+CC	test_store.o
+CC	fd_prog_load.o
+CC	fd_progcache.o
+CC	fd_progcache_admin.o
+CC	fd_progcache_user.o
+CC	fd_progcache_clock.o
+CC	fd_progcache_rec.o
+CC	fd_progcache_reclaim.o
+CC	fd_accdb_cache.o
+CC	fd_accdb_shmem.o
+CC	fd_alpenglow.o
+CC	fd_footer_cache.o
+CC	fd_vote_queue.o
+CC	fd_block_marker.o
+CC	fd_block_marker_serde.o
+CC	fd_leaders.o
+CC	fd_multi_epoch_leaders.o
+CC	fd_solcap_writer.o
+CC	fd_capture_ctx.o
+CC	context.pb.o
+CC	instr.pb.o
+CC	txn.pb.o
+CC	block.pb.o
+CC	vm.pb.o
+CC	metadata.pb.o
+CC	fd_exec_instr_ctx.o
+CC	fd_sysvar.o
+CC	fd_sysvar_cache.o
+CC	fd_sysvar_cache_db.o
+CC	fd_sysvar_clock.o
+CC	fd_sysvar_epoch_rewards.o
+CC	fd_sysvar_epoch_schedule.o
+CC	fd_sysvar_instructions.o
+CC	fd_sysvar_last_restart_slot.o
+CC	fd_sysvar_recent_hashes.o
+CC	fd_sysvar_rent.o
+CC	fd_sysvar_rent1.o
+CC	fd_sysvar_slot_hashes.o
+CC	fd_sysvar_slot_history.o
+CC	fd_sysvar_stake_history.o
+CC	fd_accdb_svm.o
+CC	fd_blockhashes.o
+CC	fd_core_bpf_migration.o
+CC	fd_bpf_frames.o
+CC	fd_executor.o
+CC	fd_hashes.o
+CC	fd_pubkey_utils.o
+CC	fd_slot_params.o
+CC	fd_txncache_shmem.o
+CC	fd_txncache.o
+CC	fd_cost_tracker.o
+CC	fd_cost_tracker_store.o
+CC	fd_compute_budget_details.o
+CC	fd_borrowed_account.o
+CC	fd_bank.o
+CC	fd_runtime.o
+CC	fd_system_ids.o
+CC	fd_instr_info.o
+CC	fd_features.o
+CC	fd_features_generated.o
+CC	fd_gossip.o
+CC	fd_gossip_message.o
+CC	fd_gossip_out.o
+CC	fd_gossip_txbuild.o
+CC	fd_gossip_purged.o
+CC	fd_gossip_hset.o
+CC	fd_prune_finder.o
+CC	fd_bloom.o
+CC	fd_crds.o
+CC	fd_active_set.o
+CC	fd_ping_tracker.o
+CC	fd_gossip_wsample.o
+CC	fd_event_tl.o
+CC	fd_event_runtime.o
+CC	fd_genesis_parse.o
+CC	fd_txn_generate.o
+CC	test_fec_resolver.o
+CC	fd_wksp_io.o
+CC	fd_wksp_checkpt_v1.o
+CC	fd_wksp_restore_v1.o
+CC	fd_wksp_checkpt_v2.o
+CC	fd_ar.o
+CC	fd_racesan.o
+CC	fd_racesan_async.o
+CC	fd_racesan_weave.o
+CC	fd_checkpt.o
+CC	fd_restore.o
+CC	fd_pkeys.o
+CC	fd_spad.o
+CC	fd_bits.o
+CC	test_shred_dest.o
+CC	test_shred_dest_conformance.o
+CC	test_stake_ci.o
+CC	test_rnonce_ss.o
+CC	test_shred_batch.o
+CC	test_shredder.o
+CC	fd_pcap.o
+CC	fd_pcapng.o
+CC	fd_pcapng_iter.o
+CC	fd_rng.o
+CC	test_fd_repair.o
+CC	fd_bls_serde.o
+CC	fd_vote.o
+CC	fd_vote_serde.o
+CC	fd_epoch_info.o
+CC	fd_cert.o
+CC	fd_cert_serde.o
+CC	fd_votor_pool.o
+CC	fd_finality_tracker.o
+CC	fd_parent_ready_tracker.o
+CC	fd_votor_loop.o
+CC	fd_vote_history_serde.o
+CC	fd_votor_hist.o
+CC	test_fd_repair_serde.o
+CC	test_fd_repair_strat.o
+CC	test_blockdb.o
+CC	test_rserve_tile.o
+CC	picohttpparser.o
+CC	fd_netdev_tbl.o
+CC	fd_netdev_netlink.o
+CC	fd_xsk.o
+CC	fd_xdp1.o
+CC	fd_xdp_redirect_user.o
+CC	fd_aio.o
+CC	fd_grpc_codec.o
+CC	fd_grpc_client.o
+CC	fd_url.o
+CC	fd_hpack.o
+CC	nghttp2_hd_huffman.o
+CC	nghttp2_hd_huffman_data.o
+CC	fd_h2_proto.o
+CC	fd_h2_callback.o
+CC	fd_h2_conn.o
+CC	fd_h2_hdr_match.o
+CC	fd_h2_tx.o
+CC	fd_getaddrinfo.o
+CC	fd_adns.o
+CC	fd_io_readline.o
+CC	fd_netdb_open_fds.o
+CC	fd_resolvconf.o
+CC	fd_lookup_name.o
+CC	fd_lookup_ipliteral.o
+CC	fd_dn_expand.o
+CC	fd_dns_parse.o
+CC	fd_res_mkquery.o
+CC	fd_res_msend.o
+CC	fd_fib4.o
+CC	fd_netlink1.o
+CC	fd_fib4_netlink.o
+CC	fd_tlsrec.o
+CC	fd_tlsrec_sock.o
+CC	fd_neigh4_map.o
+CC	fd_neigh4_netlink.o
+CC	fd_neigh4_probe.o
+CC	test_bundle_crank.o
+CC	test_bundle_client.o
+CC	fd_tls.o
+CC	fd_tls_proto.o
+CC	test_bundle_client_wraparound.o
+CC	test_bundle_tile.o
+CC	test_xdp_tile.o
+CC	test_iavf_tile.o
+CC	test_mlx5_tile.o
+CC	test_live_table.o
+CC	test_gui_geoip.o
+CC	test_gui_config_parse.o
+CC	fd_zstd_frame.o
+CC	fd_ssparse.o
+CC	fd_ssmanifest_parser.o
+CC	fd_ssload.o
+CC	fd_ssping.o
+CC	fd_http_resolver.o
+CC	fd_slot_delta_parser.o
+CC	fd_ssresolve.o
+CC	fd_sshttp.o
+CC	fd_ssarchive.o
+CC	fd_sspeer_selector.o
+CC	fd_failover_proto.o
+CC	fd_failover_wire.o
+CC	fd_failover_channel.o
+CC	fd_failover_tls.o
+CC	fd_adminctl.o
+CC	fd_startup.o
+CC	fd_ipecho_client.o
+CC	fd_ipecho_server.o
+CC	fd_ipecho_server_port_check.o
+CC	fd_snap_pool.o
+CC	fd_ssmanifest_writer.o
+CC	fd_txncache_writer.o
+CC	fd_backup_cache.o
+CC	fd_genesis_client.o
+CC	test_gui_store.o
+CC	test_gui_hist_evict.o
+CC	test_gui_tile.o
+CC	test_gui_printf.o
+CC	test_tpu_reasm.o
+CC	test_quic_metrics.o
+CC	test_wait_info.o
+CC	test_proc_interrupts.o
+CC	test_disco_base.o
+CC	test_compute_budget_program.o
+CC	test_est_tbl.o
+CC	test_pack_bitset.o
+CC	test_chkdup.o
+CC	test_tip_prog_blacklist.o
+CC	test_pack_rebate_sum.o
+CC	test_pack.o
+CC	test_deduplication.o
+CC	test_keyguard.o
+CC	test_keyload.o
+CC	test_sign_tile.o
+CC	test_verify.o
+CC	test_verify_tile.o
+CC	test_circq.o
+CC	test_event_client.o
+CC	test_events.o
+CC	test_boot_report.o
+CC	test_topob.o
+CC	test_dns_resolve.o
+CC	test_stem_sticky_poll.o
+CC	test_stem_park.o
+CC	test_sleep.o
+CC	test_topo_progcache.o
+CC	config.o
+CC	callbacks.o
+CC	add_authorized_voter.o
+CC	remove_all_authorized_voters.o
+CC	shred_version.o
+CC	snapshot_create.o
+CC	set_identity.o
+CC	get_identity.o
+CC	failover.o
+CC	adminctl_client.o
+CC	monitor_gossip.o
+CC	gossip_diag.o
+CC	wait.o
+CC	fd_bootinfo.o
+CC	fd_config.o
+CC	fd_config_parse.o
+CC	fd_auto_net.o
+CC	fd_config_json.o
+CC	fd_obj_callbacks.o
+CC	fd_boot.o
+CC	help.o
+CC	keys.o
+CC	mem.o
+CC	metrics.o
+CC	netconf.o
+CC	ps.o
+CC	ready.o
+CC	version.o
+CC	configure.o
+CC	mlx5.o
+CC	iavf.o
+CC	bonding.o
+CC	ethtool-channels.o
+CC	ethtool-offloads.o
+CC	ethtool-loopback.o
+CC	irq-affinity.o
+CC	irq-balance.o
+CC	fd_ethtool_ioctl.o
+CC	fd_irqbalance_client.o
+CC	hugetlbfs.o
+CC	hyperthreads.o
+CC	sysctl.o
+CC	sysfs-poll.o
+CC	snapshots.o
+CC	fd_cpu_isolation.o
+CC	kworkers.o
+CC	cpuset.o
+CC	nohz-full.o
+CC	rcu-nocbs.o
+CC	console.o
+CC	monitor.o
+CC	helper.o
+CC	run.o
+CC	run1.o
+CC	fd_config_extract.o
+CC	fd_cap_chk.o
+CC	fd_sys_util.o
+CC	fd_net_util.o
+CC	fd_file_util.o
+CC	fd_quic_crypto_suites.o
+CC	fd_quic_tls.o
+CC	fd_quic_ack_tx.o
+CC	fd_quic_conn.o
+CC	fd_quic_pkt_meta.o
+CC	fd_quic_retry.o
+CC	fd_quic_svc_q.o
+CC	fd_quic_stream_pool.o
+CC	fd_quic_stream.o
+CC	fd_quic_transport_params.o
+CC	fd_quic_log.o
+CC	test_failover.o
+CC	test_config_parse.o
+CC	test_auto_net.o
+CC	test_config_json.o
+CC	test_iavf_configure.o
+CC	test_rpc_client.o
+CC	fd_quic_trace_frame.o
+CC	fd_quic_trace_main.o
+CC	fd_quic_trace_rx_tile.o
+CC	fd_quic_trace_log_tile.o
+CC	fd_dev_boot.o
+CC	bench.o
+CC	bundle_client.o
+CC	dev.o
+CC	dump.o
+CC	flame.o
+CC	load.o
+CC	metrics_record.o
+CC	pktgen.o
+CC	txn.o
+CC	udpecho.o
+CC	wksp.o
+CC	fd_bencho.o
+CC	fd_benchg.o
+CC	fd_benchs.o
+CC	fd_pktgen_tile.o
+CC	fd_udpecho_tile.o
+CC	keys.o
+CC	kill.o
+CC	genesis.o
+CC	fd_rpc_client.o
+CC	fd_genesis_create.o
+CC	dump_rpc_client.o
+CC	test_tempo.o
+CC	bench_tempo_calib.o
+CC	test_cnc.o
+CC	test_tango_base.o
+CC	test_meta_tx.o
+CC	fd_fctl.o
+CC	test_meta_rx.o
+CC	test_frag_tx.o
+CC	test_frag_rx.o
+CC	bench_frag_tx.o
+CC	test_dcache.o
+CC	test_fctl.o
+CC	test_mcache.o
+CC	test_tcache.o
+CC	test_fseq.o
+CC	test_cast.o
+CC	test_rust_float.o
+CC	test_stake_delegations.o
+CC	test_warmup_cooldown_allowance.o
+CC	test_vote_stakes.o
+CC	test_epoch_credits.o
+CC	test_progcache.o
+CC	test_accdb.o
+CC	test_accdb_cache.o
+CC	bench_accdb.o
+CC	bench_accdb_hotread.o
+CC	bench_accdb_txn.o
+CC	bench_accdb_cleanup.o
+CC	test_block_marker.o
+CC	test_footer_cache.o
+CC	test_alpenglow_v5.o
+CC	fd_solfuzz.o
+CC	fd_solfuzz_exec.o
+CC	fd_sol_compat.o
+CC	fd_elf_harness.o
+CC	fd_instr_harness.o
+CC	fd_txn_harness.o
+CC	fd_bundle_harness.o
+CC	fd_cost_harness.o
+CC	fd_harness_common.o
+CC	fd_vm_harness.o
+CC	fd_gossip_harness.o
+CC	fd_shred_harness.o
+CC	fd_block_harness.o
+CC	bundle.pb.o
+CC	vm_serialization.pb.o
+CC	gossip.pb.o
+CC	cost.pb.o
+CC	elf.pb.o
+CC	shred.pb.o
+CC	fd_svm_elfgen.o
+CC	fd_svm_mini.o
+CC	test_leaders.o
+CC	test_multi_leaders.o
+CC	test_leaders_geo.o
+CC	test_leaders_geo_sim.o
+CC	test_vm_interp.o
+CC	test_vm_base.o
+CC	test_vm_instr.o
+CC	test_pointer_chase.o
+CC	test_vm_syscall_cpi.o
+CC	test_vm_syscall_hash.o
+CC	test_vm_syscall_big_mod_exp.o
+CC	test_vm_syscalls.o
+CC	test_vm_syscall_curve.o
+CC	test_cpi_shared_data_addr.o
+CC	test_cpi_semantics.o
+CC	test_sol_compat.o
+CC	test_sol_compat_so.o
+CC	test_svm_elfgen.o
+CC	test_svm_mini.o
+CC	test_accdb_svm.o
+CC	test_sysvar.o
+CC	test_bpf_frames.o
+CC	test_hashes.o
+CC	test_slot_params.o
+CC	test_cost_tracker.o
+CC	test_cost_tracker_store.o
+CC	test_borrowed_account.o
+CC	test_bundle_exec.o
+CC	test_programdata_delayvis.o
+CC	test_runtime_alut.o
+CC	test_bank.o
+CC	test_txncache.o
+CC	test_lamports_per_byte_feature_gates.o
+CC	test_runtime_sysvar_cache.o
+CC	test_vat_refresh_vote_accounts.o
+CC	test_define_ltds_fee_only_semantics.o
+CC	test_accounts_resize_delta.o
+CC	test_fee_reward.o
+CC	test_inflation_rewards.o
+CC	test_fee_calculator.o
+CC	test_cost_model.o
+CC	test_feature_activation.o
+CC	test_system_ids.o
+CC	test_bpf_loader_serialization.o
+CC	test_bpf_loader_program.o
+CC	test_vote_program.o
+CC	test_create_account_allow_prefund.o
+CC	test_compute_budget_decode.o
+CC	test_precompiles.o
+CC	test_vote_codec.o
+CC	test_vote_state_v5.o
+CC	test_validator_location.o
+CC	test_rwlock.o
+CC	test_bloom.o
+CC	test_active_set.o
+CC	test_ping_tracker.o
+CC	test_gossip_wsample.o
+CC	test_gossip_purged.o
+CC	test_gossip_hset.o
+CC	test_log_collector.o
+CC	test_inflation_rate.o
+CC	test_integer_inflation.o
+CC	test_genesis_create.o
+CC	test_choreo_base.o
+CC	test_fd_votor_base.o
+CC	test_fd_bls.o
+CC	test_fd_vote.o
+CC	test_fd_epoch_info.o
+CC	test_fd_cert.o
+CC	test_fd_votor_hist.o
+CC	test_fd_votor_pool.o
+CC	test_fd_finality_tracker.o
+CC	test_fd_parent_ready_tracker.o
+CC	test_fd_votor_loop.o
+CC	test_fd_vote_history_serde.o
+CC	test_fd_votor_loop_hist.o
+CC	test_shmem.o
+CC	test_wksp_used_treap.o
+CC	test_wksp_free_treap.o
+CC	test_wksp_admin.o
+CC	test_wksp_user.o
+CC	test_wksp_helper.o
+CC	test_wksp_tpool.o
+CC	test_wksp.o
+CC	test_ar.o
+CC	test_tar.o
+CC	test_sse_4x32.o
+CC	test_sse_common.o
+CC	test_sse_2x64.o
+CC	test_sse_16x8.o
+CC	test_nt_memcpy.o
+CC	test_avx_8x32.o
+CC	test_avx_common.o
+CC	test_avx_4x64.o
+CC	test_avx_16x16.o
+CC	test_avx_32x8.o
+CC	test_cstr.o
+CC	test_alloc.o
+CC	test_eth.o
+CC	test_ip4.o
+CC	test_ip6.o
+CC	test_igmp.o
+CC	test_udp.o
+CC	test_pcap.o
+CC	test_pcapng.o
+CC	test_scratch.o
+CC	test_env.o
+CC	test_cpuset.o
+CC	test_tile.o
+CC	test_tile_rseq.o
+CC	test_rng.o
+CC	test_sqrt.o
+CC	test_fxp.o
+CC	test_stat.o
+CC	test_tpool.o
+CC	test_util.o
+CC	test_util_base.o
+CC	test_checkpt_mmio.o
+CC	test_checkpt_stream.o
+CC	test_bplus.o
+CC	test_deque.o
+CC	test_deque_dynamic.o
+CC	test_dlist.o
+CC	test_slist.o
+CC	test_heap.o
+CC	test_map.o
+CC	test_map_chain.o
+CC	test_map_chain_multi.o
+CC	test_map_dynamic.o
+CC	test_map_giant.o
+CC	test_map_giant_mem.o
+CC	test_map_giant_concur.o
+CC	test_unit_test.o
+CC	test_map_perfect.o
+CC	test_map_chain_para.o
+CC	test_map_slot.o
+CC	test_map_slot_para.o
+CC	test_pool.o
+CC	test_pool_para.o
+CC	test_prq.o
+CC	test_queue.o
+CC	test_queue_dynamic.o
+CC	test_set.o
+CC	test_set_dynamic.o
+CC	test_smallset.o
+CC	test_sort.o
+CC	test_sort_para.o
+CC	test_stack.o
+CC	test_treap.o
+CC	test_vec.o
+CC	test_voff.o
+CC	test_sandbox.o
+CC	test_pkeys.o
+CC	test_clock.o
+CC	test_histf.o
+CC	test_spad.o
+CC	test_log.o
+CC	test_pod.o
+CC	test_io.o
+CC	test_bits.o
+CC	test_bits_tg.o
+CC	test_float.o
+CC	test_hash.o
+CC	test_uwide.o
+CC	test_sat.o
+CC	test_snapct_tile.o
+CC	test_snapld_tile.o
+CC	test_snapdc_tile.o
+CC	test_snapin_tile.o
+CC	test_snapin_accdb.o
+CC	test_zstd_frame.o
+CC	test_ssmanifest_parser.o
+CC	test_ssmanifest_v5.o
+CC	test_slot_delta_parser.o
+CC	test_sspeer_selector.o
+CC	test_ssping.o
+CC	test_ssload.o
+CC	test_ssarchive.o
+CC	test_ssparse.o
+CC	test_sshttp.o
+CC	test_ssresolve.o
+CC	test_http_resolver.o
+CC	test_wfs.o
+CC	test_execle_tile.o
+CC	test_failover_proto.o
+CC	test_failover_wire.o
+CC	test_failover_channel.o
+CC	test_failover_tile.o
+CC	test_admin_tile.o
+CC	test_gossip_tile.o
+CC	test_execrp_tile.o
+CC	test_motor_tile.o
+CC	test_resolv_tile.o
+CC	test_rdisp.o
+CC	test_rdisp_mq.o
+CC	test_sched.o
+CC	test_replay_tile.o
+CC	test_rpc_tile.o
+CC	test_libc_zstd.o
+CC	fd_libc_zstd.o
+CC	test_ipecho_client.o
+CC	test_ipecho_server.o
+CC	test_snapsv.o
+CC	test_snapsv_tile.o
+CC	test_snap_roundtrip.o
+CC	test_backup_disk.o
+CC	test_snapzp_tile.o
+CC	test_snaprd_tile.o
+CC	test_votor_tile.o
+CC	test_netdev_netlink.o
+CC	test_netdev_tbl.o
+CC	test_xsk.o
+CC	test_xdp_ebpf.o
+CC	test_aio.o
+CC	test_grpc_codec.o
+CC	test_grpc_client.o
+CC	test_quic_proto.o
+CC	test_quic_hs.o
+CC	fd_aio_pcapng.o
+CC	fd_quic_test_helpers.o
+CC	fd_udpsock.o
+CC	test_quic_streams.o
+CC	fd_quic_stream_spam.o
+CC	test_quic_conn.o
+CC	test_quic_bw.o
+CC	test_quic_layout.o
+CC	test_quic_conformance.o
+CC	fd_quic_sandbox.o
+CC	test_quic_ack_tx.o
+CC	test_quic_concurrency.o
+CC	test_quic_svc_q.o
+CC	test_quic_pkt_meta.o
+CC	test_quic_keep_alive.o
+CC	test_quic_retx.o
+CC	test_quic_pkt_meta_lifecycle.o
+CC	test_quic_tls_hs.o
+CC	test_quic_crypto.o
+CC	test_quic_client_flood.o
+CC	test_quic_server.o
+CC	test_quic_txns.o
+CC	test_quic_idle_conns.o
+CC	test_quic_retry_unit.o
+CC	test_quic_retry_integration.o
+CC	test_quic_key_phase.o
+CC	test_quic_transport_params.o
+CC	test_url.o
+CC	test_http.o
+CC	test_http_server.o
+CC	test_live_http_server.o
+CC	test_tls.o
+CC	test_tls_web.o
+CC	test_h2.o
+CC	test_h2_padded_data.o
+CC	test_h2_server.o
+CC	test_getaddrinfo.o
+CC	test_resolv.o
+CC	test_adns.o
+CC	test_fib4_netlink.o
+CC	test_fib4.o
+CC	test_tlsrec.o
+CC	test_neigh4_netlink.o
+CC	test_udpsock_echo.o
+CC	http_import_dist.o
+CC	fd_log.o
+AR	libfd_ballet.a
+AR	libfd_disco.a
+AR	libfd_tango.a
+AR	libfd_flamenco.a
+AR	libfd_util_test.a
+AR	libfd_util_extra.a
+AR	libfd_choreo.a
+AR	libfd_waltz.a
+AR	libfd_tls.a
+AR	libfd_discof.a
+AR	libfd_firedancer.a
+AR	libfdctl_shared.a
+AR	libfdctl_platform.a
+AR	libfd_quic.a
+AR	libfddev_shared.a
+AR	libfd_flamenco_test.a
+AR	libfd_waltz_test.a
+AR	libfd_util.a
+LD	test_sha512 (unit-test)
+LD	test_elf (unit-test)
+LD	test_bn254 (unit-test)
+LD	test_poseidon (unit-test)
+LD	test_base64 (unit-test)
+LD	test_jtok (unit-test)
+LD	test_aes (unit-test)
+LD	test_shred (unit-test)
+LD	test_merlin (unit-test)
+LD	test_base58 (unit-test)
+LD	test_bls12_381 (unit-test)
+LD	test_bmtree (unit-test)
+LD	test_der (unit-test)
+LD	test_x509 (unit-test)
+LD	test_x509_verify (unit-test)
+LD	test_murmur3 (unit-test)
+LD	test_blake3 (unit-test)
+LD	test_ed25519 (unit-test)
+LD	test_ed25519_signature_malleability (unit-test)
+LD	test_x25519 (unit-test)
+LD	test_ristretto255 (unit-test)
+LD	test_pb (unit-test)
+LD	test_rsa (unit-test)
+LD	test_sha1 (unit-test)
+LD	test_sha256 (unit-test)
+LD	test_hmac (unit-test)
+LD	test_zksdk (unit-test)
+LD	test_secp384r1 (unit-test)
+LD	test_reedsol (unit-test)
+LD	test_secp256k1 (unit-test)
+LD	test_chacha (unit-test)
+LD	test_chacha_rng (unit-test)
+LD	test_chacha_rng_roll (unit-test)
+LD	test_uint256 (unit-test)
+LD	test_big_mod_exp (unit-test)
+LD	test_keccak256 (unit-test)
+LD	test_secp256r1 (unit-test)
+LD	test_siphash13 (unit-test)
+LD	test_utf8 (unit-test)
+LD	test_toml (unit-test)
+LD	test_hex (unit-test)
+LD	test_sbpf_load_prog (unit-test)
+LD	test_sbpf_loader (unit-test)
+LD	test_sbpf_elf_peek (unit-test)
+LD	test_sbpf_strict_elf (unit-test)
+LD	test_sbpf_fast_load (unit-test)
+LD	test_wsample (unit-test)
+LD	test_lthash (unit-test)
+LD	test_txn_parse (unit-test)
+LD	test_txn (unit-test)
+LD	test_compact_u16 (unit-test)
+LD	test_txn_build (unit-test)
+LD	test_waker (unit-test)
+LD	test_store (unit-test)
+LD	test_fec_resolver (unit-test)
+LD	test_shred_dest (unit-test)
+LD	test_shred_dest_conformance (unit-test)
+LD	test_stake_ci (unit-test)
+LD	test_rnonce_ss (unit-test)
+LD	test_shred_batch (unit-test)
+LD	test_shredder (unit-test)
+LD	test_fd_repair (unit-test)
+LD	test_fd_repair_serde (unit-test)
+LD	test_fd_repair_strat (unit-test)
+LD	test_blockdb (unit-test)
+LD	test_rserve_tile (unit-test)
+LD	test_bundle_crank (unit-test)
+LD	test_bundle_client (unit-test)
+LD	test_bundle_client_wraparound (unit-test)
+LD	test_bundle_tile (unit-test)
+LD	test_xdp_tile (unit-test)
+LD	test_iavf_tile (unit-test)
+LD	test_mlx5_tile (unit-test)
+LD	test_live_table (unit-test)
+LD	test_gui_geoip (unit-test)
+LD	test_gui_config_parse (unit-test)
+LD	test_gui_store (unit-test)
+LD	test_gui_hist_evict (unit-test)
+LD	test_gui_tile (unit-test)
+LD	test_gui_printf (unit-test)
+LD	test_tpu_reasm (unit-test)
+LD	test_quic_metrics (unit-test)
+LD	test_wait_info (unit-test)
+LD	test_proc_interrupts (unit-test)
+LD	test_disco_base (unit-test)
+LD	test_compute_budget_program (unit-test)
+LD	test_pack_bitset (unit-test)
+LD	test_est_tbl (unit-test)
+LD	test_chkdup (unit-test)
+LD	test_tip_prog_blacklist (unit-test)
+LD	test_pack_rebate_sum (unit-test)
+LD	test_pack (unit-test)
+LD	test_deduplication (unit-test)
+LD	test_keyguard (unit-test)
+LD	test_keyload (unit-test)
+LD	test_sign_tile (unit-test)
+LD	test_verify (unit-test)
+LD	test_verify_tile (unit-test)
+LD	test_circq (unit-test)
+LD	test_event_client (unit-test)
+LD	test_events (unit-test)
+LD	test_boot_report (unit-test)
+LD	test_topob (unit-test)
+LD	test_dns_resolve (unit-test)
+LD	test_stem_sticky_poll (unit-test)
+LD	test_stem_park (unit-test)
+LD	test_sleep (unit-test)
+LD	test_topo_progcache (unit-test)
+LD	test_failover (unit-test)
+LD	test_config_parse (unit-test)
+LD	test_auto_net (unit-test)
+LD	test_config_json (unit-test)
+LD	test_iavf_configure (unit-test)
+LD	test_rpc_client (unit-test)
+LD	dump_rpc_client (unit-test)
+LD	test_tempo (unit-test)
+LD	bench_tempo_calib (unit-test)
+LD	test_cnc (unit-test)
+LD	test_tango_base (unit-test)
+LD	test_meta_tx (unit-test)
+LD	test_meta_rx (unit-test)
+LD	test_frag_tx (unit-test)
+LD	test_frag_rx (unit-test)
+LD	bench_frag_tx (unit-test)
+LD	test_dcache (unit-test)
+LD	test_fctl (unit-test)
+LD	test_mcache (unit-test)
+LD	test_tcache (unit-test)
+LD	test_fseq (unit-test)
+LD	test_cast (unit-test)
+LD	test_rust_float (unit-test)
+LD	test_stake_delegations (unit-test)
+LD	test_vote_stakes (unit-test)
+LD	test_warmup_cooldown_allowance (unit-test)
+LD	test_epoch_credits (unit-test)
+LD	test_progcache (unit-test)
+LD	test_accdb (unit-test)
+LD	test_accdb_cache (unit-test)
+LD	bench_accdb (unit-test)
+LD	bench_accdb_hotread (unit-test)
+LD	bench_accdb_txn (unit-test)
+LD	bench_accdb_cleanup (unit-test)
+LD	test_block_marker (unit-test)
+LD	test_footer_cache (unit-test)
+LD	test_alpenglow_v5 (unit-test)
+LD	test_leaders (unit-test)
+LD	test_multi_leaders (unit-test)
+LD	test_leaders_geo (unit-test)
+LD	test_leaders_geo_sim (unit-test)
+LD	test_vm_interp (unit-test)
+LD	test_vm_base (unit-test)
+LD	test_vm_instr (unit-test)
+LD	test_pointer_chase (unit-test)
+LD	test_vm_syscall_cpi (unit-test)
+LD	test_vm_syscall_hash (unit-test)
+LD	test_vm_syscall_big_mod_exp (unit-test)
+LD	test_vm_syscalls (unit-test)
+LD	test_vm_syscall_curve (unit-test)
+LD	test_cpi_shared_data_addr (unit-test)
+LD	test_cpi_semantics (unit-test)
+LD	test_sol_compat (unit-test)
+LD	test_sol_compat_so (unit-test)
+LD	test_svm_elfgen (unit-test)
+LD	test_svm_mini (unit-test)
+LD	test_accdb_svm (unit-test)
+LD	test_sysvar (unit-test)
+LD	test_bpf_frames (unit-test)
+LD	test_hashes (unit-test)
+LD	test_slot_params (unit-test)
+LD	test_cost_tracker (unit-test)
+LD	test_cost_tracker_store (unit-test)
+LD	test_borrowed_account (unit-test)
+LD	test_bundle_exec (unit-test)
+LD	test_programdata_delayvis (unit-test)
+LD	test_runtime_alut (unit-test)
+LD	test_bank (unit-test)
+LD	test_txncache (unit-test)
+LD	test_lamports_per_byte_feature_gates (unit-test)
+LD	test_runtime_sysvar_cache (unit-test)
+LD	test_vat_refresh_vote_accounts (unit-test)
+LD	test_define_ltds_fee_only_semantics (unit-test)
+LD	test_accounts_resize_delta (unit-test)
+LD	test_fee_reward (unit-test)
+LD	test_inflation_rewards (unit-test)
+LD	test_fee_calculator (unit-test)
+LD	test_cost_model (unit-test)
+LD	test_feature_activation (unit-test)
+LD	test_system_ids (unit-test)
+LD	test_bpf_loader_serialization (unit-test)
+LD	test_bpf_loader_program (unit-test)
+LD	test_vote_program (unit-test)
+LD	test_create_account_allow_prefund (unit-test)
+LD	test_compute_budget_decode (unit-test)
+LD	test_precompiles (unit-test)
+LD	test_vote_codec (unit-test)
+LD	test_vote_state_v5 (unit-test)
+LD	test_validator_location (unit-test)
+LD	test_rwlock (unit-test)
+LD	test_bloom (unit-test)
+LD	test_active_set (unit-test)
+LD	test_ping_tracker (unit-test)
+LD	test_gossip_wsample (unit-test)
+LD	test_gossip_purged (unit-test)
+LD	test_gossip_hset (unit-test)
+LD	test_log_collector (unit-test)
+LD	test_inflation_rate (unit-test)
+LD	test_integer_inflation (unit-test)
+LD	test_genesis_create (unit-test)
+LD	test_choreo_base (unit-test)
+LD	test_fd_votor_base (unit-test)
+LD	test_fd_bls (unit-test)
+LD	test_fd_vote (unit-test)
+LD	test_fd_epoch_info (unit-test)
+LD	test_fd_cert (unit-test)
+LD	test_fd_votor_hist (unit-test)
+LD	test_fd_votor_pool (unit-test)
+LD	test_fd_finality_tracker (unit-test)
+LD	test_fd_parent_ready_tracker (unit-test)
+LD	test_fd_votor_loop (unit-test)
+LD	test_fd_vote_history_serde (unit-test)
+LD	test_fd_votor_loop_hist (unit-test)
+LD	test_shmem (unit-test)
+LD	test_wksp_used_treap (unit-test)
+LD	test_wksp_free_treap (unit-test)
+LD	test_wksp_admin (unit-test)
+LD	test_wksp_user (unit-test)
+LD	test_wksp_helper (unit-test)
+LD	test_wksp_tpool (unit-test)
+LD	test_ar (unit-test)
+LD	test_wksp (unit-test)
+LD	test_tar (unit-test)
+LD	test_sse_4x32 (unit-test)
+LD	test_sse_2x64 (unit-test)
+LD	test_sse_16x8 (unit-test)
+LD	test_nt_memcpy (unit-test)
+LD	test_avx_8x32 (unit-test)
+LD	test_avx_4x64 (unit-test)
+LD	test_avx_16x16 (unit-test)
+LD	test_avx_32x8 (unit-test)
+LD	test_cstr (unit-test)
+LD	test_alloc (unit-test)
+LD	test_eth (unit-test)
+LD	test_ip4 (unit-test)
+LD	test_ip6 (unit-test)
+LD	test_igmp (unit-test)
+LD	test_udp (unit-test)
+LD	test_pcap (unit-test)
+LD	test_pcapng (unit-test)
+LD	test_scratch (unit-test)
+LD	test_env (unit-test)
+LD	test_cpuset (unit-test)
+LD	test_tile (unit-test)
+LD	test_tile_rseq (unit-test)
+LD	test_rng (unit-test)
+LD	test_sqrt (unit-test)
+LD	test_fxp (unit-test)
+LD	test_stat (unit-test)
+LD	test_tpool (unit-test)
+LD	test_util_base (unit-test)
+LD	test_util (unit-test)
+LD	test_checkpt_mmio (unit-test)
+LD	test_checkpt_stream (unit-test)
+LD	test_bplus (unit-test)
+LD	test_deque (unit-test)
+LD	test_deque_dynamic (unit-test)
+LD	test_dlist (unit-test)
+LD	test_heap (unit-test)
+LD	test_slist (unit-test)
+LD	test_map (unit-test)
+LD	test_map_chain (unit-test)
+LD	test_map_chain_multi (unit-test)
+LD	test_map_dynamic (unit-test)
+LD	test_map_giant (unit-test)
+LD	test_map_giant_mem (unit-test)
+LD	test_map_giant_concur (unit-test)
+LD	test_unit_test (unit-test)
+LD	test_map_perfect (unit-test)
+LD	test_map_chain_para (unit-test)
+LD	test_map_slot (unit-test)
+LD	test_map_slot_para (unit-test)
+LD	test_pool (unit-test)
+LD	test_pool_para (unit-test)
+LD	test_prq (unit-test)
+LD	test_queue (unit-test)
+LD	test_queue_dynamic (unit-test)
+LD	test_set (unit-test)
+LD	test_set_dynamic (unit-test)
+LD	test_sort (unit-test)
+LD	test_smallset (unit-test)
+LD	test_sort_para (unit-test)
+LD	test_stack (unit-test)
+LD	test_treap (unit-test)
+LD	test_vec (unit-test)
+LD	test_voff (unit-test)
+LD	test_sandbox (unit-test)
+LD	test_pkeys (unit-test)
+LD	test_clock (unit-test)
+LD	test_histf (unit-test)
+LD	test_spad (unit-test)
+LD	test_log (unit-test)
+LD	test_pod (unit-test)
+LD	test_io (unit-test)
+LD	test_bits (unit-test)
+LD	test_bits_tg (unit-test)
+LD	test_float (unit-test)
+LD	test_hash (unit-test)
+LD	test_uwide (unit-test)
+LD	test_sat (unit-test)
+LD	test_snapld_tile (unit-test)
+LD	test_snapdc_tile (unit-test)
+LD	test_snapct_tile (unit-test)
+LD	test_snapin_tile (unit-test)
+LD	test_snapin_accdb (unit-test)
+LD	test_zstd_frame (unit-test)
+LD	test_ssmanifest_parser (unit-test)
+LD	test_ssmanifest_v5 (unit-test)
+LD	test_slot_delta_parser (unit-test)
+LD	test_sspeer_selector (unit-test)
+LD	test_ssping (unit-test)
+LD	test_ssload (unit-test)
+LD	test_sshttp (unit-test)
+LD	test_ssarchive (unit-test)
+LD	test_ssparse (unit-test)
+LD	test_ssresolve (unit-test)
+LD	test_http_resolver (unit-test)
+LD	test_wfs (unit-test)
+LD	test_execle_tile (unit-test)
+LD	test_failover_proto (unit-test)
+LD	test_failover_wire (unit-test)
+LD	test_failover_channel (unit-test)
+LD	test_failover_tile (unit-test)
+LD	test_admin_tile (unit-test)
+LD	test_gossip_tile (unit-test)
+LD	test_execrp_tile (unit-test)
+LD	test_motor_tile (unit-test)
+LD	test_resolv_tile (unit-test)
+LD	test_rdisp (unit-test)
+LD	test_rdisp_mq (unit-test)
+LD	test_sched (unit-test)
+LD	test_replay_tile (unit-test)
+LD	test_rpc_tile (unit-test)
+LD	test_libc_zstd (unit-test)
+LD	test_ipecho_client (unit-test)
+LD	test_ipecho_server (unit-test)
+LD	test_snapsv (unit-test)
+LD	test_snapsv_tile (unit-test)
+LD	test_snap_roundtrip (unit-test)
+LD	test_backup_disk (unit-test)
+LD	test_snapzp_tile (unit-test)
+LD	test_snaprd_tile (unit-test)
+LD	test_votor_tile (unit-test)
+LD	test_netdev_netlink (unit-test)
+LD	test_netdev_tbl (unit-test)
+LD	test_xsk (unit-test)
+LD	test_xdp_ebpf (unit-test)
+LD	test_aio (unit-test)
+LD	test_grpc_codec (unit-test)
+LD	test_grpc_client (unit-test)
+LD	test_quic_proto (unit-test)
+LD	test_quic_streams (unit-test)
+LD	test_quic_hs (unit-test)
+LD	test_quic_conn (unit-test)
+LD	test_quic_bw (unit-test)
+LD	test_quic_layout (unit-test)
+LD	test_quic_conformance (unit-test)
+LD	test_quic_ack_tx (unit-test)
+LD	test_quic_concurrency (unit-test)
+LD	test_quic_svc_q (unit-test)
+LD	test_quic_pkt_meta (unit-test)
+LD	test_quic_keep_alive (unit-test)
+LD	test_quic_retx (unit-test)
+LD	test_quic_pkt_meta_lifecycle (unit-test)
+LD	test_quic_tls_hs (unit-test)
+LD	test_quic_crypto (unit-test)
+LD	test_quic_client_flood (unit-test)
+LD	test_quic_server (unit-test)
+LD	test_quic_txns (unit-test)
+LD	test_quic_idle_conns (unit-test)
+LD	test_quic_retry_unit (unit-test)
+LD	test_quic_retry_integration (unit-test)
+LD	test_quic_key_phase (unit-test)
+LD	test_quic_transport_params (unit-test)
+LD	test_url (unit-test)
+LD	test_http (unit-test)
+LD	test_http_server (unit-test)
+LD	test_live_http_server (unit-test)
+LD	test_tls (unit-test)
+LD	test_tls_web (unit-test)
+LD	test_h2 (unit-test)
+LD	test_h2_padded_data (unit-test)
+LD	test_h2_server (unit-test)
+LD	test_getaddrinfo (unit-test)
+LD	test_resolv (unit-test)
+LD	test_adns (unit-test)
+LD	test_fib4_netlink (unit-test)
+LD	test_fib4 (unit-test)
+LD	test_tlsrec (unit-test)
+LD	test_neigh4_netlink (unit-test)
+LD	test_udpsock_echo (unit-test)

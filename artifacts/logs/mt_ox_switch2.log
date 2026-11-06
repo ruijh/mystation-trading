@@ -1,0 +1,94 @@
+[WARNING] Running as root is not recommended
+
+<><> Installing new switch packages <><><><><><><><><><><><><><><><><><><><><><>
+Switch invariant: ["ocaml-variants" {= "5.2.0+ox"}]
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+∗ installed base-bigarray.base
+∗ installed base-threads.base
+∗ installed base-unix.base
+∗ installed ocaml-options-vanilla.1
+∗ installed oxcaml-alcotest.guard
+∗ installed oxcaml-backoff.guard
+∗ installed oxcaml-chrome-trace.guard
+∗ installed oxcaml-cmarkit.guard
+∗ installed oxcaml-ctypes.guard
+∗ installed oxcaml-ctypes-foreign.guard
+∗ installed oxcaml-dot-merlin-reader.guard
+∗ installed oxcaml-dune.guard
+∗ installed oxcaml-dune-action-plugin.guard
+∗ installed oxcaml-dune-build-info.guard
+∗ installed oxcaml-dune-configurator.guard
+∗ installed oxcaml-dune-glob.guard
+∗ installed oxcaml-dune-private-libs.guard
+∗ installed oxcaml-dune-rpc.guard
+∗ installed oxcaml-dune-rpc-lwt.guard
+∗ installed oxcaml-dune-site.guard
+∗ installed oxcaml-dyn.guard
+∗ installed oxcaml-eio.guard
+∗ installed oxcaml-eio_linux.guard
+∗ installed oxcaml-eio_main.guard
+∗ installed oxcaml-eio_posix.guard
+∗ installed oxcaml-fs-io.guard
+∗ installed oxcaml-gen_js_api.guard
+∗ installed oxcaml-js_of_ocaml.guard
+∗ installed oxcaml-js_of_ocaml-compiler.guard
+∗ installed oxcaml-js_of_ocaml-ppx.guard
+∗ installed oxcaml-js_of_ocaml-toplevel.guard
+∗ installed oxcaml-jsonrpc.guard
+∗ installed oxcaml-lsp.guard
+∗ installed oxcaml-lwt.guard
+∗ installed oxcaml-lwt_direct.guard
+∗ installed oxcaml-lwt_ppx.guard
+∗ installed oxcaml-lwt_runtime_events.guard
+∗ installed oxcaml-mdx.guard
+∗ installed oxcaml-merlin.guard
+∗ installed oxcaml-merlin-lib.guard
+∗ installed oxcaml-notty-community.guard
+∗ installed oxcaml-ocaml-compiler-libs.guard
+∗ installed oxcaml-ocaml-index.guard
+∗ installed oxcaml-ocaml-lsp-server.guard
+∗ installed oxcaml-ocamlbuild.guard
+∗ installed oxcaml-ocamlc-loc.guard
+∗ installed oxcaml-ocamlfind.guard
+∗ installed oxcaml-ocamlformat.guard
+∗ installed oxcaml-ocamlformat-lib.guard
+∗ installed oxcaml-odoc.guard
+∗ installed oxcaml-odoc-driver.guard
+∗ installed oxcaml-odoc-md.guard
+∗ installed oxcaml-odoc-parser.guard
+∗ installed oxcaml-ojs.guard
+∗ installed oxcaml-omd.guard
+∗ installed oxcaml-opam-core.guard
+∗ installed oxcaml-opam-format.guard
+∗ installed oxcaml-ordering.guard
+∗ installed oxcaml-patch-guards.ox
+∗ installed oxcaml-ppx_deriving.guard
+∗ installed oxcaml-ppxlib.guard
+∗ installed oxcaml-ppxlib_ast.guard
+∗ installed oxcaml-re.guard
+∗ installed oxcaml-sedlex.guard
+∗ installed oxcaml-sherlodoc.guard
+∗ installed oxcaml-spawn.guard
+∗ installed oxcaml-stdune.guard
+∗ installed oxcaml-top-closure.guard
+∗ installed oxcaml-topkg.guard
+∗ installed oxcaml-utop.guard
+∗ installed oxcaml-uutf.guard
+∗ installed oxcaml-wasm_of_ocaml-compiler.guard
+∗ installed oxcaml-xdg.guard
+∗ installed oxcaml-yojson.guard
+∗ installed oxcaml-zarith.guard
+⬇ retrieved ocaml-config.3  (2 extra sources)
+∗ installed conf-autoconf.1
+∗ installed conf-which.1
+⬇ retrieved oxcaml-compiler.5.2.0minus31  (https://github.com/oxcaml/oxcaml/archive/refs/tags/5.2.0minus-31.tar.gz)
+∗ installed oxcaml-compiler.5.2.0minus31
+∗ installed ocaml-variants.5.2.0+ox
+∗ installed ocaml-config.3
+∗ installed oxcaml.latest
+∗ installed ocaml.5.2.0
+∗ installed base-domains.base
+∗ installed base-nnp.base
+Done.
+# Run eval $(opam env --switch=5.2.0+ox) to update the current shell environment

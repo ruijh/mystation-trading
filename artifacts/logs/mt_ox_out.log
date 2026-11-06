@@ -1,0 +1,111 @@
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ export 'PATH=/usr/lib/llvm-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ PATH='/usr/lib/llvm-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ cd /root/magic-trace
++ opam switch create -y 5.2.0+ox --repos ox=git+https://github.com/oxcaml/opam-repository.git#231c88c2e564fdca40e15e750aacad5fb0887435,default
++ RC=10
++ echo SWITCH_EXIT=10
+SWITCH_EXIT=10
++ '[' 10 -ne 0 ']'
++ tail -15 /mnt/e/交易桌/artifacts/logs/mt_ox_switch.log
+Switch invariant: ["ocaml-variants" {= "5.2.0+ox"}]
+
+The following system packages will first need to be installed:
+    autoconf
+
+<><> Handling external dependencies <><><><><><><><><><><><><><><><><><><><><><>
+Let opam run your package manager to install the required system packages?
+(answer 'n' for other options) [Y/n] n
+[NOTE] Use 'opam option depext-run-installs=false' if you don't want to be prompted again.
+This command should get the requirements installed:
+
+    apt-get install autoconf
+
+You can retry with '--assume-depexts' to skip this check, or run 'opam option depext=false' to permanently disable handling of system packages altogether.
+Switch initialisation failed: clean up? ('n' will leave the switch partially installed) [Y/n] y
+++ opam env
++ eval 'OPAM_SWITCH_PREFIX='\''/root/.opam/default'\''; export OPAM_SWITCH_PREFIX;
+OCAMLTOP_INCLUDE_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAMLTOP_INCLUDE_PATH;
+CAML_LD_LIBRARY_PATH='\''/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs'\''; export CAML_LD_LIBRARY_PATH;
+OCAML_TOPLEVEL_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAML_TOPLEVEL_PATH;
+MANPATH='\'':/root/.opam/default/man'\''; export MANPATH;
+PATH='\''/root/.opam/default/bin:/usr/lib/llvm-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'\''; export PATH;'
+++ OPAM_SWITCH_PREFIX=/root/.opam/default
+++ export OPAM_SWITCH_PREFIX
+++ OCAMLTOP_INCLUDE_PATH=/root/.opam/default/lib/toplevel
+++ export OCAMLTOP_INCLUDE_PATH
+++ CAML_LD_LIBRARY_PATH=/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs
+++ export CAML_LD_LIBRARY_PATH
+++ OCAML_TOPLEVEL_PATH=/root/.opam/default/lib/toplevel
+++ export OCAML_TOPLEVEL_PATH
+++ MANPATH=:/root/.opam/default/man
+++ export MANPATH
+++ PATH='/root/.opam/default/bin:/usr/lib/llvm-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
+++ export PATH
++ opam install -y --assume-depexts -j3 . --deps-only
++ RC=0
++ echo DEPS_EXIT=0
+DEPS_EXIT=0
++ '[' 0 -ne 0 ']'
+++ opam env
++ eval 'OPAM_SWITCH_PREFIX='\''/root/.opam/default'\''; export OPAM_SWITCH_PREFIX;
+OCAMLTOP_INCLUDE_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAMLTOP_INCLUDE_PATH;
+CAML_LD_LIBRARY_PATH='\''/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs'\''; export CAML_LD_LIBRARY_PATH;
+OCAML_TOPLEVEL_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAML_TOPLEVEL_PATH;
+MANPATH='\'':/root/.opam/default/man'\''; export MANPATH;
+PATH='\''/root/.opam/default/bin:/usr/lib/llvm-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'\''; export PATH;'
+++ OPAM_SWITCH_PREFIX=/root/.opam/default
+++ export OPAM_SWITCH_PREFIX
+++ OCAMLTOP_INCLUDE_PATH=/root/.opam/default/lib/toplevel
+++ export OCAMLTOP_INCLUDE_PATH
+++ CAML_LD_LIBRARY_PATH=/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs
+++ export CAML_LD_LIBRARY_PATH
+++ OCAML_TOPLEVEL_PATH=/root/.opam/default/lib/toplevel
+++ export OCAML_TOPLEVEL_PATH
+++ MANPATH=:/root/.opam/default/man
+++ export MANPATH
+++ PATH='/root/.opam/default/bin:/usr/lib/llvm-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
+++ export PATH
++ dune build
++ RC=1
++ echo DUNE_BUILD_EXIT=1
+DUNE_BUILD_EXIT=1
++ '[' 1 -ne 0 ']'
++ tail -20 /mnt/e/交易桌/artifacts/logs/mt_ox_build.log
+29 | module%test _ = struct
+30 |   open Core
+31 | 
+32 |   let check ?remove_hex_prefix str =
+33 |     print_s
+...
+60 |     check "0xffffffffff22f000";
+61 |     [%expect {| ((int64 0xffffffffff22f000) (int 0x7fffffffff22f000)) |}]
+62 |   ;;
+63 | end
+Error: value expected
+File "vendor/tracing/zero/writer_intf.ml", line 17, characters 40-86:
+17 |   val next_buf : ensure_capacity:int -> (read_write, Iobuf.seek, Iobuf.global) Iobuf.t
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: The type constructor Iobuf.t expects 2 argument(s),
+       but is here applied to 3 argument(s)
+File "vendor/fzf/src/fzf.ml", line 375, characters 43-62:
+375 |       Option.iter pid_ivar ~f:(fun ivar -> Async.Ivar.fill_exn ivar pid);
+                                                 ^^^^^^^^^^^^^^^^^^^
+Error: Unbound value Async.Ivar.fill_exn
++ ls -la _build/default/bin/
++ head
+total 32
+drwxr-xr-x  3 root root 4096 Nov  6 03:05 .
+drwxr-xr-x 10 root root 4096 Nov  6 03:05 ..
+drwxr-xr-x  2 root root 4096 Nov  6 03:04 .merlin-conf
+-r-xr-xr-x  1 root root  379 Nov  6 03:04 gen-versions.sh
+-r-xr-xr-x  1 root root   71 Nov  6 03:04 magic_trace_bin.ml
+-r-xr-xr-x  1 root root   46 Nov  6 03:04 magic_trace_bin.mli
+-r--r--r--  1 root root 1430 Nov  6 03:05 magic_trace_bin.pp.ml
+-r--r--r--  1 root root  700 Nov  6 03:05 magic_trace_bin.pp.mli
++ ./_build/default/bin/main.exe --version
++ head -2
+/mnt/e/交易桌/scripts/wsl_magic_trace_ox.sh: line 24: ./_build/default/bin/main.exe: No such file or directory
++ echo MAGIC_TRACE_OX_DONE
+MAGIC_TRACE_OX_DONE

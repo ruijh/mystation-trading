@@ -1,0 +1,68 @@
+{
+ "generated_at": "2026-11-06 09:18:06",
+ "repo": "jpmorganchase/python-training",
+ "kernel": "workbench-py312",
+ "notebooks": {
+  "1_basic.ipynb": {
+   "path": "E:\\交易桌\\vendor\\python-training\\notebooks\\1_basic.ipynb",
+   "exists": true,
+   "cells": 11,
+   "compat_patches": [],
+   "ok": true,
+   "error": null,
+   "seconds": 3.8,
+   "output_snippets": [
+    "7",
+    "0.75",
+    "0",
+    "<class 'int'>\n<class 'int'>"
+   ]
+  },
+  "2_straddle.ipynb": {
+   "path": "E:\\交易桌\\vendor\\python-training\\notebooks\\2_straddle.ipynb",
+   "exists": true,
+   "cells": 76,
+   "compat_patches": [
+    "psp → DataFrame shim（perspective 新版移除预览 API）"
+   ],
+   "ok": true,
+   "error": null,
+   "seconds": 37.6,
+   "output_snippets": [
+    "0.15961737689352445",
+    "0.15961737689352445\n0.15961737689352445\nTrue",
+    "0.15961737689352445\n0.15961737689352445",
+    "0.15961737689352445"
+   ]
+  },
+  "3_flights.ipynb": {
+   "path": "E:\\交易桌\\vendor\\python-training\\notebooks\\3_flights.ipynb",
+   "exists": true,
+   "cells": 30,
+   "compat_patches": [],
+   "ok": true,
+   "error": null,
+   "seconds": 8.8,
+   "output_snippets": [
+    "['0_best_practices.ipynb',\n '1_basic.ipynb',\n '2_straddle.ipynb',\n '3_flights.ipynb',\n '4_webapi.ipynb',\n '5_website.ipynb',\n '6_financial_data.ipynb',\n '7_advanced_plotting.ipynb',\n '8_altman_z_double_prime.ipynb',\n '9_",
+    "['airports.csv',\n 'data_norm.csv',\n 'data_raw.csv',\n 'routes.csv',\n 'yield_curve.csv']",
+    "['read_clipboard',\n 'read_csv',\n 'read_excel',\n 'read_feather',\n 'read_fwf',\n 'read_gbq',\n 'read_hdf',\n 'read_html',\n 'read_json',\n 'read_orc',\n 'read_parquet',\n 'read_pickle',\n 'read_sas',\n 'read_spss',\n 'read_sql',\n 'r",
+    "airline airline_id source source_id dest dest_id codeshare  stops equipment\n0      2B        410    AER      2965  KZN    2990       NaN      0       CR2\n1      2B        410    ASF      2966  KZN    2990       NaN      "
+   ]
+  },
+  "9_3d_plotting.ipynb": {
+   "path": "E:\\交易桌\\vendor\\python-training\\notebooks\\9_3d_plotting.ipynb",
+   "exists": true,
+   "cells": 3,
+   "compat_patches": [],
+   "ok": true,
+   "error": null,
+   "seconds": 21.0,
+   "output_snippets": [
+    "E:\\交易桌\\.venv\\Lib\\site-packages\\jupyter_client\\session.py:727: UserWarning: Message serialization failed with:\nOut of range float values are not JSON compliant: nan\nSupporting this message is deprecated in jupyter-client ",
+    "FigureWidget({\n    'data': [{'colorscale': [[0, 'rgb(230,245,254)'], [0.4, 'rgb(123,171,203)'],\n                             [0.8, 'rgb(40,119,174)'], [1, 'rgb(37,61,81)']],\n              'hoverinfo': 'x+y+z',\n          "
+   ]
+  }
+ },
+ "passed": true
+}

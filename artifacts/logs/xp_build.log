@@ -1,0 +1,289 @@
+~/xpedite/build ~/xpedite
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/cc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python: /root/xpedite/install/runtime/bin/python3.12 (found suitable version "3.12.3", minimum required is "3.9") found components: Interpreter Development.Module Development.Embed
+-- Performing Test HAS_FLTO_AUTO
+-- Performing Test HAS_FLTO_AUTO - Success
+-- Found pybind11: /root/xpedite/install/runtime/lib/python3.12/site-packages/pybind11/include (found version "3.1.0")
+-- Could NOT find GTest (missing: GTEST_LIBRARY GTEST_INCLUDE_DIR GTEST_MAIN_LIBRARY) 
+-- Configuring done (13.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/xpedite/build
+[  0%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/Framework.C.o
+[  2%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/Collector.C.o
+[  1%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/Collector.C.o
+[  5%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/Persister.C.o
+[  1%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/Framework.C.o
+[  4%] Building CXX object CMakeFiles/xpedite-stub.dir/lib/stub/Stub.C.o
+[  6%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/Collector.C.o
+[  7%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/SamplesBuffer.C.o
+%] Building CXX object CMakeFiles/xpediteBindings.dir/lib/xpedite/pybind/Bindings.cpp.o
+[  9%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/Framework.C.o
+[  3%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/Handler.C.o
+[ 10%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/Handler.C.o
+[ 11%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/Persister.C.o
+[ 12%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/request/Request.C.o
+[ 13%] Building CXX object CMakeFiles/xpediteBindings.dir/lib/xpedite/framework/SamplesLoader.C.o
+[ 11%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/SamplesLoader.C.o
+[ 14%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/StorageMgr.C.o
+[ 13%] Building CXX object CMakeFiles/pic.dir/test/targets/PicLib.C.o
+[ 15%] Linking CXX shared library libpic.so
+/root/xpedite/lib/xpedite/framework/Persister.C: In member function ‘void xpedite::framework::Persister::persistHeader(int)’:
+/root/xpedite/lib/xpedite/framework/Persister.C:58:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   58 |     write(fd_, _buffer.data(), _hdr->size());
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/xpedite/lib/xpedite/framework/Persister.C: In member function ‘void xpedite::framework::Persister::persistData(int, const xpedite::probes::Sample*, const xpedite::probes::Sample*)’:
+/root/xpedite/lib/xpedite/framework/Persister.C:74:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   74 |     write(fd_, &segmentHeader, sizeof(segmentHeader));
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/xpedite/lib/xpedite/framework/Persister.C:75:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   75 |     write(fd_, begin_, size);
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~
+[ 15%] Built target pic
+[ 16%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/StorageMgr.C.o
+[ 16%] Linking CXX shared library libxpedite-stub.so
+[ 16%] Built target xpedite-stub
+iles/xpedite-pie.dir/lib/xpedite/framework/request/RequestParser.C.o
+[ 17%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/framework/session/RemoteSession.C.o
+/root/xpedite/lib/xpedite/framework/Persister.C: In member function ‘void xpedite::framework::Persister::persistHeader(int)’:
+/root/xpedite/lib/xpedite/framework/Persister.C:58:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   58 |     write(fd_, _buffer.data(), _hdr->size());
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/xpedite/lib/xpedite/framework/Persister.C: In member function ‘void xpedite::framework::Persister::persistData(int, const xpedite::probes::Sample*, const xpedite::probes::Sample*)’:
+/root/xpedite/lib/xpedite/framework/Persister.C:74:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   74 |     write(fd_, &segmentHeader, sizeof(segmentHeader));
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/xpedite/lib/xpedite/framework/Persister.C:75:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   75 |     write(fd_, begin_, size);
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~
+[ 19%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/request/Request.C.o
+[ 19%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/request/RequestParser.C.o
+[ 20%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/framework/session/RemoteSession.C.o
+[ 21%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/intercept/Intercept.C.o
+[ 22%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/intercept/Intercept.C.o
+[ 24%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/intercept/InterceptFallback.C.o
+[ 23%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/intercept/InterceptFallback.C.o
+[ 25%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/Persister.C.o
+[ 25%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/intercept/Report.C.o
+[ 25%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/intercept/Report.C.o
+[ 26%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/log/Log.C.o
+[ 27%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/SamplesBuffer.C.o
+[ 28%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/perf/PerfEvent.C.o
+[ 29%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/log/Log.C.o
+[ 30%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/perf/PerfEventAttrSet.C.o
+[ 31%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/perf/PerfEvent.C.o
+/root/xpedite/lib/xpedite/framework/Persister.C: In member function ‘void xpedite::framework::Persister::persistHeader(int)’:
+/root/xpedite/lib/xpedite/framework/Persister.C:58:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   58 |     write(fd_, _buffer.data(), _hdr->size());
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/xpedite/lib/xpedite/framework/Persister.C: In member function ‘void xpedite::framework::Persister::persistData(int, const xpedite::probes::Sample*, const xpedite::probes::Sample*)’:
+/root/xpedite/lib/xpedite/framework/Persister.C:74:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   74 |     write(fd_, &segmentHeader, sizeof(segmentHeader));
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/xpedite/lib/xpedite/framework/Persister.C:75:10: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   75 |     write(fd_, begin_, size);
+      |     ~~~~~^~~~~~~~~~~~~~~~~~~
+[ 31%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/SamplesLoader.C.o
+[ 32%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/perf/PerfEventAttrSet.C.o
+[ 32%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/perf/PerfEventSet.C.o
+[ 33%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/StorageMgr.C.o
+[ 34%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/perf/PerfEventsApi.C.o
+[ 34%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/perf/PerfEventSet.C.o
+[ 35%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/perf/PerfEventsCtl.C.o
+[ 36%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/perf/PerfEventsApi.C.o
+[ 37%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/perf/PerfEventsCtl.C.o
+[ 40%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/session/RemoteSession.C.o
+[ 38%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/request/Request.C.o
+[ 39%] Building C object CMakeFiles/xpedite-pie.dir/lib/xpedite/pmu/EventSet.c.o
+[ 39%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/framework/request/RequestParser.C.o
+[ 39%] Building C object CMakeFiles/xpedite-pie.dir/lib/xpedite/pmu/Formatter.c.o
+[ 42%] Building C object CMakeFiles/xpedite.dir/lib/xpedite/pmu/EventSet.c.o
+/root/xpedite/lib/xpedite/pmu/Formatter.c: In function ‘pmuRequestToString’:
+/root/xpedite/lib/xpedite/pmu/Formatter.c:133:56: warning: taking address of packed member of ‘struct <anonymous>’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+  133 |       fmtSize = offcoreEventToString(buffer, capacity, &request_->_offcoreEvents[i]);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 42%] Building C object CMakeFiles/xpedite.dir/lib/xpedite/pmu/Formatter.c.o
+/root/xpedite/lib/xpedite/pmu/Formatter.c: In function ‘pmuRequestToString’:
+/root/xpedite/lib/xpedite/pmu/Formatter.c:133:56: warning: taking address of packed member of ‘struct <anonymous>’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+  133 |       fmtSize = offcoreEventToString(buffer, capacity, &request_->_offcoreEvents[i]);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 43%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/Config.C.o
+[ 44%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/pmu/PMUCtl.C.o
+[ 45%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/probes/Config.C.o
+[ 45%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/Probe.C.o
+[ 46%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/ProbeCtl.C.o
+[ 47%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/probes/Probe.C.o
+ist.C.o
+[ 48%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/probes/ProbeCtl.C.o
+[ 49%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/intercept/Intercept.C.o
+[ 50%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/intercept/InterceptFallback.C.o
+[ 51%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/RecorderCtl.C.o
+[ 52%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/probes/ProbeList.C.o
+[ 52%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/intercept/Report.C.o
+[ 53%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/log/Log.C.o
+[ 54%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/transport/Framer.C.o
+[ 55%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/perf/PerfEvent.C.o
+[ 56%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/transport/Listener.C.o
+[ 57%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/probes/RecorderCtl.C.o
+[ 57%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/probes/Recorders.C.o
+[ 59%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/util/AddressSpace.C.o
+[ 60%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/transport/Listener.C.o
+[ 61%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/util/AddressSpace.C.o
+[ 62%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/perf/PerfEventAttrSet.C.o
+[ 62%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/util/ThreadInfo.C.o
+[ 63%] Building CXX object CMakeFiles/xpedite-pie.dir/lib/xpedite/util/Util.C.o
+[ 63%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/perf/PerfEventSet.C.o
+[ 64%] Building CXX object CMakeFiles/xpedite.dir/lib/xpedite/util/Util.C.o
+[ 65%] Building ASM object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/DataProbeCtl.S.o
+[ 65%] Building ASM object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/IdentityProbeCtl.S.o
+[ 66%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/perf/PerfEventsApi.C.o
+[ 67%] Building ASM object CMakeFiles/xpedite.dir/lib/xpedite/probes/DataProbeCtl.S.o
+[ 67%] Building ASM object CMakeFiles/xpedite.dir/lib/xpedite/probes/IdentityProbeCtl.S.o
+[ 68%] Building ASM object CMakeFiles/xpedite.dir/lib/xpedite/probes/ProbeCtl.S.o
+[ 69%] Building ASM object CMakeFiles/xpedite-pie.dir/lib/xpedite/probes/ProbeCtl.S.o
+[ 70%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/perf/PerfEventsCtl.C.o
+[ 71%] Building C object CMakeFiles/xpedite-pic.dir/lib/xpedite/pmu/EventSet.c.o
+[ 72%] Linking CXX shared module xpediteBindings.cpython-312-x86_64-linux-gnu.so
+[ 72%] Building C object CMakeFiles/xpedite-pic.dir/lib/xpedite/pmu/Formatter.c.o
+[ 73%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/pmu/PMUCtl.C.o
+/root/xpedite/lib/xpedite/pmu/Formatter.c: In function ‘pmuRequestToString’:
+/root/xpedite/lib/xpedite/pmu/Formatter.c:133:56: warning: taking address of packed member of ‘struct <anonymous>’ may result in an unaligned pointer value [-Waddress-of-packed-member]
+  133 |       fmtSize = offcoreEventToString(buffer, capacity, &request_->_offcoreEvents[i]);
+      |                                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 74%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/Config.C.o
+[ 74%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/Probe.C.o
+[ 75%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/ProbeCtl.C.o
+[ 76%] Linking CXX static library libxpedite-pie.a
+[ 78%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/RecorderCtl.C.o
+[ 79%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/Recorders.C.o
+[ 80%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/transport/Framer.C.o
+[ 77%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/ProbeList.C.o
+[ 79%] Linking CXX static library libxpedite.a
+[ 81%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/transport/Listener.C.o
+[ 82%] Building ASM object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/DataProbeCtl.S.o
+[ 82%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/util/ThreadInfo.C.o
+[ 85%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/util/Util.C.o
+[ 84%] Building CXX object CMakeFiles/xpedite-pic.dir/lib/xpedite/util/AddressSpace.C.o
+[ 81%] Building ASM object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/IdentityProbeCtl.S.o
+[ 83%] Building ASM object CMakeFiles/xpedite-pic.dir/lib/xpedite/probes/ProbeCtl.S.o
+[ 85%] Built target xpedite-pie
+[ 85%] Built target xpedite
+[ 85%] Building CXX object CMakeFiles/allocatorApp.dir/test/targets/AllocatorApp.C.o
+[ 86%] Building CXX object CMakeFiles/customRecorderApp.dir/test/targets/CustomRecorderApp.C.o
+[ 87%] Building CXX object CMakeFiles/xpediteSamplesLoader.dir/bin/SamplesLoader.C.o
+[ 89%] Building CXX object CMakeFiles/xpediteDemo.dir/demo/Demo.C.o
+[ 89%] Building CXX object CMakeFiles/dataTxnApp.dir/test/targets/DataTxnApp.C.o
+st/targets/EmbeddedApp.C.o
+[ 91%] Building CXX object CMakeFiles/slowFixDecoderApp.dir/test/targets/SlowFixDecoder.C.o
+[ 92%] Linking CXX shared library libxpedite-pic.so
+[ 92%] Built target xpedite-pic
+[ 93%] Linking CXX executable allocatorApp
+[ 93%] Linking CXX executable picApp
+[ 93%] Built target allocatorApp
+[ 93%] Built target picApp
+[ 94%] Linking CXX executable slowFixDecoderApp
+[ 95%] Linking CXX executable embeddedApp
+[ 96%] Linking CXX executable dataTxnApp
+[ 96%] Linking CXX executable customRecorderApp
+[ 97%] Linking CXX executable xpediteSamplesLoader
+[ 97%] Built target xpediteBindings
+[ 97%] Built target dataTxnApp
+[ 97%] Built target embeddedApp
+[ 98%] Linking CXX executable xpediteDemo
+[ 98%] Built target slowFixDecoderApp
+[ 98%] Built target customRecorderApp
+[ 98%] Built target xpediteSamplesLoader
+[ 98%] Built target xpediteDemo
+[100%] Linking CXX executable multiThreadedApp
+[100%] Built target multiThreadedApp
+Install the project...
+-- Install configuration: "Release"
+-- Installing: ../install/lib/libxpedite.a
+-- Installing: ../install/include/xpedite
+-- Installing: ../install/include/xpedite/intercept
+-- Installing: ../install/include/xpedite/intercept/Report.H
+-- Installing: ../install/include/xpedite/pmu
+-- Installing: ../install/include/xpedite/pmu/fwd.h
+-- Installing: ../install/include/xpedite/pmu/PMUArch.h
+-- Installing: ../install/include/xpedite/pmu/PMUCtl.H
+-- Installing: ../install/include/xpedite/pmu/FixedPmcSet.H
+-- Installing: ../install/include/xpedite/pmu/Formatter.h
+-- Installing: ../install/include/xpedite/pmu/EventSelect.h
+-- Installing: ../install/include/xpedite/pmu/EventSet.h
+-- Installing: ../install/include/xpedite/probes
+-- Installing: ../install/include/xpedite/probes/StackAlign.H
+-- Installing: ../install/include/xpedite/probes/RecorderCtl.H
+-- Installing: ../install/include/xpedite/probes/ProbeKey.H
+-- Installing: ../install/include/xpedite/probes/ProbeList.H
+-- Installing: ../install/include/xpedite/probes/Sample.H
+-- Installing: ../install/include/xpedite/probes/Probe.H
+-- Installing: ../install/include/xpedite/probes/Config.H
+-- Installing: ../install/include/xpedite/probes/CallSite.H
+-- Installing: ../install/include/xpedite/probes/ProbeCtl.H
+-- Installing: ../install/include/xpedite/probes/Recorders.H
+-- Installing: ../install/include/xpedite/platform
+-- Installing: ../install/include/xpedite/platform/Builtins.H
+-- Installing: ../install/include/xpedite/perf
+-- Installing: ../install/include/xpedite/perf/PerfEventSet.H
+-- Installing: ../install/include/xpedite/perf/PerfEventsCtl.H
+-- Installing: ../install/include/xpedite/perf/PerfEventAttrSet.H
+-- Installing: ../install/include/xpedite/perf/PerfEvent.H
+-- Installing: ../install/include/xpedite/perf/PerfEventsApi.H
+-- Installing: ../install/include/xpedite/transport
+-- Installing: ../install/include/xpedite/transport/Socket.H
+-- Installing: ../install/include/xpedite/transport/Framer.H
+-- Installing: ../install/include/xpedite/transport/Buffer.H
+-- Installing: ../install/include/xpedite/transport/Frame.H
+-- Installing: ../install/include/xpedite/transport/Platform.H
+-- Installing: ../install/include/xpedite/transport/Listener.H
+-- Installing: ../install/include/xpedite/util
+-- Installing: ../install/include/xpedite/util/ThreadInfo.H
+-- Installing: ../install/include/xpedite/util/Util.H
+-- Installing: ../install/include/xpedite/util/Allocator.H
+-- Installing: ../install/include/xpedite/util/Errno.H
+-- Installing: ../install/include/xpedite/util/Tsc.H
+-- Installing: ../install/include/xpedite/util/AddressSpace.H
+-- Installing: ../install/include/xpedite/util/RNG.H
+-- Installing: ../install/include/xpedite/common
+-- Installing: ../install/include/xpedite/common/WaitFreeBufferPool.H
+-- Installing: ../install/include/xpedite/common/PromiseKeeper.H
+-- Installing: ../install/include/xpedite/log
+-- Installing: ../install/include/xpedite/log/Log.H
+-- Installing: ../install/include/xpedite/framework
+-- Installing: ../install/include/xpedite/framework/SamplesLoader.H
+-- Installing: ../install/include/xpedite/framework/ProbeData.H
+-- Installing: ../install/include/xpedite/framework/Probes.H
+-- Installing: ../install/include/xpedite/framework/Framework.H
+-- Installing: ../install/include/xpedite/framework/Options.H
+-- Installing: ../install/include/xpedite/framework/SamplesBuffer.H
+-- Installing: ../install/include/xpedite/framework/Persister.H
+-- Installing: ../install/include/xpedite/framework/ProfileInfo.H
+-- Installing: ../install/include/xpedite/framework/ProbeInfo.H
+-- Installing: ../install/lib/libxpedite-pie.a
+-- Installing: ../install/lib/libxpedite-stub.so
+-- Installing: ../install/bin/xpediteSamplesLoader
+-- Installing: ../install/lib/libxpedite-pic.so
+-- Installing: ../install/lib/xpediteBindings.cpython-312-x86_64-linux-gnu.so
+-- Installing: ../install/bin/xpediteDemo
+-- Installing: ../install/test/allocatorApp
+-- Installing: ../install/test/embeddedApp
+-- Installing: ../install/test/customRecorderApp
+-- Installing: ../install/test/multiThreadedApp
+-- Installing: ../install/test/dataTxnApp
+-- Installing: ../install/test/libpic.so
+-- Installing: ../install/test/picApp
+-- Set non-toolchain portion of runtime path of "../install/test/picApp" to ""
+-- Installing: ../install/test/slowFixDecoderApp
+~/xpedite

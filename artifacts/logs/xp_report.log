@@ -1,0 +1,11 @@
+[ERROR]: failed to load profile file "demo/profileInfo.py"
+Traceback (most recent call last):
+  File "/root/xpedite/scripts/lib/xpedite/profiler/profileInfo.py", line 79, in loadProfileInfo
+    spec.loader.exec_module(profileInfo)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/xpedite/demo/profileInfo.py", line 18, in <module>
+    appInfo = os.path.join(os.environ.get('XPEDITE_DEMO_LOG_DIR'), 'xpedite-appinfo.txt')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 76, in join
+TypeError: expected str, bytes or os.PathLike object, not NoneType

@@ -1,0 +1,174 @@
+{
+ "generated_at": "2026-11-06 09:16:22",
+ "storage": "LMDB（本地），库 equities",
+ "checks": {
+  "versioned_write": {
+   "v1_rows": 250,
+   "v2_rows": 100,
+   "versions_seen": [
+    {
+     "version": 10,
+     "date": "",
+     "deleted": false
+    },
+    {
+     "version": 9,
+     "date": "",
+     "deleted": false
+    }
+   ]
+  },
+  "asof_time_travel": {
+   "asof_rows": 250,
+   "note": "读取 30 分钟前的 v1 版本"
+  },
+  "date_range_read": {
+   "rows_2025": 250,
+   "start": "2025-01-02",
+   "end": "2025-12-31"
+  },
+  "version_lineage": {
+   "v3_rows": 250
+  },
+  "symbols_in_library": [
+   "000300.SS",
+   "000858.SZ",
+   "002594.SZ",
+   "300750.SZ",
+   "600519.SS",
+   "600556.SS",
+   "601318.SS",
+   "AAPL",
+   "GS",
+   "JPM",
+   "MSFT",
+   "NVDA",
+   "SPY",
+   "TSLA",
+   "XOM"
+  ]
+ },
+ "store_status": {
+  "000300.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:51",
+   "versions": 3
+  },
+  "TSLA": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 4
+  },
+  "JPM": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:46",
+   "versions": 4
+  },
+  "NVDA": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:45",
+   "versions": 4
+  },
+  "GS": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:47",
+   "versions": 4
+  },
+  "XOM": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:49",
+   "versions": 4
+  },
+  "601318.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "AAPL": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:43",
+   "versions": 4
+  },
+  "MSFT": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:44",
+   "versions": 4
+  },
+  "600519.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "SPY": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:51",
+   "versions": 4
+  },
+  "002594.SZ": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "600556.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:51",
+   "versions": 2
+  },
+  "300750.SZ": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "000858.SZ": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  }
+ },
+ "passed": true
+}

@@ -1,0 +1,8 @@
+# 本地环境与数据（不入库）
+.venv/
+data/
+vendor/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store

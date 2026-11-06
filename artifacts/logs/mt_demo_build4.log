@@ -1,0 +1,6 @@
+[WARNING] Running as root is not recommended
+File "demo_decode/mt_decode_demo.ml", line 93, characters 60-61:
+93 |   let fixture = match Sys.argv |> Array.to_list |> List.nth 1 with
+                                                                 ^
+Error: This expression has type "int" but an expression was expected of type
+         "'a list"

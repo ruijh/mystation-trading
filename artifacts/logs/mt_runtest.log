@@ -1,0 +1,38 @@
+[WARNING] Running as root is not recommended
+File "src/dune", lines 12-22, characters 0-629:
+12 | (rule
+13 |  (target libLLVM.a)
+14 |  (deps llvm_symbolizer_stubs.cpp)
+15 |  (action
+16 |   (progn
+17 |    (bash
+18 |     "clang++ -Wall -Wextra -Werror -Wno-unused-parameter -DCAML_NAME_SPACE -I %{ocaml_where} $(llvm-config --cxxflags) -std=c++20 -O3 -march=broadwell -mtune=skylake -ffunction-sections -c llvm_symbolizer_stubs.cpp")
+19 |    (bash
+20 |     "ld.lld llvm_symbolizer_stubs.o --gc-sections -static -r -plugin-opt=mcpu=broadwell -plugin-opt=O3 --hash-style=gnu --build-id --start-lib $(llvm-config --link-static --libfiles Symbolize) --end-lib -o libLLVM.o")
+21 |    (run llvm-strip --strip-debug libLLVM.o)
+22 |    (run llvm-ar Drcs %{target} libLLVM.o))))
+llvm_symbolizer_stubs.cpp:43:29: error: no matching member function for call to 'symbolizeInlinedCode'
+   43 |   auto result = symbolizer->symbolizeInlinedCode(executable_file, sectioned_address);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:84:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const ObjectFile' for 1st argument
+   84 |   symbolizeInlinedCode(const ObjectFile &Obj,
+      |   ^                    ~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:87:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const std::string' (aka 'const basic_string<char>') for 1st argument
+   87 |   symbolizeInlinedCode(const std::string &ModuleName,
+      |   ^                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:90:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'ArrayRef<uint8_t>' (aka 'ArrayRef<unsigned char>') for 1st argument
+   90 |   symbolizeInlinedCode(ArrayRef<uint8_t> BuildID,
+      |   ^                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+llvm_symbolizer_stubs.cpp:66:35: error: no matching member function for call to 'getOrCreateModuleInfo'
+   66 |     if (auto module = symbolizer->getOrCreateModuleInfo(executable_file)) {
+      |                       ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:135:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const std::string' (aka 'const basic_string<char>') for 1st argument
+  135 |   getOrCreateModuleInfo(const std::string &ModuleName);
+      |   ^                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:161:34: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const ObjectFile' for 1st argument
+  161 |   Expected<SymbolizableModule *> getOrCreateModuleInfo(const ObjectFile &Obj);
+      |                                  ^                     ~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:167:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'ArrayRef<uint8_t>' (aka 'ArrayRef<unsigned char>') for 1st argument
+  167 |   getOrCreateModuleInfo(ArrayRef<uint8_t> BuildID);
+      |   ^                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.

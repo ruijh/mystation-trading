@@ -1,0 +1,136 @@
+Error: execve(./gen-versions.sh): No such file or directory
+-> required by _build/default/bin/version_stubs.c
+-> required by alias bin/all
+-> required by alias default
+File "src/dune", lines 12-22, characters 0-629:
+12 | (rule
+13 |  (target libLLVM.a)
+14 |  (deps llvm_symbolizer_stubs.cpp)
+15 |  (action
+16 |   (progn
+17 |    (bash
+18 |     "clang++ -Wall -Wextra -Werror -Wno-unused-parameter -DCAML_NAME_SPACE -I %{ocaml_where} $(llvm-config --cxxflags) -std=c++20 -O3 -march=broadwell -mtune=skylake -ffunction-sections -c llvm_symbolizer_stubs.cpp")
+19 |    (bash
+20 |     "ld.lld llvm_symbolizer_stubs.o --gc-sections -static -r -plugin-opt=mcpu=broadwell -plugin-opt=O3 --hash-style=gnu --build-id --start-lib $(llvm-config --link-static --libfiles Symbolize) --end-lib -o libLLVM.o")
+21 |    (run llvm-strip --strip-debug libLLVM.o)
+22 |    (run llvm-ar Drcs %{target} libLLVM.o))))
+llvm_symbolizer_stubs.cpp:43:29: error: no matching member function for call to 'symbolizeInlinedCode'
+   43 |   auto result = symbolizer->symbolizeInlinedCode(executable_file, sectioned_address);
+      |                 ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:84:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const ObjectFile' for 1st argument
+   84 |   symbolizeInlinedCode(const ObjectFile &Obj,
+      |   ^                    ~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:87:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const std::string' (aka 'const basic_string<char>') for 1st argument
+   87 |   symbolizeInlinedCode(const std::string &ModuleName,
+      |   ^                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:90:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'ArrayRef<uint8_t>' (aka 'ArrayRef<unsigned char>') for 1st argument
+   90 |   symbolizeInlinedCode(ArrayRef<uint8_t> BuildID,
+      |   ^                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+llvm_symbolizer_stubs.cpp:66:35: error: no matching member function for call to 'getOrCreateModuleInfo'
+   66 |     if (auto module = symbolizer->getOrCreateModuleInfo(executable_file)) {
+      |                       ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:135:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const std::string' (aka 'const basic_string<char>') for 1st argument
+  135 |   getOrCreateModuleInfo(const std::string &ModuleName);
+      |   ^                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:161:34: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'const ObjectFile' for 1st argument
+  161 |   Expected<SymbolizableModule *> getOrCreateModuleInfo(const ObjectFile &Obj);
+      |                                  ^                     ~~~~~~~~~~~~~~~~~~~~~
+/usr/lib/llvm-18/include/llvm/DebugInfo/Symbolize/Symbolize.h:167:3: note: candidate function not viable: no known conversion from 'std::string_view' (aka 'basic_string_view<char>') to 'ArrayRef<uint8_t>' (aka 'ArrayRef<unsigned char>') for 1st argument
+  167 |   getOrCreateModuleInfo(ArrayRef<uint8_t> BuildID);
+      |   ^                     ~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+Generating perf_dlfilter.ml
+Skipping generation of .mli
+File "src/interned_string.ml", line 22, characters 16-23:
+22 | include functor Binable.Of_stringable_with_uuid
+                     ^^^^^^^
+Error: Syntax error
+File "src/new_trace_writer.ml", line 53, characters 10-11:
+53 |         (#(Trace_segment.t * in_filtered_region:bool) Nonempty_vec.t[@sexp.opaque])
+               ^
+Error: Syntax error
+File "src/nonempty_vec.ml", line 4, characters 11-12:
+4 |   type ('a : k) t = ('a Vec.t[@kind k])
+               ^
+Error: Syntax error
+File "src/nonempty_vec.mli", line 5, characters 11-12:
+5 |   type ('a : k) t
+               ^
+Error: Syntax error
+File "src/ocaml_exception_info.mli", line 96, characters 14-15:
+96 |   -> f:local_ (int64 * Kind.t -> unit)
+                   ^
+Error: Syntax error
+File "src/perf_decode.ml", line 116, characters 5-6:
+116 |   : #(Symbol.t * int * Interned_string.t or_null)
+           ^
+Error: Syntax error
+File "src/slice.ml", line 3, characters 9-10:
+3 | type ('a : value mod non_float) t =
+             ^
+Error: Syntax error
+File "src/slice.mli", line 3, characters 10-11:
+3 | type (+'a : value mod non_float) t : immediate & immediate & value
+              ^
+Error: Syntax error
+File "src/symbolizer.ml", line 43, characters 9-10:
+43 |   type t : word
+              ^
+Error: Syntax error: 'end' expected
+File "src/symbolizer.ml", line 42, characters 25-31:
+42 | module Llvm_symbolizer = struct
+                              ^^^^^^
+  This 'struct' might be unmatched
+File "src/symbolizer.mli", line 54, characters 18-19:
+54 |   -> addr:Int64.t @ local
+                       ^
+Error: Syntax error
+File "src/trace_segment.ml", line 44, characters 8-9:
+44 |     -> #(t or_null
+             ^
+Error: Syntax error
+File "src/ocaml_exception_info.ml", lines 66-101, characters 0-3:
+ 66 | module%test _ = struct
+ 67 |   open Core
+ 68 | 
+ 69 |   let iter_and_print ~from ~to_ t =
+ 70 |     let range = ref [] in
+...
+ 98 |     iter_and_print ~from:150L ~to_:200L t;
+ 99 |     [%expect {| ((from 150) (to_ 200) (range ())) |}]
+100 |   ;;
+101 | end
+Error: value expected
+File "src/perf_map.ml", lines 40-156, characters 0-3:
+ 40 | module%test _ = struct
+ 41 |   open Core
+ 42 | 
+ 43 |   let%expect_test "example perf map" =
+ 44 |     let sample =
+...
+153 |               "instance void [System.Private.CoreLib] System.Collections.Generic.Dictionary`2[System.__Canon,System.Double]::.ctor(int32,class System.Collections.Generic.IEqualityComparer`1<!0>)[QuickJitted]")))))
+154 |          ("" ())) |}]
+155 |   ;;
+156 | end
+Error: value expected
+File "src/util.ml", lines 29-63, characters 0-3:
+29 | module%test _ = struct
+30 |   open Core
+31 | 
+32 |   let check ?remove_hex_prefix str =
+33 |     print_s
+...
+60 |     check "0xffffffffff22f000";
+61 |     [%expect {| ((int64 0xffffffffff22f000) (int 0x7fffffffff22f000)) |}]
+62 |   ;;
+63 | end
+Error: value expected
+File "vendor/tracing/zero/writer_intf.ml", line 17, characters 40-86:
+17 |   val next_buf : ensure_capacity:int -> (read_write, Iobuf.seek, Iobuf.global) Iobuf.t
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: The type constructor Iobuf.t expects 2 argument(s),
+       but is here applied to 3 argument(s)
+File "vendor/fzf/src/fzf.ml", line 375, characters 43-62:
+375 |       Option.iter pid_ivar ~f:(fun ivar -> Async.Ivar.fill_exn ivar pid);
+                                                 ^^^^^^^^^^^^^^^^^^^
+Error: Unbound value Async.Ivar.fill_exn

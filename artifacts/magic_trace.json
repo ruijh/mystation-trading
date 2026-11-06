@@ -1,0 +1,30 @@
+{
+ "generated_at": "2026-11-06 04:44:18",
+ "repo": "jane-street/magic-trace",
+ "platform": "WSL2 Ubuntu 24.04 · OxCaml 5.2.0+ox（对齐上游 debian/rules CI 配方：pinned oxcaml opam-repo + llvm-20）",
+ "build": {
+  "exit_code": 0,
+  "binary": "_build/default/bin/magic_trace_bin.exe",
+  "subcommands": [
+   "attach",
+   "decode",
+   "run"
+  ],
+  "ocaml_stack": "Jane Street v0.18~preview (async/core)"
+ },
+ "decode_demo": {
+  "input": "test/*.perf —— Jane Street 官方捕获的真实 Intel PT perf-script 数据（13 个 fixture）",
+  "output": "artifacts/magic_trace_demo.txt —— 纳秒级时间线（BEGIN/END 事件）",
+  "pipeline": "Perf_decode（perf-script 解析）→ callstack 重构 → Trace_writer 时间线"
+ },
+ "live_capture_limit": "Intel PT 实时采集需要裸机 Intel Skylake+；虚拟机/WSL 不支持（上游 README 注明）。WSL 下 live run 的报错已留档 artifacts/logs/mt_live.log",
+ "compat_patches": [
+  "Windows git autocrlf 导致 *.sh 损坏 → WSL 侧转回 LF",
+  "test/dune 与 demo_decode/dune 补 -cclib -lstdc++（上游仅 bin 有该链接标志）"
+ ],
+ "artifacts": [
+  "artifacts/magic_trace_demo.txt",
+  "artifacts/logs/mt_ox_build6.log"
+ ],
+ "passed": true
+}

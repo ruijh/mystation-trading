@@ -1,0 +1,6 @@
+[WARNING] Running as root is not recommended
+File "demo_decode/mt_decode_demo.ml", line 93, characters 27-35:
+93 |   let args = Array.to_list Sys.argv in
+                                ^^^^^^^^
+Error (alert deprecated): Async.Sys.argv
+[since 2019-08] Use [Sys.get_argv] instead, which has the correct behavior when [caml_sys_modify_argv] is called.

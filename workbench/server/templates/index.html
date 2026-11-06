@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MyStation · 交易工作台</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2333;--border:#2d3748;--fg:#e6edf3;--dim:#8b949e;
+--cyan:#58d6f0;--green:#3fb950;--red:#f85149;--orange:#d29922;--purple:#bc8cff;--blue:#58a6ff;
+--grid:#21262d;--ref:#3a4250;--prebg:#0a0e14;--prefix:#9ecbff}
+/* ── 主题风格：八大行品牌配色 ── */
+body[data-theme=jpm]{--bg:#0d1420;--panel:#121a2a;--panel2:#182238;--border:#27395c;--cyan:#3f8cff;--dim:#93a3bd;--grid:#1f2c47;--ref:#41537d;--prebg:#0a111d;--prefix:#9ecbff}
+body[data-theme=macos]{--bg:#f5f5f7;--panel:#ffffff;--panel2:#eeeef2;--border:#d2d2d7;--fg:#1d1d1f;--dim:#6e6e73;--cyan:#007aff;--green:#34c759;--red:#ff3b30;--orange:#ff9500;--purple:#af52de;--blue:#007aff;--grid:#e5e5ea;--ref:#aeaeb2;--prebg:#eeeef2;--prefix:#007aff}
+body[data-theme=binance]{--bg:#181a20;--panel:#1e2329;--panel2:#2b3139;--border:#2b3139;--fg:#eaecef;--dim:#848e9c;--cyan:#f0b90b;--green:#2ebd85;--red:#f6465d;--orange:#f0b90b;--purple:#c99400;--blue:#f0b90b;--grid:#2b3139;--ref:#474d57;--prebg:#0b0e11;--prefix:#f0b90b}
+body[data-theme=berkshire]{--bg:#f4f6f9;--panel:#ffffff;--panel2:#eaeef4;--border:#c9d2de;--fg:#17223b;--dim:#5b6b82;--cyan:#1f4e9e;--green:#1a7f37;--red:#c93c37;--orange:#9a6700;--purple:#8250df;--blue:#0969da;--grid:#dde3ec;--ref:#aab7c9;--prebg:#eef1f6;--prefix:#1f4e9e}
+body[data-theme=cmb]{--bg:#150d0e;--panel:#1d1214;--panel2:#261719;--border:#4a2a2e;--cyan:#f25c5c;--dim:#b39a9c;--grid:#3a2427;--ref:#6e4348;--prebg:#120a0b;--prefix:#e8b6b6}
+body[data-theme=citi]{--bg:#071523;--panel:#0c1d30;--panel2:#122640;--border:#24446b;--cyan:#3fa9f5;--dim:#8fa8c0;--grid:#17304c;--ref:#33517a;--prebg:#06101b;--prefix:#9ecbff}
+body[data-theme=hsbc]{--bg:#170d0f;--panel:#201013;--panel2:#2a161a;--border:#57272e;--cyan:#ff7070;--dim:#c29aa0;--grid:#3d2126;--ref:#75424a;--prebg:#120a0c;--prefix:#ffc2c2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 "Segoe UI","Microsoft YaHei",system-ui,sans-serif}
+header{padding:18px 26px 6px;display:flex;flex-wrap:wrap;align-items:baseline;gap:14px}
+h1{font-size:20px;margin:0}
+h1 .en{color:var(--dim);font-weight:400;font-size:13px}
+#pills{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.pill{background:var(--panel2);border:1px solid var(--border);border-radius:20px;padding:3px 12px;font-size:12px;color:var(--dim)}
+.pill b{color:var(--fg)}
+nav{display:flex;gap:6px;padding:10px 26px;border-bottom:1px solid var(--border)}
+nav button{background:none;border:1px solid transparent;color:var(--dim);padding:7px 16px;border-radius:8px;cursor:pointer;font-size:14px}
+nav button.on{color:var(--fg);background:var(--panel2);border-color:var(--border)}
+main{padding:18px 26px;max-width:1250px}
+section{display:none}section.on{display:block}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:14px}
+.card h3{margin:0 0 10px;font-size:14px;color:var(--dim);font-weight:600}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.g2,.g3{grid-template-columns:1fr}}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-bottom:1px solid var(--border);padding:7px 10px;text-align:right}
+th{color:var(--dim);font-weight:600}
+td:first-child,th:first-child{text-align:left}
+.pos{color:var(--green)}.neg{color:var(--red)}.dimc{color:var(--dim)}
+select{background:var(--panel2);color:var(--fg);border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:14px;margin-bottom:12px}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:12px 16px}
+.kpi .v{font-size:22px;font-weight:700}
+.kpi .l{color:var(--dim);font-size:12px}
+.libcard{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px}
+.libcard h3{margin:0 0 6px;font-size:15px}
+.libcard .tag{font-size:11px;color:var(--dim)}
+.libcard pre{background:var(--prebg);border:1px solid var(--border);border-radius:6px;padding:8px;font:11px/1.45 Consolas,monospace;color:var(--prefix);overflow:auto;max-height:150px;margin:8px 0 0}
+.badge{display:inline-block;border-radius:4px;padding:1px 8px;font-size:11px;font-weight:600}
+.badge.ok{background:#12321c;color:var(--green)}
+.badge.warn{background:#332a12;color:var(--orange)}
+.badge.err{background:#3a1416;color:var(--red)}
+.bar{height:6px;border-radius:3px;background:var(--panel2);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%}
+.small{font-size:12px;color:var(--dim)}
+</style>
+</head>
+<body>
+<header>
+  <h1>MyStation <span class="en">华尔街六库交易工作台 · gs-quant · ArcticDB · python-training · Xpedite · Firedancer · magic-trace</span></h1>
+  <select id="theme" title="主题风格"></select>
+  <div id="pills"></div>
+</header>
+<nav>
+  <button data-tab="overview" class="on">概览</button>
+  <button data-tab="risk">风险分析 · gs-quant</button>
+  <button data-tab="bt">手续费回测</button>
+  <button data-tab="libs">六库状态</button>
+</nav>
+<main>
+  <section id="tab-overview" class="on">
+    <div id="kpis" class="grid g3"></div>
+    <div class="card"><h3>标的池 · 五年日线（ArcticDB 实时读取）</h3><div id="tbl"></div></div>
+    <div class="card"><h3>数据管道</h3><div id="pipe" class="small"></div></div>
+  </section>
+
+  <section id="tab-risk">
+    <select id="risk-symbol"></select>
+    <div class="grid g2">
+      <div class="card"><h3>收盘价（周线，五年）</h3><div id="c-price"></div></div>
+      <div class="card"><h3>回撤曲线（gs-quant 口径）</h3><div id="c-dd"></div></div>
+      <div class="card"><h3>滚动年化波动率 63d</h3><div id="c-vol"></div></div>
+      <div class="card"><h3>价格 z-score 20d（gs-quant zscores）</h3><div id="c-z"></div></div>
+      <div class="card"><h3>滚动 beta 126d · <span id="beta-bench">SPY</span></h3><div id="c-beta"></div></div>
+      <div class="card"><h3>gs-quant 指标摘要</h3><div id="risk-sum"></div></div>
+    </div>
+  </section>
+
+  <section id="tab-bt">
+    <select id="bt-symbol"></select>
+    <div class="card"><h3>净值曲线（100k 本金 · 毛 vs 净（含佣金万5+滑点万2））</h3><div id="c-eq"></div></div>
+    <div class="card"><h3>绩效对比（gs-quant 统计口径）</h3><div id="bt-table"></div></div>
+  </section>
+
+  <section id="tab-libs">
+    <p class="small">六个华尔街开源库的运行状态与可复现证据；运行器见 <code>workbench/demos/</code> 与 <code>scripts/</code>。</p>
+    <div id="libs-grid" class="grid g2"></div>
+  </section>
+</main>
+<script>
+const $=q=>document.querySelector(q),$$=q=>[...document.querySelectorAll(q)];
+const fmtP=x=>(x>=0?'+':'')+(100*x).toFixed(2)+'%';
+const fmt2=x=>Number(x).toFixed(2);
+const dstr=ms=>{const d=new Date(ms);return d.toISOString().slice(0,10)};
+const COLORS={price:'var(--green)',dd:'var(--red)',vol:'var(--orange)',z:'var(--cyan)',beta:'var(--purple)',gross:'var(--dim)',net:'var(--cyan)',bh:'#4a5568'};
+const state={overview:null,status:null,riskSym:'AAPL',btSym:'AAPL'};
+
+/* ── 主题风格：八大行 ── */
+const THEMES=[
+ ['mystation','MyStation（默认）'],
+ ['jpm','摩根大通'],['macos','MacOS'],['binance','币安'],['berkshire','伯克希尔·哈撒韦'],
+ ['cmb','招商银行'],['citi','花旗'],['hsbc','汇丰'],
+];
+function applyTheme(v){
+  document.body.dataset.theme=v;
+  try{localStorage.setItem('mystation-theme',v)}catch(e){}
+  // 主题切换后用新配色重画当前可见图表
+  if(document.querySelector('#tab-risk.on'))renderRisk();
+  if(document.querySelector('#tab-bt.on'))renderBt();
+}
+(function initTheme(){
+  const sel=$('#theme');
+  THEMES.forEach(([v,n])=>{const o=document.createElement('option');o.value=v;o.textContent='🎨 '+n;sel.appendChild(o)});
+  let saved='mystation';
+  try{saved=localStorage.getItem('mystation-theme')||'mystation'}catch(e){}
+  if(!THEMES.some(([v])=>v===saved))saved='mystation';
+  sel.value=saved;
+  if(saved!=='mystation')document.body.dataset.theme=saved;
+  sel.onchange=()=>applyTheme(sel.value);
+})();
+
+/* ── 极简 SVG 折线图（无外部依赖，颜色随主题变量走）──────────── */
+const getVar=(n,fb)=>getComputedStyle(document.body).getPropertyValue(n).trim()||fb;
+function svgLine(el,series,opts={}){
+  const W=560,H=280,L=52,R=14,T=12,B=30;
+  const GRID=getVar('--grid','#21262d'),REF=getVar('--ref','#3a4250'),DIM=getVar('--dim','#8b949e');
+  const pts=series.filter(s=>s.points.length>1);
+  if(!pts.length){el.innerHTML='<div class="small dimc">无数据</div>';return}
+  let xs=pts[0].points.map(p=>p[0]),ys=pts.flatMap(s=>s.points.map(p=>p[1]));
+  const x0=Math.min(...xs),x1=Math.max(...xs);
+  let y0=Math.min(...ys),y1=Math.max(...ys);
+  if(opts.y0!==undefined)y0=opts.y0; if(opts.y1!==undefined)y1=opts.y1;
+  if(y0===y1){y0-=1;y1+=1}
+  const X=t=>L+(t-x0)/(x1-x0||1)*(W-L-R);
+  const Y=v=>T+(1-(v-y0)/(y1-y0||1))*(H-T-B);
+  let g='';
+  for(let i=0;i<=4;i++){const v=y0+(y1-y0)*i/4,y=Y(v);
+    g+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="${GRID}"/>`+
+       `<text x="${L-6}" y="${y+4}" text-anchor="end" font-size="10" fill="${DIM}">${opts.yfmt?opts.yfmt(v):fmt2(v)}</text>`}
+  for(let i=0;i<=4;i++){const t=x0+(x1-x0)*i/4;
+    g+=`<text x="${X(t)}" y="${H-8}" text-anchor="middle" font-size="10" fill="${DIM}">${dstr(t).slice(0,7)}</text>`}
+  if(opts.refLines)for(const r of opts.refLines){if(r.v>=y0&&r.v<=y1)
+    g+=`<line x1="${L}" y1="${Y(r.v)}" x2="${W-R}" y2="${Y(r.v)}" stroke="${r.c||REF}" stroke-dasharray="4 3" opacity=".6"/>`+
+       `<text x="${W-R}" y="${Y(r.v)-4}" text-anchor="end" font-size="10" fill="${r.c||REF}">${r.t}</text>`}
+  for(const s of pts){
+    const d=s.points.map((p,i)=>`${i?'L':'M'}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join('');
+    g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.w||1.6}"/>`;
+    const last=s.points[s.points.length-1];
+    g+=`<circle cx="${X(last[0])}" cy="${Y(last[1])}" r="3" fill="${s.color}"/>`+
+       `<text x="${X(last[0])+6}" y="${Y(last[1])+3}" font-size="10" fill="${s.color}">${opts.yfmt?opts.yfmt(last[1]):fmt2(last[1])}</text>`}
+  let leg='';
+  if(pts.length>1||opts.legend)pts.forEach((s,i)=>{leg+=`<span style="color:${s.color};margin-right:14px">■ ${s.name}</span>`});
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}</svg><div class="small" style="margin-top:4px">${leg}</div>`;
+}
+const pctfmt=v=>(100*v).toFixed(1)+'%';
+const money=v=>'$'+Math.round(v/1000)+'k';
+
+/* ── tabs ── */
+$$('nav button').forEach(b=>b.onclick=()=>{
+  $$('nav button').forEach(x=>x.classList.remove('on'));b.classList.add('on');
+  $$('main section').forEach(s=>s.classList.remove('on'));
+  $('#tab-'+b.dataset.tab).classList.add('on');
+  if(b.dataset.tab==='libs')renderLibs();
+});
+
+/* ── 概览 ── */
+function renderOverview(){
+  const o=state.overview,st=state.status;
+  const an=o.analytics.symbols,bs=o.backtest_stats;
+  const kpi=(l,v,cls='')=>`<div class="kpi"><div class="l">${l}</div><div class="v ${cls}">${v}</div></div>`;
+  const syms=Object.keys(an);
+  const avg=k=>syms.reduce((a,s)=>a+an[s][k],0)/syms.length;
+  $('#kpis').innerHTML=
+    kpi('标的池（五年日线）',`${syms.length} 只`)+
+    kpi('平均年化波动率',pctfmt(avg('ann_vol')))+
+    kpi('平均最大回撤',pctfmt(avg('max_drawdown')),'neg')+
+    kpi('平均 beta（分市场基准）',fmt2(avg('beta_spy')))+
+    kpi('数据源',(()=>{
+      const d=state.status.data||{},c={};Object.values(d).forEach(v=>{c[v.source]=(c[v.source]||0)+1});
+      return Object.entries(c).map(([k,v])=>`${k}×${v}`).join(' ');
+    })())+
+    kpi('ArcticDB 演示',o.arcticdb_demo_passed?'passed':'—',o.arcticdb_demo_passed?'pos':'');
+  let rows=`<table><tr><th>标的</th><th>年化波动</th><th>最大回撤</th><th>z-score 20d</th><th>beta vs 基准</th><th>夏普</th>
+  <th>回测净收益(z回归)</th><th>费用拖累</th></tr>`;
+  for(const s of syms){const a=an[s],b=(bs[s]||{}).zscore_reversion||{};
+    rows+=`<tr><td><b>${s}</b></td><td>${pctfmt(a.ann_vol)}</td><td class="neg">${pctfmt(a.max_drawdown)}</td>
+    <td class="${a.zscore_20d>0?'pos':'neg'}">${fmt2(a.zscore_20d)}</td><td>${fmt2(a.beta_spy)}</td><td>${fmt2(a.sharpe)}</td>
+    <td class="${b.net_total_return>=0?'pos':'neg'}">${fmtP(b.net_total_return??NaN)}</td>
+    <td class="neg">${pctfmt(b.fee_drag??NaN)}</td></tr>`}
+  $('#tbl').innerHTML=rows+'</table>';
+  const d=st.data||{};
+  const srcs={};Object.values(d).forEach(v=>{srcs[v.source]=(srcs[v.source]||0)+1});
+  $('#pipe').innerHTML=
+   `yfinance（五年日线，1255 行/只）→ <b>ArcticDB</b> LMDB 版本化落库 → <b>gs-quant</b> 波动/回撤/z-score/beta → 带手续费回测 → 本工作台<br>` +
+   `符号数：${Object.keys(d).length} ｜ 来源分布：${Object.entries(srcs).map(([k,v])=>`${k}×${v}`).join('，')} ｜ ` +
+   `费用模型：${o.cost_model||''}`;
+}
+
+/* ── 风险分析 ── */
+async function renderRisk(){
+  const s=state.riskSym,a=state.overview.analytics.symbols[s];
+  $('#beta-bench').textContent=a.benchmark||'SPY';
+  const [pr]=await Promise.all([fetch(`/api/price/${s}`).then(r=>r.json())]);
+  const ser=a.series;
+  svgLine($('#c-price'),[{name:s+' 收盘价',color:COLORS.price,points:pr.weekly}],{yfmt:v=>v.toFixed(0)});
+  svgLine($('#c-dd'),[{name:'回撤',color:COLORS.dd,points:ser.drawdown_1w}],{yfmt:pctfmt,refLines:[{v:0,t:'0'}]});
+  svgLine($('#c-vol'),[{name:'滚动波动率',color:COLORS.vol,points:ser.rolling_vol_63d_1w}],{yfmt:pctfmt});
+  svgLine($('#c-z'),[{name:'z-score',color:COLORS.z,points:ser.zscore_20d_1w}],
+    {yfmt:fmt2,refLines:[{v:1,t:'+1'},{v:-1,t:'-1'},{v:0,t:'0'}]});
+  svgLine($('#c-beta'),[{name:'rolling beta',color:COLORS.beta,points:ser.beta_126d_1w}],
+    {yfmt:fmt2,refLines:[{v:1,t:'β=1'}]});
+  $('#risk-sum').innerHTML=`<table>
+   <tr><td>年化波动率</td><td class="pos">${pctfmt(a.ann_vol)}</td></tr>
+   <tr><td>最大回撤</td><td class="neg">${pctfmt(a.max_drawdown)}</td></tr>
+   <tr><td>z-score(20d)</td><td>${fmt2(a.zscore_20d)}</td></tr>
+   <tr><td>beta vs ${a.benchmark||'SPY'}</td><td>${fmt2(a.beta_spy)}</td></tr>
+   <tr><td>夏普(零利率近似)</td><td>${fmt2(a.sharpe)}</td></tr></table>
+   <p class="small">引擎：${a.engine||state.overview.analytics.engine}。GS 原生 sharpe 需无风险利率曲线（API），此处用零利率近似。</p>`;
+}
+
+/* ── 回测 ── */
+async function renderBt(){
+  const s=state.btSym,d=await fetch(`/api/backtest/${s}`).then(r=>r.json());
+  const z=d.zscore_reversion||{},m=d.sma_cross||{};
+  svgLine($('#c-eq'),[
+    {name:'毛收益（不含费用）',color:COLORS.gross,points:z.equity_gross_1w},
+    {name:'净收益（含手续费）',color:COLORS.net,points:z.equity_net_1w,w:2},
+    {name:'100k 本金线',color:getVar('--ref','#3a4250'),points:z.equity_gross_1w.length?[[z.equity_gross_1w[0][0],100000],[z.equity_gross_1w[z.equity_gross_1w.length-1][0],100000]]:[]},
+  ],{yfmt:money});
+  const row=(l,zz,mm)=>`<tr><td>${l}</td><td>${fmtP(zz)}</td><td>${fmtP(mm)}</td></tr>`;
+  const rowN=(l,zz,mm)=>`<tr><td>${l}</td><td>${fmt2(zz)}</td><td>${fmt2(mm)}</td></tr>`;
+  const pct=v=>(100*v).toFixed(1)+'%';
+  $('#bt-table').innerHTML=`<table><tr><th>指标</th><th>z-score 均值回归</th><th>双均线趋势</th></tr>
+   ${row('净收益',z.stats.net_total_return,m.stats.net_total_return)}
+   ${row('毛收益(不含费用)',z.stats.gross_total_return,m.stats.gross_total_return)}
+   ${row('买入持有',z.stats.buy_and_hold,m.stats.buy_and_hold)}
+   ${row('净年化波动',z.stats.net_ann_vol,m.stats.net_ann_vol)}
+   ${rowN('净夏普',z.stats.net_sharpe,m.stats.net_sharpe)}
+   ${row('净最大回撤',z.stats.net_max_drawdown,m.stats.net_max_drawdown)}
+   ${row('费用拖累',z.stats.fee_drag,m.stats.fee_drag)}
+   <tr><td>交易次数</td><td>${z.stats.num_trades}</td><td>${m.stats.num_trades}</td></tr>
+   <tr><td>持仓暴露</td><td>${pct(z.stats.exposure)}</td><td>${pct(m.stats.exposure)}</td></tr></table>
+   <p class="small">成本模型：${d.cost_model||state.overview.cost_model}。夏普为净口径。</p>`;
+}
+
+/* ── 六库状态 ── */
+function libCard(name,en,tag,st,pre){
+  const cls=st==='ok'?'ok':(st==='warn'?'warn':'err');
+  const label=st==='ok'?'✅ 已跑通':(st==='warn'?'⚠️ 受限运行':'❌ 未运行');
+  return `<div class="libcard"><h3>${name} <span class="badge ${cls}">${label}</span></h3>
+   <div class="tag">${tag}</div><pre>${pre}</pre></div>`;
+}
+function renderLibs(){
+  const L=(state.status.libraries)||{};
+  const order=['gs_quant','arcticdb','jpm_training','xpedite','firedancer','magic_trace'];
+  let html='';
+  for(const k of order){const v=L[k];if(!v){continue}
+    html+=libCard(v.name||k,v.en||'',v.tag||'',v.status||'err',(v.detail||'')+(v.evidence?'\n'+v.evidence:''))}
+  $('#libs-grid').innerHTML=html||'<div class="card small dimc">状态未生成，先运行 run_all</div>';
+}
+
+/* ── boot ── */
+async function boot(){
+  const [ov,st]=await Promise.all([
+    fetch('/api/overview').then(r=>r.json()),
+    fetch('/api/status').then(r=>r.json())]);
+  state.overview=ov;state.status=st;
+  const syms=Object.keys(ov.analytics.symbols);
+  const opts=syms.map(s=>`<option>${s}</option>`).join('');
+  $('#risk-symbol').innerHTML=opts;$('#bt-symbol').innerHTML=opts;
+  $('#risk-symbol').onchange=e=>{state.riskSym=e.target.value;renderRisk()};
+  $('#bt-symbol').onchange=e=>{state.btSym=e.target.value;renderBt()};
+  renderOverview();renderRisk();renderBt();
+  $('#pills').innerHTML=`<span class="pill">数据 <b>${Object.keys(st.data||{}).length}</b> 只</span>
+   <span class="pill">分析 <b>gs-quant</b></span><span class="pill">存储 <b>ArcticDB</b></span>
+   <span class="pill">回测 <b>含手续费</b></span>`;
+}
+boot().catch(e=>{$('#kpis').innerHTML=`<div class="card neg">加载失败：${e}</div>`});
+</script>
+</body>
+</html>

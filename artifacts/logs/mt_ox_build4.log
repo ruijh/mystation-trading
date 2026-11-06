@@ -1,0 +1,7 @@
+[WARNING] Running as root is not recommended
+Error: execve(./gen-versions.sh): No such file or directory
+-> required by _build/default/bin/version_stubs.c
+-> required by alias bin/all
+-> required by alias default
+Generating perf_dlfilter.ml
+Skipping generation of .mli

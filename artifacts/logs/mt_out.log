@@ -1,0 +1,79 @@
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ apt-get install -y -qq opam libev-dev pkg-config m4 unzip
++ opam init -y --disable-sandboxing -j3
+++ opam env
++ eval 'OPAM_SWITCH_PREFIX='\''/root/.opam/default'\''; export OPAM_SWITCH_PREFIX;
+OCAMLTOP_INCLUDE_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAMLTOP_INCLUDE_PATH;
+CAML_LD_LIBRARY_PATH='\''/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs'\''; export CAML_LD_LIBRARY_PATH;
+OCAML_TOPLEVEL_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAML_TOPLEVEL_PATH;
+MANPATH='\'':/root/.opam/default/man'\''; export MANPATH;
+PATH='\''/root/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'\''; export PATH;'
+++ OPAM_SWITCH_PREFIX=/root/.opam/default
+++ export OPAM_SWITCH_PREFIX
+++ OCAMLTOP_INCLUDE_PATH=/root/.opam/default/lib/toplevel
+++ export OCAMLTOP_INCLUDE_PATH
+++ CAML_LD_LIBRARY_PATH=/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs
+++ export CAML_LD_LIBRARY_PATH
+++ OCAML_TOPLEVEL_PATH=/root/.opam/default/lib/toplevel
+++ export OCAML_TOPLEVEL_PATH
+++ MANPATH=:/root/.opam/default/man
+++ export MANPATH
+++ PATH='/root/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
+++ export PATH
++ rm -rf /root/magic-trace
++ mkdir -p /root/magic-trace
++ cp -a /mnt/e/交易桌/vendor/magic-trace/. /root/magic-trace/
++ cd /root/magic-trace
++ opam install -y -j3 .
++ RC=10
++ echo OPAM_INSTALL_EXIT=10
+OPAM_INSTALL_EXIT=10
++ tail -25 /mnt/e/交易桌/artifacts/logs/mt_opam_install.log
+  ∗ install async_kernel                v0.16.0 [required by async]
+  ∗ install textutils                   v0.16.0 [required by async, shell]
+  ∗ install async_unix                  v0.16.0 [required by async]
+  ∗ install async_rpc_kernel            v0.16.0 [required by async]
+  ∗ install shell                       v0.16.0 [required by magic-trace]
+  ∗ install async                       v0.16.0 [required by magic-trace]
+  ∗ install expect_test_helpers_async   v0.16.0 [required by magic-trace]
+  ∗ install conduit-async               8.0.0   [required by cohttp-async]
+  ∗ install cohttp-async                5.3.0   [required by cohttp_static_handler]
+  ∗ install cohttp_static_handler       v0.16.0 [required by magic-trace]
+  ∗ install magic-trace                 1.0.1*
+===== ∗ 113 =====
+
+The following system packages will first need to be installed:
+    libzstd-dev
+
+<><> Handling external dependencies <><><><><><><><><><><><><><><><><><><><><><>
+Let opam run your package manager to install the required system packages?
+(answer 'n' for other options) [Y/n] n
+[NOTE] Use 'opam option depext-run-installs=false' if you don't want to be prompted again.
+This command should get the requirements installed:
+
+    apt-get install libzstd-dev
+
+You can retry with '--assume-depexts' to skip this check, or run 'opam option depext=false' to permanently disable handling of system packages altogether.
+++ opam env
++ eval 'OPAM_SWITCH_PREFIX='\''/root/.opam/default'\''; export OPAM_SWITCH_PREFIX;
+OCAMLTOP_INCLUDE_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAMLTOP_INCLUDE_PATH;
+CAML_LD_LIBRARY_PATH='\''/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs'\''; export CAML_LD_LIBRARY_PATH;
+OCAML_TOPLEVEL_PATH='\''/root/.opam/default/lib/toplevel'\''; export OCAML_TOPLEVEL_PATH;
+MANPATH='\'':/root/.opam/default/man'\''; export MANPATH;
+PATH='\''/root/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'\''; export PATH;'
+++ OPAM_SWITCH_PREFIX=/root/.opam/default
+++ export OPAM_SWITCH_PREFIX
+++ OCAMLTOP_INCLUDE_PATH=/root/.opam/default/lib/toplevel
+++ export OCAMLTOP_INCLUDE_PATH
+++ CAML_LD_LIBRARY_PATH=/root/.opam/default/lib/stublibs:/usr/local/lib/ocaml/4.14.1/stublibs:/usr/lib/ocaml/stublibs
+++ export CAML_LD_LIBRARY_PATH
+++ OCAML_TOPLEVEL_PATH=/root/.opam/default/lib/toplevel
+++ export OCAML_TOPLEVEL_PATH
+++ MANPATH=:/root/.opam/default/man
+++ export MANPATH
+++ PATH='/root/.opam/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
+++ export PATH
++ command -v magic-trace
++ echo MAGIC_TRACE_BUILD_DONE
+MAGIC_TRACE_BUILD_DONE

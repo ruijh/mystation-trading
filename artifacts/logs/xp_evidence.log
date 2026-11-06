@@ -1,0 +1,52 @@
++ export 'PATH=/root/xpedite/install/runtime/bin:/root/xpedite/scripts/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ PATH='/root/xpedite/install/runtime/bin:/root/xpedite/scripts/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ cd /root/xpedite
++ echo '=== xpedite cpuInfo（工具自检）==='
+=== xpedite cpuInfo（工具自检）===
++ xpedite cpuInfo
++ head -8
+GenuineIntel-6-BD-1
++ echo '=== xpedite probes（探针清单）==='
+=== xpedite probes（探针清单）===
++ xpedite probes -p demo/profileInfo.py
++ head -12
+[ERROR]: failed to load profile file "demo/profileInfo.py"
+Traceback (most recent call last):
+  File "/root/xpedite/scripts/lib/xpedite/profiler/profileInfo.py", line 79, in loadProfileInfo
+    spec.loader.exec_module(profileInfo)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/xpedite/demo/profileInfo.py", line 18, in <module>
+    appInfo = os.path.join(os.environ.get('XPEDITE_DEMO_LOG_DIR'), 'xpedite-appinfo.txt')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 76, in join
+TypeError: expected str, bytes or os.PathLike object, not NoneType+ echo '=== xpedite report（重新生成 runId 1793905883 的报告）==='
+=== xpedite report（重新生成 runId 1793905883 的报告）===
++ xpedite report -p demo/profileInfo.py -r 1793905883
++ head -40
++ tee /mnt/e/交易桌/artifacts/logs/xp_report.log
+[ERROR]: failed to load profile file "demo/profileInfo.py"
+Traceback (most recent call last):
+  File "/root/xpedite/scripts/lib/xpedite/profiler/profileInfo.py", line 79, in loadProfileInfo
+    spec.loader.exec_module(profileInfo)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/root/xpedite/demo/profileInfo.py", line 18, in <module>
+    appInfo = os.path.join(os.environ.get('XPEDITE_DEMO_LOG_DIR'), 'xpedite-appinfo.txt')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen posixpath>", line 76, in join
+TypeError: expected str, bytes or os.PathLike object, not NoneType+ REPORT_EXIT=0
++ echo REPORT_EXIT=0
+REPORT_EXIT=0
++ echo '=== 报告文件 ==='
+=== 报告文件 ===
++ find /tmp/xpediteShell9rxy1fny /tmp/xpeditey8rw1wyb /dev/shm -maxdepth 3 '(' -name '*.txt' -o -name '*.ipynb' -o -name '*.html' ')' -newermt today
++ grep -i xpedite
++ head -10
++ find /tmp/xpediteShell9rxy1fny /tmp/xpeditey8rw1wyb /dev/shm -maxdepth 3 -type f -newermt today
++ grep -iE 'xpedite|XpediteDemo'
++ read -r f
++ ls -la /mnt/e/交易桌/artifacts
++ grep xpedite
++ echo XPEDITE_EVIDENCE_DONE
+XPEDITE_EVIDENCE_DONE

@@ -1,0 +1,175 @@
+{
+ "generated_at": "2026-11-06 09:18:06",
+ "libraries": {
+  "gs_quant": {
+   "name": "gs-quant",
+   "en": "Goldman Sachs",
+   "tag": "量化指标 / 风险分析",
+   "status": "ok",
+   "detail": "volatility/beta/max_drawdown/zscores（离线 pandas 实现，GS 开源库原生）\n基准 None，覆盖 7 只标的；口径经本地校准（vol 百分数÷100）",
+   "evidence": "engine=gs_quant.timeseries (econometrics + statistics)"
+  },
+  "arcticdb": {
+   "name": "ArcticDB",
+   "en": "Man Group",
+   "tag": "时序数据库 / 行情存储",
+   "status": "ok",
+   "detail": "LMDB 本地库 equities：8 符号 × ~1255 行五年日线（15 符号真实数据）\n版本化写入 / as-of 时间旅行 / 日期区间读取 全部通过",
+   "evidence": "passed=True"
+  },
+  "jpm_training": {
+   "name": "python-training",
+   "en": "JPMorgan Chase",
+   "tag": "官方培训笔记本",
+   "status": "ok",
+   "detail": "nbclient 无头执行 4 个官方笔记本：1_basic / 2_straddle（numpy 期权）/\n3_flights（pandas）/ 9_3d_plotting（plotly 收益率曲线）",
+   "evidence": "passed=True"
+  },
+  "firedancer": {
+   "name": "Firedancer",
+   "en": "Jump Trading",
+   "tag": "Solana 验证节点（C）",
+   "status": "ok",
+   "detail": "Firedancer 为 Linux/Solana 全节点软件；本工作台在 WSL2 构建全部单元测试目标并运行代表性子集，8/8 通过（含 make unit-test 全量构建 exit=0）。",
+   "evidence": "unit_tests_passed=8/8"
+  },
+  "xpedite": {
+   "name": "Xpedite",
+   "en": "Morgan Stanley",
+   "tag": "低延迟性能剖析",
+   "status": "ok",
+   "detail": "完整复现：scripts/wsl_xpedite_demo.sh + scripts/wsl_xpedite_report.sh。末尾的可选交互 notebook shell 需非 root 或 --allow-root，不影响 record/report 主流程。",
+   "evidence": ""
+  },
+  "magic_trace": {
+   "name": "magic-trace",
+   "en": "Jane Street",
+   "tag": "高精度性能追踪",
+   "status": "ok",
+   "detail": "WSL2 Ubuntu 24.04 · OxCaml 5.2.0+ox（对齐上游 debian/rules CI 配方：pinned oxcaml opam-repo + llvm-20）\nartifacts/magic_trace_demo.txt —— 纳秒级时间线（BEGIN/END 事件）\nIntel PT 实时采集需要裸机 Intel Skylake+；虚拟机/WSL 不支持（上游 README 注明）。WSL 下 live run 的报错已留档 artifacts/logs/mt_live.log",
+   "evidence": "artifacts/magic_trace_demo.txt"
+  }
+ },
+ "data": {
+  "000300.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:51",
+   "versions": 3
+  },
+  "TSLA": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 4
+  },
+  "JPM": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:46",
+   "versions": 4
+  },
+  "NVDA": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:45",
+   "versions": 4
+  },
+  "GS": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:47",
+   "versions": 4
+  },
+  "XOM": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:49",
+   "versions": 4
+  },
+  "601318.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "AAPL": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:43",
+   "versions": 4
+  },
+  "MSFT": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:44",
+   "versions": 4
+  },
+  "600519.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "SPY": {
+   "rows": 1253,
+   "source": "yfinance",
+   "start": "2021-11-08",
+   "end": "2026-11-04",
+   "ingested_at": "2026-11-06T09:15:51",
+   "versions": 4
+  },
+  "002594.SZ": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "600556.SS": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:51",
+   "versions": 2
+  },
+  "300750.SZ": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  },
+  "000858.SZ": {
+   "rows": 1215,
+   "source": "eastmoney",
+   "start": "2021-11-02",
+   "end": "2026-11-05",
+   "ingested_at": "2026-11-06T09:15:50",
+   "versions": 3
+  }
+ }
+}

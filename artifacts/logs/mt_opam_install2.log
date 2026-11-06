@@ -1,0 +1,490 @@
+[WARNING] Running as root is not recommended
+[NOTE] Ignoring uncommitted changes in /root/magic-trace (`--working-dir' not active).
+[magic-trace.1.0.1] synchronised (git+file:///root/magic-trace#master)
+The following actions will be performed:
+  ∗ install dune                        3.24.2  [required by magic-trace]
+  ∗ install conf-pkg-config             5       [required by conf-zlib, conf-zstd]
+  ∗ install ocamlfind                   1.9.8   [required by camlzip]
+  ∗ install ocamlbuild                  0.16.1  [required by jsonm, ptime]
+  ∗ install cmdliner                    2.1.1   [required by crunch]
+  ∗ install num                         1.6     [required by sexplib]
+  ∗ install vec                         0.4.0   [required by magic-trace]
+  ∗ install stringext                   1.6.0   [required by cohttp]
+  ∗ install stdlib-shims                0.3.0   [required by integers]
+  ∗ install spawn                       v0.17.0 [required by shell]
+  ∗ install sexplib0                    v0.16.0 [required by cohttp]
+  ∗ install re                          1.14.0  [required by magic-trace]
+  ∗ install ppx_derivers                1.2.1   [required by ppxlib]
+  ∗ install owee                        0.8     [required by magic-trace]
+  ∗ install ocaml-syntax-shims          1.0.0   [required by angstrom]
+  ∗ install ocaml-compiler-libs         v0.12.4 [required by ppxlib]
+  ∗ install magic-mime                  1.3.1   [required by cohttp-async]
+  ∗ install macaddr                     5.6.2   [required by ipaddr]
+  ∗ install jane-street-headers         v0.16.0 [required by core, core_unix]
+  ∗ install domain-name                 0.5.0   [required by ipaddr]
+  ∗ install csexp                       1.5.2   [required by dune-configurator]
+  ∗ install base64                      3.5.2   [required by cohttp]
+  ∗ install conf-zstd                   1.3.8   [required by zstandard]
+  ∗ install conf-zlib                   1       [required by camlzip]
+  ∗ install topkg                       1.1.1   [required by jsonm, ptime]
+  ∗ install integers                    0.8.0   [required by ctypes]
+  ∗ install parsexp                     v0.16.0 [required by sexplib]
+  ∗ install ppxlib                      0.35.0  [required by ppx_jane]
+  ∗ install ipaddr                      5.6.2   [required by cohttp-async]
+  ∗ install dune-configurator           3.24.2  [required by ctypes]
+  ∗ install camlzip                     1.14    [required by magic-trace]
+  ∗ install uutf                        1.0.4   [required by textutils, jsonm]
+  ∗ install ptime                       1.2.0   [required by crunch]
+  ∗ install fmt                         0.11.0  [required by cohttp-async]
+  ∗ install astring                     0.8.5   [required by conduit]
+  ∗ install sexplib                     v0.16.0 [required by core, core_unix]
+  ∗ install ppx_pipebang                v0.16.0 [required by ppx_jane]
+  ∗ install ppx_ignore_instrumentation  v0.16.0 [required by ppx_jane]
+  ∗ install ocaml_intrinsics            v0.16.2 [required by magic-trace]
+  ∗ install ctypes                      0.24.0  [required by zstandard]
+  ∗ install bigstringaf                 0.10.0  [required by angstrom]
+  ∗ install base                        v0.16.5 [required by cohttp-async]
+  ∗ install jsonm                       1.0.2   [required by cohttp]
+  ∗ install crunch                      4.1.0   [required by magic-trace]
+  ∗ install logs                        0.10.0  [required by cohttp-async]
+  ∗ install angstrom                    0.16.1  [required by uri]
+  ∗ install variantslib                 v0.16.0 [required by core]
+  ∗ install typerep                     v0.16.0 [required by core]
+  ∗ install stdio                       v0.16.0 [required by core]
+  ∗ install ppx_tydi                    v0.16.0 [required by ppx_jane]
+  ∗ install ppx_stable_witness          v0.16.0 [required by ppx_jane]
+  ∗ install ppx_stable                  v0.16.0 [required by ppx_jane]
+  ∗ install ppx_sexp_conv               v0.16.0 [required by cohttp]
+  ∗ install ppx_optional                v0.16.0 [required by ppx_jane]
+  ∗ install ppx_here                    v0.16.0 [required by conduit-async]
+  ∗ install ppx_globalize               v0.16.0 [required by ppx_base]
+  ∗ install ppx_fixed_literal           v0.16.0 [required by ppx_jane]
+  ∗ install ppx_enumerate               v0.16.0 [required by ppx_base]
+  ∗ install ppx_disable_unused_warnings v0.16.0 [required by ppx_jane]
+  ∗ install ppx_compare                 v0.16.0 [required by ppx_base, bin_prot]
+  ∗ install ppx_cold                    v0.16.0 [required by ppx_base]
+  ∗ install fieldslib                   v0.16.0 [required by core]
+  ∗ install uri                         4.4.0   [required by cohttp]
+  ∗ install ppx_variants_conv           v0.16.0 [required by ppx_jane]
+  ∗ install ppx_typerep_conv            v0.16.0 [required by ppx_jane]
+  ∗ install ppx_optcomp                 v0.16.0 [required by core_kernel, core, core_unix]
+  ∗ install ppx_custom_printf           v0.16.0 [required by ppx_jane]
+  ∗ install ipaddr-sexp                 5.6.2   [required by conduit-async]
+  ∗ install ppx_sexp_value              v0.16.0 [required by ppx_jane]
+  ∗ install ppx_sexp_message            v0.16.0 [required by core]
+  ∗ install ppx_let                     v0.16.0 [required by ppx_jane]
+  ∗ install ppx_hash                    v0.16.0 [required by core]
+  ∗ install ppx_assert                  v0.16.0 [required by core]
+  ∗ install ppx_fields_conv             v0.16.0 [required by ppx_jane]
+  ∗ install uri-sexp                    4.4.0   [required by cohttp, cohttp_static_handler]
+  ∗ install conduit                     8.0.0   [required by conduit-async]
+  ∗ install ppx_log                     v0.16.0 [required by async]
+  ∗ install ppx_base                    v0.16.0 [required by core]
+  ∗ install jst-config                  v0.16.0 [required by shell]
+  ∗ install bin_prot                    v0.16.0 [required by core]
+  ∗ install cohttp                      5.3.1   [required by magic-trace]
+  ∗ install sexp_pretty                 v0.16.0 [required by expect_test_helpers_async]
+  ∗ install ppx_string                  v0.16.0 [required by ppx_jane]
+  ∗ install time_now                    v0.16.0 [required by core]
+  ∗ install ppx_bin_prot                v0.16.0 [required by ppx_jane]
+  ∗ install ppx_module_timer            v0.16.0 [required by ppx_jane]
+  ∗ install ppx_inline_test             v0.16.1 [required by core]
+  ∗ install ppx_expect                  v0.16.2 [required by ppx_jane]
+  ∗ install ppx_bench                   v0.16.0 [required by ppx_jane]
+  ∗ install splittable_random           v0.16.0 [required by core]
+  ∗ install base_quickcheck             v0.16.0 [required by core]
+  ∗ install ppx_jane                    v0.16.0 [required by magic-trace]
+  ∗ install int_repr                    v0.16.0 [required by core_kernel]
+  ∗ install base_bigstring              v0.16.0 [required by core]
+  ∗ install core                        v0.16.2 [required by magic-trace]
+  ∗ install timezone                    v0.16.0 [required by core_unix]
+  ∗ install textutils_kernel            v0.16.0 [required by textutils]
+  ∗ install protocol_version_header     v0.16.0 [required by async_rpc_kernel]
+  ∗ install expect_test_helpers_core    v0.16.0 [required by expect_test_helpers_async]
+  ∗ install core_kernel                 v0.16.0 [required by async, zstandard]
+  ∗ install zstandard                   v0.16.1 [required by magic-trace]
+  ∗ install core_unix                   v0.16.0 [required by magic-trace]
+  ∗ install async_kernel                v0.16.0 [required by async]
+  ∗ install textutils                   v0.16.0 [required by async, shell]
+  ∗ install async_unix                  v0.16.0 [required by async]
+  ∗ install async_rpc_kernel            v0.16.0 [required by async]
+  ∗ install shell                       v0.16.0 [required by magic-trace]
+  ∗ install async                       v0.16.0 [required by magic-trace]
+  ∗ install expect_test_helpers_async   v0.16.0 [required by magic-trace]
+  ∗ install conduit-async               8.0.0   [required by cohttp-async]
+  ∗ install cohttp-async                5.3.0   [required by cohttp_static_handler]
+  ∗ install cohttp_static_handler       v0.16.0 [required by magic-trace]
+  ∗ install magic-trace                 1.0.1*
+===== ∗ 113 =====
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+⬇ retrieved astring.0.8.5  (https://opam.ocaml.org/cache)
+⬇ retrieved async_kernel.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved angstrom.0.16.1  (https://opam.ocaml.org/cache)
+⬇ retrieved async_rpc_kernel.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved async_unix.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved base64.3.5.2  (https://opam.ocaml.org/cache)
+⬇ retrieved base.v0.16.5  (https://opam.ocaml.org/cache)
+⬇ retrieved base_bigstring.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved base_quickcheck.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved bigstringaf.0.10.0  (https://opam.ocaml.org/cache)
+⬇ retrieved bin_prot.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved camlzip.1.14  (https://opam.ocaml.org/cache)
+⬇ retrieved cmdliner.2.1.1  (https://opam.ocaml.org/cache)
+⬇ retrieved cohttp.5.3.1  (https://opam.ocaml.org/cache)
+⬇ retrieved cohttp-async.5.3.0  (https://opam.ocaml.org/cache)
+⬇ retrieved cohttp_static_handler.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved conduit.8.0.0  (https://opam.ocaml.org/cache)
+⬇ retrieved conf-pkg-config.5  (2 extra sources)
+⬇ retrieved conduit-async.8.0.0  (https://opam.ocaml.org/cache)
+⬇ retrieved core.v0.16.2  (https://opam.ocaml.org/cache)
+∗ installed conf-pkg-config.5
+∗ installed conf-zlib.1
+∗ installed conf-zstd.1.3.8
+⬇ retrieved core_kernel.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed cmdliner.2.1.1
+⬇ retrieved core_unix.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved crunch.4.1.0  (https://opam.ocaml.org/cache)
+⬇ retrieved csexp.1.5.2  (https://opam.ocaml.org/cache)
+⬇ retrieved ctypes.0.24.0  (https://opam.ocaml.org/cache)
+⬇ retrieved domain-name.0.5.0  (https://opam.ocaml.org/cache)
+⬇ retrieved dune.3.24.2  (https://opam.ocaml.org/cache)
+⬇ retrieved dune-configurator.3.24.2  (https://opam.ocaml.org/cache)
+⬇ retrieved expect_test_helpers_async.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved expect_test_helpers_core.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved fieldslib.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved fmt.0.11.0  (https://opam.ocaml.org/cache)
+⬇ retrieved int_repr.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved integers.0.8.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ipaddr.5.6.2  (https://opam.ocaml.org/cache)
+⬇ retrieved ipaddr-sexp.5.6.2  (cached)
+⬇ retrieved jane-street-headers.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved jsonm.1.0.2  (https://opam.ocaml.org/cache)
+⬇ retrieved async.v0.16.0  (https://ocaml.janestreet.com/ocaml-core/v0.16/files/async-v0.16.0.tar.gz)
+⬇ retrieved macaddr.5.6.2  (cached)
+⬇ retrieved jst-config.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved magic-trace.1.0.1  (no changes)
+⬇ retrieved logs.0.10.0  (https://opam.ocaml.org/cache)
+⬇ retrieved magic-mime.1.3.1  (https://opam.ocaml.org/cache)
+⬇ retrieved ocaml-syntax-shims.1.0.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ocaml-compiler-libs.v0.12.4  (https://opam.ocaml.org/cache)
+⬇ retrieved num.1.6  (https://opam.ocaml.org/cache)
+⬇ retrieved ocaml_intrinsics.v0.16.2  (https://opam.ocaml.org/cache)
+∗ installed num.1.6
+⬇ retrieved ocamlfind.1.9.8  (https://opam.ocaml.org/cache)
+⬇ retrieved ocamlbuild.0.16.1  (https://opam.ocaml.org/cache)
+⬇ retrieved owee.0.8  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_assert.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved parsexp.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_base.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_cold.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_bin_prot.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_bench.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed ocamlfind.1.9.8
+∗ installed ocamlbuild.0.16.1
+⬇ retrieved ppx_compare.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_custom_printf.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed camlzip.1.14
+⬇ retrieved ppx_derivers.1.2.1  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_disable_unused_warnings.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_enumerate.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed dune.3.24.2
+⬇ retrieved ppx_fields_conv.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_fixed_literal.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed base64.3.5.2
+∗ installed csexp.1.5.2
+∗ installed domain-name.0.5.0
+∗ installed jane-street-headers.v0.16.0
+⬇ retrieved ppx_expect.v0.16.2  (https://opam.ocaml.org/cache)
+∗ installed macaddr.5.6.2
+⬇ retrieved ppx_hash.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed magic-mime.1.3.1
+⬇ retrieved ppx_globalize.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed dune-configurator.3.24.2
+∗ installed ocaml-compiler-libs.v0.12.4
+∗ installed ipaddr.5.6.2
+∗ installed ocaml-syntax-shims.1.0.0
+⬇ retrieved ppx_ignore_instrumentation.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_here.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed bigstringaf.0.10.0
+⬇ retrieved ppx_inline_test.v0.16.1  (https://opam.ocaml.org/cache)
+∗ installed owee.0.8
+∗ installed ppx_derivers.1.2.1
+∗ installed angstrom.0.16.1
+⬇ retrieved ppx_jane.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed ocaml_intrinsics.v0.16.2
+⬇ retrieved ppx_let.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_log.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_optcomp.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_module_timer.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_optional.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_pipebang.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_sexp_conv.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_sexp_value.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_sexp_message.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_stable_witness.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_stable.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_string.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_tydi.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppx_variants_conv.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ppxlib.0.35.0  (https://opam.ocaml.org/cache)
+⬇ retrieved protocol_version_header.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved ptime.1.2.0  (https://opam.ocaml.org/cache)
+⬇ retrieved re.1.14.0  (https://opam.ocaml.org/cache)
+∗ installed re.1.14.0
+⬇ retrieved sexplib.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved sexplib0.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed sexplib0.v0.16.0
+⬇ retrieved shell.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed parsexp.v0.16.0
+⬇ retrieved spawn.v0.17.0  (https://opam.ocaml.org/cache)
+∗ installed sexplib.v0.16.0
+∗ installed spawn.v0.17.0
+⬇ retrieved splittable_random.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed base.v0.16.5
+∗ installed fieldslib.v0.16.0
+⬇ retrieved stdio.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed stdio.v0.16.0
+⬇ retrieved stdlib-shims.0.3.0  (https://opam.ocaml.org/cache)
+∗ installed stdlib-shims.0.3.0
+∗ installed integers.0.8.0
+⬇ retrieved stringext.1.6.0  (https://opam.ocaml.org/cache)
+∗ installed stringext.1.6.0
+⬇ retrieved ppx_typerep_conv.v0.16.0  (https://ocaml.janestreet.com/ocaml-core/v0.16/files/ppx_typerep_conv-v0.16.0.tar.gz)
+⬇ retrieved textutils_kernel.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved time_now.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved textutils.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved timezone.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved sexp_pretty.v0.16.0  (https://ocaml.janestreet.com/ocaml-core/v0.16/files/sexp_pretty-v0.16.0.tar.gz)
+∗ installed ctypes.0.24.0
+⬇ retrieved topkg.1.1.1  (https://opam.ocaml.org/cache)
+⬇ retrieved typerep.v0.16.0  (https://opam.ocaml.org/cache)
+⬇ retrieved uri.4.4.0  (https://opam.ocaml.org/cache)
+∗ installed typerep.v0.16.0
+∗ installed uri.4.4.0
+∗ installed ppxlib.0.35.0
+∗ installed ppx_cold.v0.16.0
+∗ installed ppx_compare.v0.16.0
+⬇ retrieved variantslib.v0.16.0  (https://opam.ocaml.org/cache)
+∗ installed ppx_disable_unused_warnings.v0.16.0
+⬇ retrieved uri-sexp.4.4.0  (https://opam.ocaml.org/cache)
+⬇ retrieved zstandard.v0.16.1  (https://opam.ocaml.org/cache)
+∗ installed ppx_enumerate.v0.16.0
+⬇ retrieved vec.0.4.0  (https://opam.ocaml.org/cache)
+∗ installed ppx_fields_conv.v0.16.0
+∗ installed ppx_globalize.v0.16.0
+∗ installed ppx_fixed_literal.v0.16.0
+∗ installed ppx_here.v0.16.0
+∗ installed ppx_ignore_instrumentation.v0.16.0
+∗ installed ppx_optcomp.v0.16.0
+∗ installed ppx_let.v0.16.0
+∗ installed ppx_optional.v0.16.0
+∗ installed ppx_pipebang.v0.16.0
+∗ installed topkg.1.1.1
+∗ installed ppx_stable.v0.16.0
+∗ installed ppx_sexp_conv.v0.16.0
+∗ installed ppx_stable_witness.v0.16.0
+⬇ retrieved uutf.1.0.4  (https://erratique.ch/software/uutf/releases/uutf-1.0.4.tbz)
+∗ installed ipaddr-sexp.5.6.2
+∗ installed ppx_assert.v0.16.0
+∗ installed fmt.0.11.0
+∗ installed astring.0.8.5
+∗ installed ppx_custom_printf.v0.16.0
+∗ installed logs.0.10.0
+∗ installed ppx_hash.v0.16.0
+∗ installed jst-config.v0.16.0
+∗ installed conduit.8.0.0
+∗ installed ppx_sexp_message.v0.16.0
+∗ installed ppx_base.v0.16.0
+∗ installed ppx_tydi.v0.16.0
+∗ installed ppx_sexp_value.v0.16.0
+∗ installed ppx_log.v0.16.0
+∗ installed ppx_typerep_conv.v0.16.0
+∗ installed ppx_string.v0.16.0
+∗ installed time_now.v0.16.0
+∗ installed uri-sexp.4.4.0
+∗ installed ptime.1.2.0
+∗ installed sexp_pretty.v0.16.0
+∗ installed ppx_inline_test.v0.16.1
+∗ installed ppx_module_timer.v0.16.0
+∗ installed crunch.4.1.0
+∗ installed ppx_bench.v0.16.0
+∗ installed variantslib.v0.16.0
+∗ installed uutf.1.0.4
+∗ installed ppx_expect.v0.16.2
+∗ installed splittable_random.v0.16.0
+∗ installed ppx_variants_conv.v0.16.0
+∗ installed jsonm.1.0.2
+∗ installed vec.0.4.0
+∗ installed base_quickcheck.v0.16.0
+∗ installed bin_prot.v0.16.0
+∗ installed cohttp.5.3.1
+∗ installed ppx_bin_prot.v0.16.0
+∗ installed ppx_jane.v0.16.0
+∗ installed int_repr.v0.16.0
+∗ installed base_bigstring.v0.16.0
+∗ installed core.v0.16.2
+∗ installed protocol_version_header.v0.16.0
+∗ installed expect_test_helpers_core.v0.16.0
+∗ installed textutils_kernel.v0.16.0
+∗ installed timezone.v0.16.0
+∗ installed core_kernel.v0.16.0
+∗ installed zstandard.v0.16.1
+∗ installed async_kernel.v0.16.0
+∗ installed async_rpc_kernel.v0.16.0
+∗ installed core_unix.v0.16.0
+∗ installed textutils.v0.16.0
+∗ installed shell.v0.16.0
+∗ installed async_unix.v0.16.0
+∗ installed async.v0.16.0
+∗ installed conduit-async.8.0.0
+∗ installed expect_test_helpers_async.v0.16.0
+∗ installed cohttp-async.5.3.0
+∗ installed cohttp_static_handler.v0.16.0
+[ERROR] The compilation of magic-trace.1.0.1 failed at "dune build -p magic-trace -j 3".
+
+#=== ERROR while compiling magic-trace.1.0.1 ==================================#
+# context              2.1.5 | linux/x86_64 | ocaml.4.14.1 | pinned(git+file:///root/magic-trace#master#b3faf23fccfc4373d47bb6458c9d7dc79b0723fe)
+# path                 ~/.opam/default/.opam-switch/build/magic-trace.1.0.1
+# command              ~/.opam/default/bin/dune build -p magic-trace -j 3
+# exit-code            1
+# env-file             ~/.opam/log/magic-trace-20284-d5bf65.env
+# output-file          ~/.opam/log/magic-trace-20284-d5bf65.out
+### output ###
+# [...]
+# 17 |    (bash
+# 18 |     "clang++ -Wall -Wextra -Werror -Wno-unused-parameter -DCAML_NAME_SPACE -I %{ocaml_where} $(llvm-config --cxxflags) -std=c++20 -O3 -march=broadwell -mtune=skylake -ffunction-sections -c llvm_symbolizer_stubs.cpp")
+# 19 |    (bash
+# 20 |     "ld.lld llvm_symbolizer_stubs.o --gc-sections -static -r -plugin-opt=mcpu=broadwell -plugin-opt=O3 --hash-style=gnu --build-id --start-lib $(llvm-config --link-static --libfiles Symbolize) --end-lib -o libLLVM.o")
+# 21 |    (run llvm-strip --strip-debug libLLVM.o)
+# 22 |    (run llvm-ar Drcs %{target} libLLVM.o))))
+# (cd _build/default/src && /usr/bin/bash -e -u -o pipefail -c 'clang++ -Wall -Wextra -Werror -Wno-unused-parameter -DCAML_NAME_SPACE -I /usr/lib/ocaml $(llvm-config --cxxflags) -std=c++20 -O3 -march=broadwell -mtune=skylake -ffunction-sections -c llvm_symbolizer_stubs.cpp')
+# /usr/bin/bash: line 1: llvm-config: command not found
+# llvm_symbolizer_stubs.cpp:9:10: fatal error: 'llvm/DebugInfo/Symbolize/SymbolizableModule.h' file not found
+#     9 | #include "llvm/DebugInfo/Symbolize/SymbolizableModule.h"
+#       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 1 error generated.
+
+
+
+<><> Error report <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+┌─ The following actions failed
+│ λ build magic-trace 1.0.1
+└─ 
+┌─ The following changes have been performed
+│ ∗ install angstrom                    0.16.1
+│ ∗ install astring                     0.8.5
+│ ∗ install async                       v0.16.0
+│ ∗ install async_kernel                v0.16.0
+│ ∗ install async_rpc_kernel            v0.16.0
+│ ∗ install async_unix                  v0.16.0
+│ ∗ install base                        v0.16.5
+│ ∗ install base64                      3.5.2
+│ ∗ install base_bigstring              v0.16.0
+│ ∗ install base_quickcheck             v0.16.0
+│ ∗ install bigstringaf                 0.10.0
+│ ∗ install bin_prot                    v0.16.0
+│ ∗ install camlzip                     1.14
+│ ∗ install cmdliner                    2.1.1
+│ ∗ install cohttp                      5.3.1
+│ ∗ install cohttp-async                5.3.0
+│ ∗ install cohttp_static_handler       v0.16.0
+│ ∗ install conduit                     8.0.0
+│ ∗ install conduit-async               8.0.0
+│ ∗ install conf-pkg-config             5
+│ ∗ install conf-zlib                   1
+│ ∗ install conf-zstd                   1.3.8
+│ ∗ install core                        v0.16.2
+│ ∗ install core_kernel                 v0.16.0
+│ ∗ install core_unix                   v0.16.0
+│ ∗ install crunch                      4.1.0
+│ ∗ install csexp                       1.5.2
+│ ∗ install ctypes                      0.24.0
+│ ∗ install domain-name                 0.5.0
+│ ∗ install dune                        3.24.2
+│ ∗ install dune-configurator           3.24.2
+│ ∗ install expect_test_helpers_async   v0.16.0
+│ ∗ install expect_test_helpers_core    v0.16.0
+│ ∗ install fieldslib                   v0.16.0
+│ ∗ install fmt                         0.11.0
+│ ∗ install int_repr                    v0.16.0
+│ ∗ install integers                    0.8.0
+│ ∗ install ipaddr                      5.6.2
+│ ∗ install ipaddr-sexp                 5.6.2
+│ ∗ install jane-street-headers         v0.16.0
+│ ∗ install jsonm                       1.0.2
+│ ∗ install jst-config                  v0.16.0
+│ ∗ install logs                        0.10.0
+│ ∗ install macaddr                     5.6.2
+│ ∗ install magic-mime                  1.3.1
+│ ∗ install num                         1.6
+│ ∗ install ocaml-compiler-libs         v0.12.4
+│ ∗ install ocaml-syntax-shims          1.0.0
+│ ∗ install ocaml_intrinsics            v0.16.2
+│ ∗ install ocamlbuild                  0.16.1
+│ ∗ install ocamlfind                   1.9.8
+│ ∗ install owee                        0.8
+│ ∗ install parsexp                     v0.16.0
+│ ∗ install ppx_assert                  v0.16.0
+│ ∗ install ppx_base                    v0.16.0
+│ ∗ install ppx_bench                   v0.16.0
+│ ∗ install ppx_bin_prot                v0.16.0
+│ ∗ install ppx_cold                    v0.16.0
+│ ∗ install ppx_compare                 v0.16.0
+│ ∗ install ppx_custom_printf           v0.16.0
+│ ∗ install ppx_derivers                1.2.1
+│ ∗ install ppx_disable_unused_warnings v0.16.0
+│ ∗ install ppx_enumerate               v0.16.0
+│ ∗ install ppx_expect                  v0.16.2
+│ ∗ install ppx_fields_conv             v0.16.0
+│ ∗ install ppx_fixed_literal           v0.16.0
+│ ∗ install ppx_globalize               v0.16.0
+│ ∗ install ppx_hash                    v0.16.0
+│ ∗ install ppx_here                    v0.16.0
+│ ∗ install ppx_ignore_instrumentation  v0.16.0
+│ ∗ install ppx_inline_test             v0.16.1
+│ ∗ install ppx_jane                    v0.16.0
+│ ∗ install ppx_let                     v0.16.0
+│ ∗ install ppx_log                     v0.16.0
+│ ∗ install ppx_module_timer            v0.16.0
+│ ∗ install ppx_optcomp                 v0.16.0
+│ ∗ install ppx_optional                v0.16.0
+│ ∗ install ppx_pipebang                v0.16.0
+│ ∗ install ppx_sexp_conv               v0.16.0
+│ ∗ install ppx_sexp_message            v0.16.0
+│ ∗ install ppx_sexp_value              v0.16.0
+│ ∗ install ppx_stable                  v0.16.0
+│ ∗ install ppx_stable_witness          v0.16.0
+│ ∗ install ppx_string                  v0.16.0
+│ ∗ install ppx_tydi                    v0.16.0
+│ ∗ install ppx_typerep_conv            v0.16.0
+│ ∗ install ppx_variants_conv           v0.16.0
+│ ∗ install ppxlib                      0.35.0
+│ ∗ install protocol_version_header     v0.16.0
+│ ∗ install ptime                       1.2.0
+│ ∗ install re                          1.14.0
+│ ∗ install sexp_pretty                 v0.16.0
+│ ∗ install sexplib                     v0.16.0
+│ ∗ install sexplib0                    v0.16.0
+│ ∗ install shell                       v0.16.0
+│ ∗ install spawn                       v0.17.0
+│ ∗ install splittable_random           v0.16.0
+│ ∗ install stdio                       v0.16.0
+│ ∗ install stdlib-shims                0.3.0
+│ ∗ install stringext                   1.6.0
+│ ∗ install textutils                   v0.16.0
+│ ∗ install textutils_kernel            v0.16.0
+│ ∗ install time_now                    v0.16.0
+│ ∗ install timezone                    v0.16.0
+│ ∗ install topkg                       1.1.1
+│ ∗ install typerep                     v0.16.0
+│ ∗ install uri                         4.4.0
+│ ∗ install uri-sexp                    4.4.0
+│ ∗ install uutf                        1.0.4
+│ ∗ install variantslib                 v0.16.0
+│ ∗ install vec                         0.4.0
+│ ∗ install zstandard                   v0.16.1
+└─ 
+
+The former state can be restored with:
+    /usr/bin/opam switch import "/root/.opam/default/.opam-switch/backup/state-20261105183524.export"

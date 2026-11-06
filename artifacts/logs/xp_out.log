@@ -1,0 +1,342 @@
++ export DEBIAN_FRONTEND=noninteractive
++ DEBIAN_FRONTEND=noninteractive
++ cd /root
++ rm -rf /root/xpedite
++ mkdir -p /root/xpedite
++ cp -a /mnt/e/交易桌/vendor/xpedite/. /root/xpedite/
++ cd /root/xpedite
++ grep -rlI $'\r' '--include=*.sh' '--include=*.py' .
++ read -r f
++ sed -i 's/\r$//' ./build.sh
++ read -r f
++ sed -i 's/\r$//' ./install.sh
++ read -r f
++ sed -i 's/\r$//' ./demo/demo.sh
++ read -r f
++ sed -i 's/\r$//' ./demo/profileInfo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/bin/ko.sh
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/setup.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/thirdParty/pyprof2calltree.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/thirdParty/html.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/examples/profileInfo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/profileInfoGenerator.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/environment.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/reportgenerator.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/app.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/profile.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/profileInfo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/runtime.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/probeAdmin.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/resolver.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/profiler/appInfo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/types/dataSource.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/types/probe.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/types/route.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/types/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/types/containers.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/dependencies/config.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/dependencies/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/dependencies/pluginLoader.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/selfProfile/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/event.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/uarchEvent.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/topdown.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/allocator.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/hierarchy.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/uarchspec/uarchSpecLoader.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/uarchspec/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/pmuctrl.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/eventsDb.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/eventsLoader.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/pmu/request.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/aggregator.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/conflator.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/timeline.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/treeCollections.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/timelineFilter.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/analytics/timelineTree.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/transport/remote.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/transport/net.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/transport/client.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/transport/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/util/probeFactory.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/util/cpuInfo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/util/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/data/config/jupyter_server_config.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/data/config/serverextensions/tornadoExtension/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/templates/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/templates/initCell.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/xpediteData.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/autoComplete.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/plot.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/driver.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/snippetsBuilder.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/archive.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/commands.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/result.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/jupyter/context.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/flot.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/markup.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/tabs.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/histogram.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/reportbuilder.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/profileInfo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/env.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/codeFormatter.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/stats.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/report/diff.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/filter.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/classifier.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/fragments.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/collection.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/extractor.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/collector.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/loader.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/txn/repo.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/benchmark/info.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/xpedite/benchmark/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./scripts/lib/logger/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./.github/actions/entrypoint.sh
++ read -r f
++ sed -i 's/\r$//' ./test/generateBaseline.sh
++ read -r f
++ sed -i 's/\r$//' ./test/runTest.sh
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/conftest.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_pmu/pmuResults.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_pmu/test_allocator.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_pmu/generateBaseline.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_pmu/test_commands.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_pmu/test_request.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_pmu/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/__init__.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/generateBaseline.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/scenario.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/app.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/profile.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/formatters.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/comparator.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/context.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/test_profiler.py
++ read -r f
++ sed -i 's/\r$//' ./test/pytest/test_xpedite/test_profiler/test_intercept.py
++ read -r f
++ sed -i 's/\r$//' ./test/tarFiles.sh
++ read -r f
++ sed -i 's/\r$//' ./test/validateTarFiles.sh
++ read -r f
++ grep -rlI $'\r' scripts/bin demo demo.sh install.sh build.sh
++ read -r f
++ sed -i 's/\r$//' scripts/bin/xpedite
++ read -r f
++ sed -i 's/\r$//' demo/Demo.C
++ read -r f
++ sed -i 's/\r$//' demo/Demo.H
++ read -r f
++ sed -i 's/\r$//' demo/Life.C
++ read -r f
++ echo CRLF_CLEANED
+CRLF_CLEANED
++ echo '=== [1/4] install.sh（创建 venv + python 依赖）==='
+=== [1/4] install.sh（创建 venv + python 依赖）===
++ ./install.sh
++ echo INSTALL_EXIT=0
+INSTALL_EXIT=0
++ tail -5 /mnt/e/交易桌/artifacts/logs/xp_install.log
+Using cached arrow-1.4.0-py3-none-any.whl (68 kB)
+Using cached lark-1.3.1-py3-none-any.whl (113 kB)
+Using cached pycparser-3.12-py3-none-any.whl (62 kB)
+Installing collected packages: py-cpuinfo, pure-eval, ptyprocess, netifaces, ipython-genutils, futures, enum34, websocket-client, webencodings, webcolors, wcwidth, uri-template, tzdata, typing-extensions, traitlets, tornado, termcolor, soupsieve, six, setuptools, send2trash, rpds-py, rfc3986-validator, pyzmq, pyyaml, python-json-logger, pygments, pycparser, psutil, prometheus-client, platformdirs, pexpect, parso, pandocfilters, packaging, numpy, nest-asyncio2, nest-asyncio, mistune, MarkupSafe, lark, jupyterlab-pygments, jsonpointer, idna, fqdn, fastjsonschema, executing, defusedxml, debugpy, comm, cement, attrs, asttokens, tinycss2, terminado, stack_data, rfc3987-syntax, rfc3339-validator, referencing, python-dateutil, prompt_toolkit, plumbum, matplotlib-inline, jupyter-core, jinja2, jedi, ipython-pygments-lexers, cffi, bleach, beautifulsoup4, anyio, rpyc, jupyter-server-terminals, jupyter-client, jsonschema-specifications, ipython, arrow, argon2-cffi-bindings, jsonschema, isoduration, ipykernel, argon2-cffi, nbformat, ipynbname, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, nbclassic
+Successfully installed MarkupSafe-3.0.4 anyio-4.16.0 argon2-cffi-25.1.0 argon2-cffi-bindings-26.1.0 arrow-1.4.0 asttokens-3.0.2 attrs-26.1.0 beautifulsoup4-4.15.0 bleach-6.4.0 cement-3.0.16 cffi-2.1.1 comm-0.2.3 debugpy-1.8.22 defusedxml-0.7.1 enum34-1.1.10 executing-2.3.0 fastjsonschema-2.22.3 fqdn-1.6.0 futures-3.0.5 idna-3.20 ipykernel-7.4.0 ipynbname-2025.8.0.0 ipython-9.18.1 ipython-genutils-0.2.0 ipython-pygments-lexers-1.1.1 isoduration-20.11.0 jedi-0.20.1 jinja2-3.1.6 jsonpointer-3.8 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 jupyter-client-8.10.0 jupyter-core-5.9.1 jupyter-events-0.12.1 jupyter-server-2.21.1 jupyter-server-terminals-0.5.4 jupyterlab-pygments-0.3.0 lark-1.3.1 matplotlib-inline-0.2.2 mistune-3.4.0 nbclassic-1.3.3 nbclient-0.11.0 nbconvert-7.17.2 nbformat-5.11.1 nest-asyncio-1.6.0 nest-asyncio2-1.7.4 netifaces-0.11.0 notebook-shim-0.2.4 numpy-2.5.4 packaging-26.3 pandocfilters-1.5.1 parso-0.8.7 pexpect-4.9.0 platformdirs-4.14.5 plumbum-2.0.2 prometheus-client-0.26.0 prompt_toolkit-3.0.53 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.4 py-cpuinfo-9.0.0 pycparser-3.12 pygments-2.21.0 python-dateutil-4.0.0 python-json-logger-4.2.0 pyyaml-6.0.3 pyzmq-27.3.0 referencing-0.37.0 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rpds-py-2026.9.1 rpyc-6.0.2 send2trash-2.1.0 setuptools-84.2.1 six-1.17.0 soupsieve-4.0.1 stack_data-0.6.3 termcolor-3.3.0 terminado-0.18.1 tinycss2-1.5.1 tornado-6.6 traitlets-5.16.1 typing-extensions-4.16.0 tzdata-2026.6 uri-template-1.3.0 wcwidth-0.9.4 webcolors-25.10.0 webencodings-0.6.1 websocket-client-1.9.2
++ echo '=== [1.5/4] venv 内升级 cmake + pybind11（Ubuntu 24.04 自带 cmake 3.28 < 要求的 3.31）==='
+=== [1.5/4] venv 内升级 cmake + pybind11（Ubuntu 24.04 自带 cmake 3.28 < 要求的 3.31）===
++ /root/xpedite/install/runtime/bin/pip install -q 'cmake>=3.31' pybind11
++ export 'PATH=/root/xpedite/install/runtime/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ PATH='/root/xpedite/install/runtime/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin:/mnt/c/Users/ruijh/.local/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/local/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Program Files/Git/mingw64/bin:/mnt/c/Program Files/Git/usr/bin:/mnt/c/Users/ruijh/bin:/mnt/c/Program Files/Eclipse Adoptium/jdk-17.0.20.101-hotspot/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0:/mnt/c/windows/System32/OpenSSH:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/GitHub CLI:/mnt/c/Program Files/WSL:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/ruijh/AppData/Local/Python/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/ruijh/AppData/Roaming/npm:/mnt/c/users/ruijh/.local/bin:/mnt/c/users/ruijh/appdata/roaming/python/python314/scripts:/mnt/c/Users/ruijh/AppData/Local/Programs/blender-5.2.2-windows-x64:/mnt/c/Users/ruijh/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim:/mnt/c/Users/ruijh/AppData/Local/Pandoc:/mnt/c/Users/ruijh/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-9.0.2-full_build/bin:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ripgrep:/mnt/c/Users/ruijh/AppData/Local/Programs/ZCode/resources/tools/ugrep:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/usr/bin/vendor_perl:/mnt/c/Program Files/Git/usr/bin/core_perl:/snap/bin'
++ cmake --version
++ head -1
+cmake version 4.4.4
+++ /root/xpedite/install/runtime/bin/python -c 'import pybind11; print(pybind11.get_cmake_dir())'
++ export CMAKE_PREFIX_PATH=/root/xpedite/install/runtime/lib/python3.12/site-packages/pybind11/share/cmake/pybind11
++ CMAKE_PREFIX_PATH=/root/xpedite/install/runtime/lib/python3.12/site-packages/pybind11/share/cmake/pybind11
++ echo CMAKE_PREFIX_PATH=/root/xpedite/install/runtime/lib/python3.12/site-packages/pybind11/share/cmake/pybind11
+CMAKE_PREFIX_PATH=/root/xpedite/install/runtime/lib/python3.12/site-packages/pybind11/share/cmake/pybind11
++ echo '=== [2/4] build.sh（cmake 构建 xpediteDemo）==='
+=== [2/4] build.sh（cmake 构建 xpediteDemo）===
++ ./build.sh
++ echo BUILD_EXIT=0
+BUILD_EXIT=0
++ ls -la install/bin/
++ head -8
+total 5620
+drwxr-xr-x 2 root root    4096 Nov  6 03:11 .
+drwxr-xr-x 7 root root    4096 Nov  6 03:11 ..
+-rwxr-xr-x 1 root root 5378184 Nov  6 03:11 xpediteDemo
+-rwxr-xr-x 1 root root  364176 Nov  6 03:11 xpediteSamplesLoader
++ tail -8 /mnt/e/交易桌/artifacts/logs/xp_build.log
+-- Installing: ../install/test/customRecorderApp
+-- Installing: ../install/test/multiThreadedApp
+-- Installing: ../install/test/dataTxnApp
+-- Installing: ../install/test/libpic.so
+-- Installing: ../install/test/picApp
+-- Set non-toolchain portion of runtime path of "../install/test/picApp" to ""
+-- Installing: ../install/test/slowFixDecoderApp
+~/xpedite
++ echo '=== [3/4] demo.sh（启动 demo app + xpedite record）==='
+=== [3/4] demo.sh（启动 demo app + xpedite record）===
++ timeout 180 ./demo/demo.sh
++ echo DEMO_EXIT=0
+DEMO_EXIT=0
++ tail -30 /mnt/e/交易桌/artifacts/logs/xp_demo.log
+To keep all reports in one place, set variable homeDir in profileInfo to a valid path.
+creating xpedite data directory /tmp/xpeditey8rw1wyb/xpData
+generating notebook XpediteDemo-2026-11-06-03:11:20.ipynb -> completed 5.5 KiB in 0.09 sec.
+[W 2026-11-06 03:11:27.131 ServerApp] notebook_dir is deprecated, use root_dir
+[W 2026-11-06 03:11:27.138 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-11-06 03:11:27.146 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-11-06 03:11:27.149 ServerApp] nbclassic | extension was successfully linked.
+[I 2026-11-06 03:11:27.150 ServerApp] Writing Jupyter server cookie secret to /tmp/xpediteShell9rxy1fny/jupyter_cookie_secret
+[I 2026-11-06 03:11:27.199 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-11-06 03:11:27.201 ServerApp] tornadoExtension | extension was successfully linked.
+[I 2026-11-06 03:11:27.265 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-11-06 03:11:27.266 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-11-06 03:11:27.268 ServerApp] nbclassic | extension was successfully loaded.
+[I 2026-11-06 03:11:27.270 ServerApp] tornadoExtension | extension was successfully loaded.
+[I 2026-11-06 03:11:27.274 ServerApp] The port 8888 is already in use, trying another port.
+[C 2026-11-06 03:11:27.279 ServerApp] Running as root is not recommended. Use --allow-root to bypass.
+
+  _   _          _      _
+ | | | |_ __  __| |__ _| |_ ___
+ | |_| | '_ \/ _` / _` |  _/ -_)
+  \___/| .__/\__,_\__,_|\__\___|
+       |_|
+
+Read the migration plan to Notebook 7 to learn about the new features and the actions to take if you are using extensions.
+
+https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html
+
+Please note that updating to Notebook 7 might break some of your extensions.
+
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
++ echo '=== [4/4] report 生成 ==='
+=== [4/4] report 生成 ===
+++ find /tmp -maxdepth 2 -type d -name 'Profile*'
+++ head -1
++ PROFILE_DIR=
++ echo PROFILE_DIR=
+PROFILE_DIR=
++ '[' -n '' ']'
++ echo XPEDITE_DEMO_DONE
+XPEDITE_DEMO_DONE

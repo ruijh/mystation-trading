@@ -1,0 +1,42 @@
+detected virtual environment. resolving python dependencies from /root/xpedite/demo/../install/runtime
+Xpedite demo log dir - /tmp/tmp.gZsVMyz0OH
+press RETURN key to, end live profile and generate report ...
+[WARNING]: Detected unclean profile termination - [Errno 32] Broken pipe
+scanning for samples files matching - /dev/shm/xpedite-XpediteDemo-1793905883-*.data
+loading counters for thread 19298 from file /dev/shm/xpedite-XpediteDemo-1793905883-19298-00007aa6b85597c0.data -> 199 records | 100 txns loaded in 0.00 sec.
+generating profile XpediteDemo-2026-11-06-03:11:20 - Transaction (txns - 100) -> completed in 0.00 sec.
+generating report XpediteDemo-2026-11-06-03:11:20 - Transaction latency statistics [100 transactions] -> completed 245.1 KiB in 0.03 sec.
+
+To recreate the report run - "xpedite report -p profileInfo.py -r 1793905883"
+
+[WARNING]: Xpedite home directory not found in profileInfo (using temp dir).
+To keep all reports in one place, set variable homeDir in profileInfo to a valid path.
+creating xpedite data directory /tmp/xpeditey8rw1wyb/xpData
+generating notebook XpediteDemo-2026-11-06-03:11:20.ipynb -> completed 5.5 KiB in 0.09 sec.
+[W 2026-11-06 03:11:27.131 ServerApp] notebook_dir is deprecated, use root_dir
+[W 2026-11-06 03:11:27.138 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-11-06 03:11:27.146 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-11-06 03:11:27.149 ServerApp] nbclassic | extension was successfully linked.
+[I 2026-11-06 03:11:27.150 ServerApp] Writing Jupyter server cookie secret to /tmp/xpediteShell9rxy1fny/jupyter_cookie_secret
+[I 2026-11-06 03:11:27.199 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-11-06 03:11:27.201 ServerApp] tornadoExtension | extension was successfully linked.
+[I 2026-11-06 03:11:27.265 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-11-06 03:11:27.266 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-11-06 03:11:27.268 ServerApp] nbclassic | extension was successfully loaded.
+[I 2026-11-06 03:11:27.270 ServerApp] tornadoExtension | extension was successfully loaded.
+[I 2026-11-06 03:11:27.274 ServerApp] The port 8888 is already in use, trying another port.
+[C 2026-11-06 03:11:27.279 ServerApp] Running as root is not recommended. Use --allow-root to bypass.
+
+  _   _          _      _
+ | | | |_ __  __| |__ _| |_ ___
+ | |_| | '_ \/ _` / _` |  _/ -_)
+  \___/| .__/\__,_\__,_|\__\___|
+       |_|
+
+Read the migration plan to Notebook 7 to learn about the new features and the actions to take if you are using extensions.
+
+https://jupyter-notebook.readthedocs.io/en/latest/migrate_to_notebook7.html
+
+Please note that updating to Notebook 7 might break some of your extensions.
+
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]

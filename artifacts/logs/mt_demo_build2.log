@@ -1,0 +1,5 @@
+[WARNING] Running as root is not recommended
+File "demo_decode/mt_decode_demo.ml", line 42, characters 21-45:
+42 |         ~trace_scope:Trace_scope.Process_tree
+                          ^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unbound constructor "Trace_scope.Process_tree"

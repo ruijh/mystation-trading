@@ -1,0 +1,60 @@
+=== magic-trace decode demo（fixture → 时间线）===
+$ ./_build/default/demo_decode/mt_decode_demo.exe test/hello_world_userspace.perf 30
+[decode demo] fixture=test/hello_world_userspace.perf max_print=30
+[decode demo] fixture bytes=1979664
+30549/30549 174427.938460376:                           1    branches:uH:   tr strt                             0 [unknown] ([unknown]) =>     7ffff7ddc140 _start+0x0 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938460812:                           1    branches:uH:   tr end                   7ffff7ddc140 _start+0x0 (/usr/lib64/ld-2.17.so) =>                0 [unknown] ([unknown])
+30549/30549 174427.938462629:                           1    branches:uH:   tr strt                             0 [unknown] ([unknown]) =>     7ffff7ddc140 _start+0x0 (/usr/lib64/ld-2.17.so)
+->    436ns BEGIN [untraced]
+30549/30549 174427.938462629:                           1    branches:uH:   call                     7ffff7ddc143 _start+0x3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc850 _dl_start+0x0 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938463014:                           1    branches:uH:   tr end                   7ffff7ddc86f _dl_start+0x1f (/usr/lib64/ld-2.17.so) =>                0 [unknown] ([unknown])
+->  2.253us END   [untraced]
+->  2.253us BEGIN [unknown]
+30549/30549 174427.938463498:                           1    branches:uH:   tr strt                             0 [unknown] ([unknown]) =>     7ffff7ddc86f _dl_start+0x1f (/usr/lib64/ld-2.17.so)
+->  2.638us BEGIN [untraced]
+30549/30549 174427.938463680:                           1    branches:uH:   tr end                   7ffff7ddc876 _dl_start+0x26 (/usr/lib64/ld-2.17.so) =>                0 [unknown] ([unknown])
+->  3.122us END   [untraced]
+30549/30549 174427.938465832:                           1    branches:uH:   tr strt                             0 [unknown] ([unknown]) =>     7ffff7ddc876 _dl_start+0x26 (/usr/lib64/ld-2.17.so)
+->  3.304us BEGIN [untraced]
+30549/30549 174427.938465863:                           1    branches:uH:   jmp                      7ffff7ddc8e2 _dl_start+0x92 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8ff _dl_start+0xaf (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465863:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465863:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465880:                           1    branches:uH:   jcc                      7ffff7ddc90f _dl_start+0xbf (/usr/lib64/ld-2.17.so) =>     7ffff7ddcae8 _dl_start+0x298 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465880:                           1    branches:uH:   jcc                      7ffff7ddcaf0 _dl_start+0x2a0 (/usr/lib64/ld-2.17.so) =>     7ffff7ddcb10 _dl_start+0x2c0 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465892:                           1    branches:uH:   jcc                      7ffff7ddcb1a _dl_start+0x2ca (/usr/lib64/ld-2.17.so) =>     7ffff7ddcb30 _dl_start+0x2e0 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465892:                           1    branches:uH:   jmp                      7ffff7ddcb47 _dl_start+0x2f7 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8f3 _dl_start+0xa3 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465892:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465892:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465904:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465904:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465904:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465905:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465905:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465905:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465907:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465907:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465907:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465910:                           1    branches:uH:   jcc                      7ffff7ddc930 _dl_start+0xe0 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8ff _dl_start+0xaf (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465924:                           1    branches:uH:   jcc                      7ffff7ddc930 _dl_start+0xe0 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8ff _dl_start+0xaf (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465924:                           1    branches:uH:   jcc                      7ffff7ddc903 _dl_start+0xb3 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8e8 _dl_start+0x98 (/usr/lib64/ld-2.17.so)
+30549/30549 174427.938465932:                           1    branches:uH:   jcc                      7ffff7ddc930 _dl_start+0xe0 (/usr/lib64/ld-2.17.so) =>     7ffff7ddc8ff _dl_start+0xaf (/usr/lib64/ld-2.17.so)
+INPUT TRACE STREAM ENDED
+->      0ns BEGIN [unknown]
+
+$ ./_build/default/demo_decode/mt_decode_demo.exe test/demo_with_branch_misses.perf 10
+[decode demo] fixture=test/demo_with_branch_misses.perf max_print=10
+[decode demo] fixture bytes=2322571
+3871580/3871580 431345.473157382:         50                  branch-misses/period=50/u:                                      0     7fca99943ac7 dl_open_worker+0x37 (/usr/lib64/ld-2.28.so)
+->      0ns BEGIN branch-misses
+->      0ns END   branch-misses
+3871580/3871580 431345.473219999:         50                  branch-misses/period=50/u:                                      0     7fca99943c60 _dl_open+0x0 (/usr/lib64/ld-2.28.so)
+-> 62.617us BEGIN branch-misses
+-> 62.617us END   branch-misses
+3871580/3871580 431345.473283859:         50                  branch-misses/period=50/u:                                      0     7fca9992cfca strcmp+0x7a (/usr/lib64/ld-2.28.so)
+-> 126.477us BEGIN branch-misses
+-> 126.477us END   branch-misses
+3871580/3871580 431345.473342782:         50                  branch-misses/period=50/u:                                      0     7fca997281ee dlopen_doit+0x5e (/usr/lib64/libdl-2.28.so)
+->  185.4us BEGIN branch-misses
+->  185.4us END   branch-misses
+3871580/3871580 431345.473419597:         50                  branch-misses/period=50/u:                                      0     7fca99944189 dl_open_worker_begin+0xa9 (/usr/lib64/ld-2.28.so)
+-> 262.215us BEGIN branch-misses

@@ -1,0 +1,512 @@
+[WARNING] Running as root is not recommended
+The following actions will be performed:
+  ⊘ remove  oxcaml-re                          guard
+  ⊘ remove  oxcaml-dune                        guard
+  ⊘ remove  oxcaml-ocamlfind                   guard
+  ⊘ remove  oxcaml-uutf                        guard
+  ⊘ remove  oxcaml-topkg                       guard
+  ⊘ remove  oxcaml-ocaml-compiler-libs         guard
+  ⊘ remove  oxcaml-ppxlib                      guard
+  ∗ install cmdliner                           2.1.1
+  ⊘ remove  oxcaml-spawn                       guard
+  ∗ install seq                                base
+  ⊘ remove  oxcaml-odoc-parser                 guard
+  ∗ install conf-pkg-config                    5
+  ⊘ remove  oxcaml-ctypes                      guard
+  ⊘ remove  oxcaml-ocamlbuild                  guard
+  ⊘ remove  oxcaml-dune-configurator           guard
+  ⊘ remove  oxcaml-ppxlib_ast                  guard
+  ∗ install num                                1.6
+  ∗ install dune                               3.20.2+ox1
+  ∗ install ocamlfind                          1.9.8+ox
+  ∗ install conf-zstd                          1.3.8
+  ∗ install conf-zlib                          1
+  ∗ install ocamlbuild                         0.16.1+ox
+  ∗ install stringext                          1.6.0
+  ∗ install stdlib-shims                       0.3.0
+  ∗ install spawn                              v0.15.1+ox
+  ∗ install result                             1.5
+  ∗ install re                                 1.14.0+ox
+  ∗ install ppx_derivers                       1.2.1
+  ∗ install oxcaml-dune-patches                enabled
+  ∗ install owee                               0.8
+  ∗ install ocaml-syntax-shims                 1.0.0
+  ∗ install ocaml-compiler-libs                v0.17.0+ox
+  ∗ install ocaml_intrinsics_kernel            v0.18~preview.130.91+190
+  ∗ install magic-mime                         1.3.1
+  ∗ install macaddr                            5.6.2
+  ∗ install jane-street-headers                v0.18~preview.130.91+190
+  ∗ install domain-name                        0.5.0
+  ∗ install csexp                              1.5.2
+  ∗ install camlp-streams                      5.0.1
+  ∗ install basement                           v0.18~preview.130.91+190
+  ∗ install base64                             3.5.2
+  ∗ install oxcaml-ocamlfind-patches           enabled
+  ∗ install base-bytes                         base
+  ∗ install camlzip                            1.14
+  ∗ install topkg                              1.1.1+ox
+  ∗ install oxcaml-ocamlbuild-patches          enabled
+  ∗ install integers                           0.8.0
+  ∗ install oxcaml-spawn-patches               enabled
+  ∗ install oxcaml-re-patches                  enabled
+  ∗ install oxcaml-ocaml-compiler-libs-patches enabled
+  ∗ install ipaddr                             5.6.2
+  ∗ install dune-configurator                  3.20.2+ox
+  ∗ install sexp_type                          v0.18~preview.130.91+190
+  ∗ install uutf                               1.0.4+ox
+  ∗ install ptime                              1.2.0
+  ∗ install oxcaml-topkg-patches               enabled
+  ∗ install fmt                                0.11.0
+  ∗ install astring                            0.8.5
+  ∗ install oxcaml-dune-configurator-patches   enabled
+  ∗ install ctypes                             0.24.0+ox
+  ∗ install bigstringaf                        0.10.0
+  ∗ install sexplib0                           v0.18~preview.130.91+190
+  ∗ install oxcaml-uutf-patches                enabled
+  ∗ install jsonm                              1.0.2
+  ∗ install crunch                             4.1.0
+  ∗ install logs                               0.10.0
+  ∗ install cstruct                            6.3.0
+  ∗ install odoc-parser                        3.1.0+ox
+  ∗ install oxcaml-ctypes-patches              enabled
+  ∗ install angstrom                           0.16.1
+  ∗ install ppxlib_ast                         0.33.0+ox1
+  ∗ install oxcaml-odoc-parser-patches         enabled
+  ∗ install uri                                4.4.0
+  ∗ install ppxlib_jane                        v0.18~preview.130.91+190
+  ∗ install oxcaml-ppxlib_ast-patches          enabled
+  ∗ install ppxlib                             0.33.0+ox1
+  ∗ install ppx_shorthand                      v0.18~preview.130.91+190
+  ∗ install ppx_pipebang                       v0.18~preview.130.91+190
+  ∗ install ppx_ignore_instrumentation         v0.18~preview.130.91+190
+  ∗ install ppx_helpers                        v0.18~preview.130.91+190
+  ∗ install ppx_enumerate                      v0.18~preview.130.91+190
+  ∗ install ppx_disable_unused_warnings        v0.18~preview.130.91+190
+  ∗ install ppx_debug_assert                   v0.18~preview.130.91+190
+  ∗ install ppx_cold                           v0.18~preview.130.91+190
+  ∗ install ppx_builtin                        v0.18~preview.130.91+190
+  ∗ install oxcaml-ppxlib-patches              enabled
+  ∗ install ppx_template                       v0.18~preview.130.91+190
+  ∗ install ppx_sexp_conv                      v0.18~preview.130.91+190
+  ∗ install ppx_globalize                      v0.18~preview.130.91+190
+  ∗ install ppx_array_base                     v0.18~preview.130.91+190
+  ∗ install ocaml_intrinsics                   v0.18~preview.130.91+190
+  ∗ install ppx_js_style                       v0.18~preview.130.91+190
+  ∗ install ppx_compare                        v0.18~preview.130.91+190
+  ∗ install ppx_box                            v0.18~preview.130.91+190
+  ∗ install capsule0                           v0.18~preview.130.91+190
+  ∗ install uri-sexp                           4.4.0
+  ∗ install ipaddr-sexp                        5.6.2
+  ∗ install ppx_hash                           v0.18~preview.130.91+190
+  ∗ install cohttp                             5.3.1
+  ∗ install conduit                            8.0.0
+  ∗ install ppx_base                           v0.18~preview.130.91+190
+  ∗ install base                               v0.18~preview.130.91+190
+  ∗ install variantslib                        v0.18~preview.130.91+190
+  ∗ install string_dict                        v0.18~preview.130.91+190
+  ∗ install stdio                              v0.18~preview.130.91+190
+  ∗ install ppx_var_name                       v0.18~preview.130.91+190
+  ∗ install ppx_tydi                           v0.18~preview.130.91+190
+  ∗ install ppx_string                         v0.18~preview.130.91+190
+  ∗ install ppx_stable_witness                 v0.18~preview.130.91+190
+  ∗ install ppx_stable                         v0.18~preview.130.91+190
+  ∗ install ppx_portable                       v0.18~preview.130.91+190
+  ∗ install ppx_optional                       v0.18~preview.130.91+190
+  ∗ install ppx_int63_literal                  v0.18~preview.130.91+190
+  ∗ install ppx_here                           v0.18~preview.130.91+190
+  ∗ install ppx_fixed_literal                  v0.18~preview.130.91+190
+  ∗ install ppx_custom_printf                  v0.18~preview.130.91+190
+  ∗ install fieldslib                          v0.18~preview.130.91+190
+  ∗ install capsule                            v0.18~preview.130.91+190
+  ∗ install capitalization                     v0.18~preview.130.91+190
+  ∗ install ppx_variants_conv                  v0.18~preview.130.91+190
+  ∗ install ppx_optcomp                        v0.18~preview.130.91+190
+  ∗ install ppx_sexp_value                     v0.18~preview.130.91+190
+  ∗ install ppx_sexp_message                   v0.18~preview.130.91+190
+  ∗ install ppx_let                            v0.18~preview.130.91+190
+  ∗ install ppx_assert                         v0.18~preview.130.91+190
+  ∗ install ppx_fields_conv                    v0.18~preview.130.91+190
+  ∗ install ppx_string_conv                    v0.18~preview.130.91+190
+  ∗ install ppx_fuelproof                      v0.18~preview.130.91+190
+  ∗ install jst-config                         v0.18~preview.130.91+190
+  ∗ install bin_prot                           v0.18~preview.130.91+190
+  ∗ install time_now                           v0.18~preview.130.91+190
+  ∗ install ppx_bin_prot                       v0.18~preview.130.91+190
+  ∗ install ppx_module_timer                   v0.18~preview.130.91+190
+  ∗ install ppx_inline_test                    v0.18~preview.130.91+190
+  ∗ install univ_map                           v0.18~preview.130.91+190
+  ∗ install ppx_bench                          v0.18~preview.130.91+190
+  ∗ install splittable_random                  v0.18~preview.130.91+190
+  ∗ install base_quickcheck                    v0.18~preview.130.91+190
+  ∗ install portable                           v0.18~preview.130.91+190
+  ∗ install unique                             v0.18~preview.130.91+190
+  ∗ install typerep                            v0.18~preview.130.91+190
+  ∗ install ppx_expect                         v0.18~preview.130.91+190
+  ∗ install parsexp                            v0.18~preview.130.91+190
+  ∗ install ppx_typerep_conv                   v0.18~preview.130.91+190
+  ∗ install sexplib                            v0.18~preview.130.91+190
+  ∗ install sexp_pretty                        v0.18~preview.130.91+190
+  ∗ install ppx_typed_fields                   v0.18~preview.130.91+190
+  ∗ install ppx_log                            v0.18~preview.130.91+190
+  ∗ install ppx_jane                           v0.18~preview.130.91+190
+  ∗ install uopt                               v0.18~preview.130.91+190
+  ∗ install record_builder                     v0.18~preview.130.91+190
+  ∗ install ppx_diff                           v0.18~preview.130.91+190
+  ∗ install int_repr                           v0.18~preview.130.91+190
+  ∗ install base_bigstring                     v0.18~preview.130.91+190
+  ∗ install core                               v0.18~preview.130.91+190
+  ∗ install protocol_version_header            v0.18~preview.130.91+190
+  ∗ install float_array                        v0.18~preview.130.91+190
+  ∗ install flexible_sexp                      v0.18~preview.130.91+190
+  ∗ install expect_test_helpers_core           v0.18~preview.130.91+190
+  ∗ install core_kernel                        v0.18~preview.130.91+190
+  ∗ install unboxed                            v0.18~preview.130.91+190
+  ∗ install zstandard                          v0.18~preview.130.91+190
+  ∗ install core_unix                          v0.18~preview.130.91+190
+  ∗ install ppx_for_loop                       v0.18~preview.130.91+190
+  ∗ install textutils                          v0.18~preview.130.91+190
+  ∗ install core_extended                      v0.18~preview.130.91+190
+  ∗ install async_kernel                       v0.18~preview.130.91+190
+  ∗ install vec                                v0.18~preview.130.91+190
+  ∗ install shell                              v0.18~preview.130.91+190
+  ∗ install pipe_with_writer_error             v0.18~preview.130.91+190
+  ∗ install async_unix                         v0.18~preview.130.91+190
+  ∗ install async_rpc_kernel                   v0.18~preview.130.91+190
+  ∗ install async_log                          v0.18~preview.130.91+190
+  ∗ install async                              v0.18~preview.130.91+190
+  ∗ install expect_test_helpers_async          v0.18~preview.130.91+190
+  ∗ install conduit-async                      8.0.0
+  ∗ install cohttp-async                       5.3.0
+  ∗ install cohttp_static_handler              v0.18~preview.130.91+190
+===== ∗ 165   ⊘ 13 =====
+
+<><> Processing actions <><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+⊘ removed   oxcaml-ctypes.guard
+⊘ removed   oxcaml-dune.guard
+⊘ removed   oxcaml-dune-configurator.guard
+⊘ removed   oxcaml-ocaml-compiler-libs.guard
+⊘ removed   oxcaml-ocamlbuild.guard
+⊘ removed   oxcaml-ocamlfind.guard
+⊘ removed   oxcaml-odoc-parser.guard
+⊘ removed   oxcaml-ppxlib.guard
+⊘ removed   oxcaml-ppxlib_ast.guard
+⊘ removed   oxcaml-re.guard
+⊘ removed   oxcaml-spawn.guard
+⊘ removed   oxcaml-topkg.guard
+⊘ removed   oxcaml-uutf.guard
+⬇ retrieved angstrom.0.16.1  (cached)
+⬇ retrieved astring.0.8.5  (cached)
+⬇ retrieved async.v0.18~preview.130.91+190  (https://github.com/janestreet/async/archive/1cee9c70c3effc48b6fd433b4f801a6122bf74d2.tar.gz)
+⬇ retrieved async_kernel.v0.18~preview.130.91+190  (https://github.com/janestreet/async_kernel/archive/461b9fddffc0c37ebee4078a63ce8864f4e193c5.tar.gz)
+⬇ retrieved async_log.v0.18~preview.130.91+190  (https://github.com/janestreet/async_log/archive/d040fdf834bb57d7aae523a4adf685aef51beea9.tar.gz)
+⬇ retrieved async_unix.v0.18~preview.130.91+190  (https://github.com/janestreet/async_unix/archive/be6bd073e176dc7fd802c7ea4ac642ce7cb06a5a.tar.gz)
+⬇ retrieved base.v0.18~preview.130.91+190  (https://github.com/janestreet/base/archive/c78bb094adba6b3b65fb6cfc4a01f8cdc84b0176.tar.gz)
+⬇ retrieved base64.3.5.2  (cached)
+⬇ retrieved async_rpc_kernel.v0.18~preview.130.91+190  (https://github.com/janestreet/async_rpc_kernel/archive/63430441094971eb8a3c1e33dceff586994ffafa.tar.gz)
+⬇ retrieved base_bigstring.v0.18~preview.130.91+190  (https://github.com/janestreet/base_bigstring/archive/1296bec8003ca4b4d94a45ffca492b4c31a2bf7d.tar.gz)
+⬇ retrieved base_quickcheck.v0.18~preview.130.91+190  (https://github.com/janestreet/base_quickcheck/archive/0e29881c2789e2ff4377495c9de026c47d7fc70d.tar.gz)
+⬇ retrieved basement.v0.18~preview.130.91+190  (https://github.com/janestreet/basement/archive/6c9b75af42bd9b8505969a6b539181c688f0c588.tar.gz)
+⬇ retrieved bigstringaf.0.10.0  (cached)
+⬇ retrieved camlzip.1.14  (cached)
+⬇ retrieved bin_prot.v0.18~preview.130.91+190  (https://github.com/janestreet/bin_prot/archive/2504a5934baa12b566ec2e18cdc27bebe057ea04.tar.gz)
+⬇ retrieved camlp-streams.5.0.1  (https://opam.ocaml.org/cache)
+⬇ retrieved capitalization.v0.18~preview.130.91+190  (https://github.com/janestreet/capitalization/archive/e52a4f656ca3295996622932b2c1116a73849142.tar.gz)
+⬇ retrieved cmdliner.2.1.1  (cached)
+⬇ retrieved cohttp.5.3.1  (cached)
+⬇ retrieved capsule.v0.18~preview.130.91+190  (https://github.com/janestreet/capsule/archive/8632b5e45d420d785244cab52f81dacc3c18f474.tar.gz)
+⬇ retrieved capsule0.v0.18~preview.130.91+190  (https://github.com/janestreet/capsule0/archive/10af883bb767996c4216e351dc63fb1e65b08c25.tar.gz)
+⬇ retrieved cohttp-async.5.3.0  (cached)
+⬇ retrieved conduit.8.0.0  (cached)
+⬇ retrieved conf-pkg-config.5  (cached)
+⬇ retrieved conduit-async.8.0.0  (cached)
+⬇ retrieved cohttp_static_handler.v0.18~preview.130.91+190  (https://github.com/janestreet/cohttp_static_handler/archive/dd790950607374811c69a66f0d10e9402dab7fdc.tar.gz)
+∗ installed conf-pkg-config.5
+⬇ retrieved core_extended.v0.18~preview.130.91+190  (https://github.com/janestreet/core_extended/archive/16287aa56e8702ab261015e57279074c60f9feb1.tar.gz)
+⬇ retrieved core.v0.18~preview.130.91+190  (https://github.com/janestreet/core/archive/922a95164a8e8bca606e5b158d17d70ea7b9bc33.tar.gz)
+∗ installed conf-zlib.1
+∗ installed conf-zstd.1.3.8
+⬇ retrieved crunch.4.1.0  (cached)
+⬇ retrieved core_kernel.v0.18~preview.130.91+190  (https://github.com/janestreet/core_kernel/archive/205ec2af39c6d0493b1aa5ff67da62aca7a97bed.tar.gz)
+⬇ retrieved core_unix.v0.18~preview.130.91+190  (https://github.com/janestreet/core_unix/archive/177318d23705d779fbf9154d9d6d2d1f383fc645.tar.gz)
+⬇ retrieved csexp.1.5.2  (cached)
+⬇ retrieved ctypes.0.24.0+ox  (cached)
+⬇ retrieved domain-name.0.5.0  (cached)
+⬇ retrieved cstruct.6.3.0  (https://opam.ocaml.org/cache)
+⬇ retrieved dune.3.20.2+ox1  (cached)
+⬇ retrieved dune-configurator.3.20.2+ox  (cached)
+⬇ retrieved expect_test_helpers_async.v0.18~preview.130.91+190  (https://github.com/janestreet/expect_test_helpers_async/archive/a5abf94c80d6987d26b717aaae89b29c078c9cea.tar.gz)
+⬇ retrieved expect_test_helpers_core.v0.18~preview.130.91+190  (https://github.com/janestreet/expect_test_helpers_core/archive/9f6bf0e8af101a70ec021d8a0ba55307c5218bc0.tar.gz)
+⬇ retrieved flexible_sexp.v0.18~preview.130.91+190  (https://github.com/janestreet/flexible_sexp/archive/3419bb3d81abd77e63d6b6b72c6860d1a56ab6c9.tar.gz)
+⬇ retrieved fieldslib.v0.18~preview.130.91+190  (https://github.com/janestreet/fieldslib/archive/ea06377de5240840764bbb2ae96a78abc9fa1f50.tar.gz)
+⬇ retrieved float_array.v0.18~preview.130.91+190  (https://github.com/janestreet/float_array/archive/aab18080a1273eea07162c1b7bbf60ab2ae440ac.tar.gz)
+⬇ retrieved fmt.0.11.0  (cached)
+⬇ retrieved integers.0.8.0  (cached)
+⬇ retrieved ipaddr.5.6.2  (cached)
+⬇ retrieved ipaddr-sexp.5.6.2  (cached)
+⬇ retrieved jsonm.1.0.2  (cached)
+⬇ retrieved int_repr.v0.18~preview.130.91+190  (https://github.com/janestreet/int_repr/archive/904cd5003cf096073d002c92eca331e005d04bd3.tar.gz)
+⬇ retrieved jane-street-headers.v0.18~preview.130.91+190  (https://github.com/janestreet/jane-street-headers/archive/d2eec36f0484ba47620de0fea0e8401617062975.tar.gz)
+⬇ retrieved logs.0.10.0  (cached)
+⬇ retrieved macaddr.5.6.2  (cached)
+⬇ retrieved jst-config.v0.18~preview.130.91+190  (https://github.com/janestreet/jst-config/archive/4569e516ab46032ad33d45926a2c6c7ca2a2ea6d.tar.gz)
+⬇ retrieved magic-mime.1.3.1  (cached)
+⬇ retrieved num.1.6  (cached)
+⬇ retrieved ocaml-syntax-shims.1.0.0  (cached)
+⬇ retrieved ocaml_intrinsics.v0.18~preview.130.91+190  (https://github.com/janestreet/ocaml_intrinsics/archive/1938472cbf386c319e34e2a5556ebd239c41b656.tar.gz)
+⬇ retrieved ocaml_intrinsics_kernel.v0.18~preview.130.91+190  (https://github.com/janestreet/ocaml_intrinsics_kernel/archive/4fbc03af0df87d5df5b3c5649604cfd1b450d245.tar.gz)
+⬇ retrieved ocaml-compiler-libs.v0.17.0+ox  (https://github.com/janestreet/ocaml-compiler-libs/archive/refs/tags/v0.17.0.tar.gz)
+⬇ retrieved ocamlbuild.0.16.1+ox  (cached)
+⬇ retrieved ocamlfind.1.9.8+ox  (cached)
+⬇ retrieved owee.0.8  (cached)
+⬇ retrieved parsexp.v0.18~preview.130.91+190  (https://github.com/janestreet/parsexp/archive/6c27837b5d30da89d3cd1fd7b4ef3530c861ee1c.tar.gz)
+⬇ retrieved pipe_with_writer_error.v0.18~preview.130.91+190  (https://github.com/janestreet/pipe_with_writer_error/archive/eb1e90f60f21d2a553e3f61de4b4a6bbdfe2befa.tar.gz)
+⬇ retrieved portable.v0.18~preview.130.91+190  (https://github.com/janestreet/portable/archive/d09c59cbb4f3e99a5f14abf862dfdebc31291a92.tar.gz)
+⬇ retrieved ppx_array_base.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_array_base/archive/06adccfcff607668501df1391dbe0bea27cec843.tar.gz)
+⬇ retrieved ppx_assert.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_assert/archive/bc1ebd47ffa67a2ad9c9a4dc21cac8130c8a7e4a.tar.gz)
+⬇ retrieved ppx_base.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_base/archive/25094d8face556953e0755cca0dee4eb086e6881.tar.gz)
+⬇ retrieved ppx_bench.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_bench/archive/b0790c7775c706de9736b4e362c63059d37c7080.tar.gz)
+∗ installed cmdliner.2.1.1
+∗ installed num.1.6
+⬇ retrieved ppx_bin_prot.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_bin_prot/archive/4533a56b2a56fff0e43ae252971a5acbb525b099.tar.gz)
+⬇ retrieved ppx_box.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_box/archive/47088b15c6c3d1158cbe1cab26511198739a38a1.tar.gz)
+⬇ retrieved ppx_cold.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_cold/archive/a0fa79c1bb58cbf7813c77c3bebfec0c82cfedf1.tar.gz)
+⬇ retrieved ppx_builtin.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_builtin/archive/bd8d465e87c9092d30e5ca26b471c0435f67741e.tar.gz)
+⬇ retrieved ppx_compare.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_compare/archive/2ad18f5c3a1a3077b7745f2b308f1ac6600c6a43.tar.gz)
+⬇ retrieved ppx_custom_printf.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_custom_printf/archive/e2b0e5a5652e8d81841e6f2c14b9aff405a385cc.tar.gz)
+⬇ retrieved ppx_derivers.1.2.1  (cached)
+⬇ retrieved ppx_debug_assert.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_debug_assert/archive/93a084e4a64cce23c12dbb27aebaad27d802e78e.tar.gz)
+⬇ retrieved ppx_diff.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_diff/archive/89bfc1bf38b90c42e4848e448501d7705819e442.tar.gz)
+⬇ retrieved ppx_disable_unused_warnings.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_disable_unused_warnings/archive/447a088878744b724de730cdf6085625fa124cf0.tar.gz)
+∗ installed ocamlfind.1.9.8+ox
+∗ installed base-bytes.base
+⬇ retrieved ppx_enumerate.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_enumerate/archive/b747f858f6f054b41818168f71f48e820e8b9770.tar.gz)
+⬇ retrieved odoc-parser.3.1.0+ox  (git+https://github.com/oxcaml/odoc.git#97e1daecb432d33a7137d525f7a554f203073a95)
+∗ installed ocamlbuild.0.16.1+ox
+∗ installed oxcaml-ocamlbuild-patches.enabled
+∗ installed oxcaml-ocamlfind-patches.enabled
+⬇ retrieved ppx_expect.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_expect/archive/8fe6fb95921672bf69a93ebcf9979e13aa9035f2.tar.gz)
+⬇ retrieved ppx_fields_conv.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_fields_conv/archive/f75fa97752729e3a9c06ae4bf54027dfed196c21.tar.gz)
+∗ installed camlzip.1.14
+⬇ retrieved ppx_fixed_literal.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_fixed_literal/archive/5c8bc1850b1dec7f238538dccd06db12fa528b0d.tar.gz)
+⬇ retrieved ppx_fuelproof.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_fuelproof/archive/612423bd07151f8b06394c6af2f0cbb117eadbc5.tar.gz)
+⬇ retrieved ppx_for_loop.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_for_loop/archive/60319fa6c2877683449e3d03f303e24f40780843.tar.gz)
+⬇ retrieved ppx_globalize.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_globalize/archive/18b1822dab8b39707f43ce859fc73eadb9c219c7.tar.gz)
+⬇ retrieved ppx_hash.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_hash/archive/95ddda64ddd8dfd3dea294082ddc28d4ba62eee6.tar.gz)
+⬇ retrieved ppx_here.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_here/archive/f9eae1b4d167a5128098d09bd82740acf4e10cc6.tar.gz)
+⬇ retrieved ppx_helpers.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_helpers/archive/1d4263d63e7755cdda3a1fdbf65b245c4003b2a6.tar.gz)
+⬇ retrieved ppx_ignore_instrumentation.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_ignore_instrumentation/archive/e11cb15c11acc52d896b0eff23695c36005566b6.tar.gz)
+⬇ retrieved ppx_inline_test.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_inline_test/archive/2828a32690b0a3cda3eb1605d7c24f4403fe2a79.tar.gz)
+⬇ retrieved ppx_int63_literal.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_int63_literal/archive/d715837ffc9b9b12ba6dec0cad0f861cf0752b8e.tar.gz)
+⬇ retrieved ppx_jane.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_jane/archive/82c7d707d2124a012b01057700930624984313c5.tar.gz)
+⬇ retrieved ppx_let.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_let/archive/7468ef020eff1866381d7e38d570d7916ac9cea2.tar.gz)
+⬇ retrieved ppx_log.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_log/archive/d517c6ff58d6a123aea9d8b34e85ae4011da3a2d.tar.gz)
+⬇ retrieved ppx_js_style.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_js_style/archive/191d15177cee02c931c89f7eae74b652609560c5.tar.gz)
+⬇ retrieved ppx_module_timer.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_module_timer/archive/59b32236af4ded42020c2144cb84dcc21925ab10.tar.gz)
+⬇ retrieved ppx_optcomp.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_optcomp/archive/eba95a035879c550823cd8b53e3fb78f303ac45c.tar.gz)
+⬇ retrieved ppx_optional.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_optional/archive/339190b9288d884769d1c34d7600c532cc0c57fc.tar.gz)
+⬇ retrieved ppx_pipebang.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_pipebang/archive/a50a75cd7f508e972862036ffc6e04db15fafa11.tar.gz)
+⬇ retrieved ppx_portable.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_portable/archive/0b281b6e3a561bbfae42d2307d60a0167b8cf96b.tar.gz)
+⬇ retrieved ppx_sexp_conv.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_sexp_conv/archive/7ef46faac0d9110f08361b26bdbf16bc72e35100.tar.gz)
+⬇ retrieved ppx_sexp_message.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_sexp_message/archive/d4c49d7349f05a7cddf0c6d216a837a35deed257.tar.gz)
+⬇ retrieved ppx_shorthand.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_shorthand/archive/84867454db8182729c5ea77f9898c366f75583be.tar.gz)
+⬇ retrieved ppx_stable.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_stable/archive/f015b556d9aab0d6faebfd95a33c558631360b43.tar.gz)
+⬇ retrieved ppx_sexp_value.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_sexp_value/archive/8f192b011f8d071085ab0f3436164d69ca824a29.tar.gz)
+⬇ retrieved ppx_stable_witness.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_stable_witness/archive/d081ebcd9b75a03a05e46427a900afaae0f636b0.tar.gz)
+⬇ retrieved ppx_string.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_string/archive/a511e7916b10a301ebcb1a7ef325bf2980861328.tar.gz)
+⬇ retrieved ppx_string_conv.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_string_conv/archive/5c9faeee2aa93f746e97e49f7930e597d735e0b4.tar.gz)
+⬇ retrieved ppx_template.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_template/archive/0815339ae38ed2febc30d977a5378ece2ceeb348.tar.gz)
+⬇ retrieved ppx_typed_fields.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_typed_fields/archive/79a3f87400322b8d72d3065345fc9ecdb1f161c0.tar.gz)
+⬇ retrieved ppx_tydi.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_tydi/archive/73ea0affecaf9440f1d6074b4ff6bff9200f8492.tar.gz)
+⬇ retrieved ppx_typerep_conv.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_typerep_conv/archive/066ae505dc15510ddc92ca14c08e333b70eabe86.tar.gz)
+⬇ retrieved ppx_variants_conv.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_variants_conv/archive/99ab9c7ef4a65b9c854f1ebbd6761e7c0ae458f6.tar.gz)
+⬇ retrieved ppx_var_name.v0.18~preview.130.91+190  (https://github.com/janestreet/ppx_var_name/archive/18ce1879fda1af29674ef06656f5e17b82f79255.tar.gz)
+⬇ retrieved ppxlib.0.33.0+ox1  (https://github.com/ocaml-ppx/ppxlib/archive/1f788de67fd04d7e608376ac26ee57deeeb93fdd.tar.gz)
+⬇ retrieved ppxlib_ast.0.33.0+ox1  (https://github.com/ocaml-ppx/ppxlib/archive/1f788de67fd04d7e608376ac26ee57deeeb93fdd.tar.gz)
+⬇ retrieved ptime.1.2.0  (cached)
+⬇ retrieved protocol_version_header.v0.18~preview.130.91+190  (https://github.com/janestreet/protocol_version_header/archive/df97b44d713ff7d0079bbd91e9d211d00bebc1e9.tar.gz)
+⬇ retrieved ppxlib_jane.v0.18~preview.130.91+190  (https://github.com/janestreet/ppxlib_jane/archive/ee5f0d96c93ba6ca3cfe57e87b6502da8eb3e3a6.tar.gz)
+⬇ retrieved re.1.14.0+ox  (https://github.com/ocaml/ocaml-re/archive/cb63cdf6d355d7eff97c88c0cf90dd567a0faf06.tar.gz)
+⬇ retrieved result.1.5  (https://opam.ocaml.org/cache)
+∗ installed dune.3.20.2+ox1
+⬇ retrieved record_builder.v0.18~preview.130.91+190  (https://github.com/janestreet/record_builder/archive/ca61d871c0924b3fff9ade3ae87ba6ccc1a7d533.tar.gz)
+∗ installed base64.3.5.2
+∗ installed camlp-streams.5.0.1
+⬇ retrieved seq.base  (2 extra sources)
+⬇ retrieved sexp_pretty.v0.18~preview.130.91+190  (https://github.com/janestreet/sexp_pretty/archive/96087fc30c7ef82a117d8978047f64f25452fdec.tar.gz)
+∗ installed csexp.1.5.2
+⬇ retrieved sexp_type.v0.18~preview.130.91+190  (https://github.com/janestreet/sexp_type/archive/771ad9e29aa661aa68784c8ec7a6f3820028e794.tar.gz)
+∗ installed domain-name.0.5.0
+∗ installed basement.v0.18~preview.130.91+190
+∗ installed jane-street-headers.v0.18~preview.130.91+190
+⬇ retrieved sexplib.v0.18~preview.130.91+190  (https://github.com/janestreet/sexplib/archive/5d4e7007a5efe96db543c0c4e32fc454b6bd7adb.tar.gz)
+⬇ retrieved sexplib0.v0.18~preview.130.91+190  (https://github.com/janestreet/sexplib0/archive/b15f5801432c043b7ea3c82d9efcb3a7884a593c.tar.gz)
+⬇ retrieved shell.v0.18~preview.130.91+190  (https://github.com/janestreet/shell/archive/75f7d3e3be12ff6fb1faeccdb982d9c888dc5ae0.tar.gz)
+⬇ retrieved spawn.v0.15.1+ox  (https://github.com/janestreet/spawn/archive/e24c5102490d51c50f5e77798250d95eb680a5d2.tar.gz)
+∗ installed magic-mime.1.3.1
+⬇ retrieved stdlib-shims.0.3.0  (cached)
+⬇ retrieved splittable_random.v0.18~preview.130.91+190  (https://github.com/janestreet/splittable_random/archive/750b7cb10d8fc05d9e95fc9a49db71bc73f8e05d.tar.gz)
+⬇ retrieved stdio.v0.18~preview.130.91+190  (https://github.com/janestreet/stdio/archive/3743c497849ab02fccbd47626613580993ff45f1.tar.gz)
+⬇ retrieved stringext.1.6.0  (cached)
+∗ installed dune-configurator.3.20.2+ox
+⬇ retrieved time_now.v0.18~preview.130.91+190  (https://github.com/janestreet/time_now/archive/3e44ea9b53084f79dd7a31372f1a95762df71870.tar.gz)
+⬇ retrieved textutils.v0.18~preview.130.91+190  (https://github.com/janestreet/textutils/archive/a6406169e58b3af5e7d78321fdd3533d9d464bda.tar.gz)
+⬇ retrieved string_dict.v0.18~preview.130.91+190  (https://github.com/janestreet/string_dict/archive/468590ba4f7365af6a62c79eebc2df7d7a2792fb.tar.gz)
+⬇ retrieved topkg.1.1.1+ox  (cached)
+⬇ retrieved typerep.v0.18~preview.130.91+190  (https://github.com/janestreet/typerep/archive/6b800493abfa91208863eb9f36aa352bd03eb291.tar.gz)
+⬇ retrieved unboxed.v0.18~preview.130.91+190  (https://github.com/janestreet/unboxed/archive/d4b0598cf2cb96da4b32c354ffd92495adbd8d2a.tar.gz)
+⬇ retrieved unique.v0.18~preview.130.91+190  (https://github.com/janestreet/unique/archive/e1c572204a8be0422b89654cd08ab3d997a6d3e8.tar.gz)
+⬇ retrieved univ_map.v0.18~preview.130.91+190  (https://github.com/janestreet/univ_map/archive/3b7c8d857db28d7f1fbf951b192b317248c3ae6f.tar.gz)
+⬇ retrieved uri.4.4.0  (cached)
+⬇ retrieved uopt.v0.18~preview.130.91+190  (https://github.com/janestreet/uopt/archive/732c566c5dbb20f25ca674d4e59de357fd4fdcb6.tar.gz)
+⬇ retrieved uri-sexp.4.4.0  (cached)
+⬇ retrieved uutf.1.0.4+ox  (cached)
+⬇ retrieved variantslib.v0.18~preview.130.91+190  (https://github.com/janestreet/variantslib/archive/213d3056deb8bf82f9abf6e5485b8261085c338b.tar.gz)
+⬇ retrieved vec.v0.18~preview.130.91+190  (https://github.com/janestreet/vec/archive/8dac8c3ed4a6284461a7335e9240eed5948d7914.tar.gz)
+⬇ retrieved zstandard.v0.18~preview.130.91+190  (https://github.com/janestreet/zstandard/archive/b4b83bf7de45c74d89cdb2ad73d4369be4cee6f3.tar.gz)
+∗ installed macaddr.5.6.2
+∗ installed ocaml-syntax-shims.1.0.0
+∗ installed bigstringaf.0.10.0
+∗ installed ocaml-compiler-libs.v0.17.0+ox
+∗ installed ocaml_intrinsics_kernel.v0.18~preview.130.91+190
+∗ installed ipaddr.5.6.2
+∗ installed oxcaml-dune-configurator-patches.enabled
+∗ installed oxcaml-dune-patches.enabled
+∗ installed oxcaml-ocaml-compiler-libs-patches.enabled
+∗ installed angstrom.0.16.1
+∗ installed ppx_derivers.1.2.1
+∗ installed seq.base
+∗ installed result.1.5
+∗ installed owee.0.8
+∗ installed sexp_type.v0.18~preview.130.91+190
+∗ installed stdlib-shims.0.3.0
+∗ installed spawn.v0.15.1+ox
+∗ installed integers.0.8.0
+∗ installed oxcaml-spawn-patches.enabled
+∗ installed sexplib0.v0.18~preview.130.91+190
+∗ installed stringext.1.6.0
+∗ installed re.1.14.0+ox
+∗ installed ctypes.0.24.0+ox
+∗ installed oxcaml-re-patches.enabled
+∗ installed oxcaml-ctypes-patches.enabled
+∗ installed uri.4.4.0
+∗ installed ppxlib_ast.0.33.0+ox1
+∗ installed oxcaml-ppxlib_ast-patches.enabled
+∗ installed ppxlib_jane.v0.18~preview.130.91+190
+∗ installed topkg.1.1.1+ox
+∗ installed fmt.0.11.0
+∗ installed oxcaml-topkg-patches.enabled
+∗ installed astring.0.8.5
+∗ installed cstruct.6.3.0
+∗ installed ptime.1.2.0
+∗ installed odoc-parser.3.1.0+ox
+∗ installed crunch.4.1.0
+∗ installed oxcaml-odoc-parser-patches.enabled
+∗ installed logs.0.10.0
+∗ installed uutf.1.0.4+ox
+∗ installed oxcaml-uutf-patches.enabled
+∗ installed jsonm.1.0.2
+∗ installed ppxlib.0.33.0+ox1
+∗ installed oxcaml-ppxlib-patches.enabled
+∗ installed ppx_builtin.v0.18~preview.130.91+190
+∗ installed ppx_cold.v0.18~preview.130.91+190
+∗ installed ppx_debug_assert.v0.18~preview.130.91+190
+∗ installed ppx_disable_unused_warnings.v0.18~preview.130.91+190
+∗ installed ppx_enumerate.v0.18~preview.130.91+190
+∗ installed ocaml_intrinsics.v0.18~preview.130.91+190
+∗ installed ppx_helpers.v0.18~preview.130.91+190
+∗ installed ppx_pipebang.v0.18~preview.130.91+190
+∗ installed ppx_ignore_instrumentation.v0.18~preview.130.91+190
+∗ installed ppx_shorthand.v0.18~preview.130.91+190
+∗ installed ppx_globalize.v0.18~preview.130.91+190
+∗ installed ppx_array_base.v0.18~preview.130.91+190
+∗ installed ppx_sexp_conv.v0.18~preview.130.91+190
+∗ installed ipaddr-sexp.5.6.2
+∗ installed uri-sexp.4.4.0
+∗ installed conduit.8.0.0
+∗ installed ppx_template.v0.18~preview.130.91+190
+∗ installed cohttp.5.3.1
+∗ installed capsule0.v0.18~preview.130.91+190
+∗ installed ppx_compare.v0.18~preview.130.91+190
+∗ installed ppx_js_style.v0.18~preview.130.91+190
+∗ installed ppx_box.v0.18~preview.130.91+190
+∗ installed ppx_hash.v0.18~preview.130.91+190
+∗ installed ppx_base.v0.18~preview.130.91+190
+∗ installed base.v0.18~preview.130.91+190
+∗ installed fieldslib.v0.18~preview.130.91+190
+∗ installed capsule.v0.18~preview.130.91+190
+∗ installed capitalization.v0.18~preview.130.91+190
+∗ installed ppx_custom_printf.v0.18~preview.130.91+190
+∗ installed ppx_fields_conv.v0.18~preview.130.91+190
+∗ installed ppx_fixed_literal.v0.18~preview.130.91+190
+∗ installed ppx_here.v0.18~preview.130.91+190
+∗ installed ppx_int63_literal.v0.18~preview.130.91+190
+∗ installed ppx_optional.v0.18~preview.130.91+190
+∗ installed ppx_portable.v0.18~preview.130.91+190
+∗ installed ppx_assert.v0.18~preview.130.91+190
+∗ installed ppx_let.v0.18~preview.130.91+190
+∗ installed ppx_sexp_message.v0.18~preview.130.91+190
+∗ installed ppx_sexp_value.v0.18~preview.130.91+190
+∗ installed ppx_stable.v0.18~preview.130.91+190
+∗ installed ppx_fuelproof.v0.18~preview.130.91+190
+∗ installed ppx_stable_witness.v0.18~preview.130.91+190
+∗ installed jst-config.v0.18~preview.130.91+190
+∗ installed ppx_tydi.v0.18~preview.130.91+190
+∗ installed ppx_string.v0.18~preview.130.91+190
+∗ installed stdio.v0.18~preview.130.91+190
+∗ installed ppx_var_name.v0.18~preview.130.91+190
+∗ installed string_dict.v0.18~preview.130.91+190
+∗ installed ppx_optcomp.v0.18~preview.130.91+190
+∗ installed variantslib.v0.18~preview.130.91+190
+∗ installed ppx_string_conv.v0.18~preview.130.91+190
+∗ installed ppx_variants_conv.v0.18~preview.130.91+190
+∗ installed time_now.v0.18~preview.130.91+190
+∗ installed ppx_inline_test.v0.18~preview.130.91+190
+∗ installed ppx_module_timer.v0.18~preview.130.91+190
+∗ installed bin_prot.v0.18~preview.130.91+190
+∗ installed ppx_bench.v0.18~preview.130.91+190
+∗ installed univ_map.v0.18~preview.130.91+190
+∗ installed splittable_random.v0.18~preview.130.91+190
+∗ installed ppx_bin_prot.v0.18~preview.130.91+190
+∗ installed base_quickcheck.v0.18~preview.130.91+190
+∗ installed portable.v0.18~preview.130.91+190
+∗ installed unique.v0.18~preview.130.91+190
+∗ installed typerep.v0.18~preview.130.91+190
+∗ installed ppx_expect.v0.18~preview.130.91+190
+∗ installed ppx_typerep_conv.v0.18~preview.130.91+190
+∗ installed parsexp.v0.18~preview.130.91+190
+∗ installed sexplib.v0.18~preview.130.91+190
+∗ installed sexp_pretty.v0.18~preview.130.91+190
+∗ installed ppx_log.v0.18~preview.130.91+190
+∗ installed ppx_typed_fields.v0.18~preview.130.91+190
+∗ installed ppx_jane.v0.18~preview.130.91+190
+∗ installed record_builder.v0.18~preview.130.91+190
+∗ installed int_repr.v0.18~preview.130.91+190
+∗ installed uopt.v0.18~preview.130.91+190
+∗ installed base_bigstring.v0.18~preview.130.91+190
+∗ installed ppx_diff.v0.18~preview.130.91+190
+∗ installed core.v0.18~preview.130.91+190
+∗ installed flexible_sexp.v0.18~preview.130.91+190
+∗ installed expect_test_helpers_core.v0.18~preview.130.91+190
+∗ installed protocol_version_header.v0.18~preview.130.91+190
+∗ installed float_array.v0.18~preview.130.91+190
+∗ installed unboxed.v0.18~preview.130.91+190
+∗ installed core_kernel.v0.18~preview.130.91+190
+∗ installed ppx_for_loop.v0.18~preview.130.91+190
+∗ installed vec.v0.18~preview.130.91+190
+∗ installed zstandard.v0.18~preview.130.91+190
+∗ installed core_unix.v0.18~preview.130.91+190
+∗ installed textutils.v0.18~preview.130.91+190
+∗ installed core_extended.v0.18~preview.130.91+190
+∗ installed shell.v0.18~preview.130.91+190
+∗ installed async_kernel.v0.18~preview.130.91+190
+∗ installed pipe_with_writer_error.v0.18~preview.130.91+190
+∗ installed async_unix.v0.18~preview.130.91+190
+∗ installed async_rpc_kernel.v0.18~preview.130.91+190
+∗ installed async_log.v0.18~preview.130.91+190
+∗ installed async.v0.18~preview.130.91+190
+∗ installed expect_test_helpers_async.v0.18~preview.130.91+190
+∗ installed conduit-async.8.0.0
+∗ installed cohttp-async.5.3.0
+∗ installed cohttp_static_handler.v0.18~preview.130.91+190
+Done.
+# Run eval $(opam env) to update the current shell environment

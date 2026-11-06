@@ -1,0 +1,19 @@
+{
+ "generated_at": "2026-11-06 03:14:21",
+ "repo": "Morgan-Stanley/xpedite",
+ "platform": "WSL2 Ubuntu 24.04",
+ "pipeline": {
+  "install_sh": "venv + python 依赖安装（exit 0）",
+  "build_sh": "cmake 构建 xpediteDemo（exit 0）",
+  "demo_sh": "demo app 启动 + xpedite record（exit 0）",
+  "report": "Transaction latency statistics [100 transactions] -> 245.1 KiB + notebook"
+ },
+ "records": "199 records | 100 txns loaded（/dev/shm/xpedite-XpediteDemo-1793905883-*.data）",
+ "artifacts": [
+  "artifacts/xpedite_report.txt",
+  "artifacts/xpedite_report.ipynb",
+  "artifacts/xpedite_report.xpd"
+ ],
+ "passed": true,
+ "notes": "完整复现：scripts/wsl_xpedite_demo.sh + scripts/wsl_xpedite_report.sh。末尾的可选交互 notebook shell 需非 root 或 --allow-root，不影响 record/report 主流程。"
+}

@@ -1,0 +1,22 @@
+{
+ "generated_at": "2026-11-06 02:38:48",
+ "repo": "firedancer-io/firedancer",
+ "platform": "WSL2 Ubuntu 24.04 (gcc 13.3.0)",
+ "build": {
+  "command": "make -j4 unit-test",
+  "exit_code": 0,
+  "test_binary_dir": "build/native/gcc/13.3.0/unit-test/"
+ },
+ "unit_tests_passed": [
+  "test_util",
+  "test_bmtree",
+  "test_sha256",
+  "test_aes",
+  "test_cstr",
+  "test_alloc",
+  "test_tpool",
+  "test_hex"
+ ],
+ "unit_tests_failed": [],
+ "notes": "Firedancer 为 Linux/Solana 全节点软件；本工作台在 WSL2 构建全部单元测试目标并运行代表性子集，8/8 通过（含 make unit-test 全量构建 exit=0）。"
+}
